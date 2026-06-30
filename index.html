@@ -3,229 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <meta name="description" content="Olise Ebinum's WDD 231 course home page, including links to the Chamber of Commerce and Final projects.">
+    <meta name="author" content="Olise Ebinum">
     <title>WDD 231 | Olise Ebinum</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        :root {
-            --green: #1a3c2e;
-            --gold: #c9a84c;
-            --light: #f5f5f0;
-            --text: #2c2c2c;
-            --muted: #6b6b6b;
-        }
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--light);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            background-color: var(--green);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: var(--gold);
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 0.95rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-            opacity: 0.85;
-        }
-
-        nav {
-            background-color: #122b20;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 0.85rem;
-        }
-
-        nav a {
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.04em;
-            transition: opacity 0.2s;
-        }
-
-        nav a:hover {
-            opacity: 0.7;
-        }
-
-        main {
-            flex: 1;
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            width: 100%;
-        }
-
-        .intro {
-            border-left: 4px solid var(--gold);
-            padding-left: 1.2rem;
-            margin-bottom: 3rem;
-        }
-
-        .intro h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .intro p {
-            color: var(--muted);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            border: 1px solid #e0e0d8;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        }
-
-        .card .week {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            color: var(--gold);
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .card p {
-            font-size: 0.85rem;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
-        .card .status {
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.75rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            background-color: #f0f0ea;
-            color: var(--muted);
-        }
-
-        .card .status.active {
-            background-color: #e8f4ee;
-            color: #1a6e3c;
-        }
-
-        footer {
-            background-color: var(--green);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.85rem;
-            opacity: 0.9;
-        }
-
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.6rem;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-        }
-    </style>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
 
     <header>
-        <h1>WDD 231 – Web Frontend Development II</h1>
-        <p>Olise Ebinum &nbsp;|&nbsp; BYU-Idaho via BYU-Pathway Worldwide</p>
+        <div class="branding">
+            <img src="images/logo.svg" alt="Site logo" class="logo">
+            <span class="site-name">Olise Ebinum</span>
+        </div>
+        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="primary-nav">
+            <a href="index.html" class="current">Home</a>
+            <a href="chamber/index.html">Chamber</a>
+            <a href="final/index.html">Final</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="https://github.com/Olisebinum/wdd231" target="_blank">GitHub</a>
-    </nav>
-
     <main>
-        <div class="intro">
-            <h2>Welcome</h2>
-            <p>This site showcases my weekly projects and assignments for WDD 231 at BYU-Idaho. Each project explores modern frontend development techniques including responsive design, JavaScript DOM manipulation, accessibility, and web performance.</p>
-        </div>
+        <h1>Home</h1>
 
-        <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Weekly Projects</h2>
+        <section class="about-grid">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm a Software Development student at BYU-Idaho, building skills in HTML, CSS, and JavaScript through the WDD course track. This site is the hub for my weekly projects this term, including the Chamber of Commerce and Final projects linked above.</p>
+                <p>Together, these projects showcase my progress, technical skills, creativity, and commitment to building high-quality, engaging web experiences as I continue my journey toward becoming a professional software developer.
+</p>
+            </div>
+            <div class="about-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Photo of Olise Ebinum">
+            </div>
+        </section>
 
-        <div class="projects-grid">
-            <div class="card">
-                <div class="week">Week 01</div>
-                <h3>GitHub Setup</h3>
-                <p>Established the course repository, configured Git, and deployed via GitHub Pages.</p>
-                <span class="status active">Complete</span>
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="CSE">CSE</button>
+                <button data-filter="WDD">WDD</button>
             </div>
-            <div class="card">
-                <div class="week">Week 02</div>
-                <h3>Coming Soon</h3>
-                <p>Project details will be added as the course progresses.</p>
-                <span class="status">Upcoming</span>
+            <div class="course-cards" id="course-cards">
+                <!-- Course cards injected here by course.js -->
             </div>
-            <div class="card">
-                <div class="week">Week 03</div>
-                <h3>Coming Soon</h3>
-                <p>Project details will be added as the course progresses.</p>
-                <span class="status">Upcoming</span>
-            </div>
-        </div>
+            <p class="credit-total">The total credits for course listed above is <span id="creditTotal">0</span></p>
+        </section>
     </main>
 
+    <div class="social-links">
+        <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <img src="images/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Olisebinum" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <img src="images/github.png" alt="GitHub">
+        </a>
+        <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
+            <img src="images/twitter.png" alt="X">
+        </a>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Olise Ebinum &nbsp;|&nbsp; <a href="https://olisebinum.github.io/wdd231/">olisebinum.github.io/wdd231</a></p>
+        <p>&copy; <span id="currentyear"></span> Olise Ebinum &nbsp;|&nbsp; Abuja, Nigeria</p>
+        <p id="lastModified"></p>
     </footer>
 
 </body>

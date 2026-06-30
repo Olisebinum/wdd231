@@ -1,0 +1,89 @@
+/* ==========================================================================
+   larger.css — Desktop / Larger Screen Styles
+   ========================================================================== */
+
+@media (min-width: 40em) {
+
+  /* ===== Header ===== */
+
+  header {
+    padding: 1.25rem 2.5rem;
+  }
+
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .site-name {
+    font-size: 1.3rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* ===== Navigation (desktop: horizontal dark strip) ===== */
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0;
+    justify-content: flex-start;
+    animation: none;
+  }
+
+  nav a {
+    border-bottom: none;
+    padding: 0.75rem 1.5rem;
+    position: relative;
+  }
+
+  nav a:hover {
+    background-color: rgba(184, 115, 51, 0.18);
+    padding-left: 1.5rem;
+  }
+
+  nav a.current {
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: inset 0 -3px 0 var(--copper);
+  }
+
+  /* ===== Main Layout ===== */
+
+  main {
+    padding: 3rem 2.5rem;
+  }
+
+  main > h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Side-by-side About Me + Student Photo, matching wireframe */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* ===== Course Cards Grid (3 cols, matches the 3 filter buttons) ===== */
+
+  .course-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  /* ===== Footer (stays centered, matches wireframe) ===== */
+
+  footer {
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  main {
+    padding: 3.5rem 4rem;
+  }
+}
