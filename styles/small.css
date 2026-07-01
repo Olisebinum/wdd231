@@ -188,10 +188,10 @@ nav a:focus {
 }
 
 nav a.current {
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: var(--copper);
   color: var(--white);
   font-weight: 600;
-  box-shadow: inset 3px 0 0 var(--copper);
+  box-shadow: inset 3px 0 0 var(--navy-dark);
 }
 
 /* ===== Main ===== */
@@ -207,7 +207,7 @@ main {
 main > h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.01em;
   position: relative;
   display: inline-block;
@@ -221,6 +221,103 @@ main > h1::after {
   width: 60px;
   height: 4px;
   background: linear-gradient(90deg, var(--copper), var(--copper-light));
+}
+
+/* ===== Hero Strip ===== */
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--copper), var(--copper-light));
+}
+
+.hero-tagline {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  max-width: none;
+}
+
+.hero-tagline .dot {
+  color: var(--copper);
+  margin: 0 0.4rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background-color: var(--white);
+  border: 1px solid var(--copper);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* ===== Section Divider ===== */
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 2.5rem 0;
+  position: relative;
+}
+
+.section-divider::before {
+  content: "";
+  position: absolute;
+  inset-block-start: -2px;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--copper), transparent);
+}
+
+/* ===== Goals Blockquote ===== */
+
+.goals-quote {
+  border-left: 4px solid var(--copper);
+  padding: 1rem 1.25rem;
+  background-color: var(--white);
+  margin: 0;
+  box-shadow: 0 4px 16px rgba(15, 31, 61, 0.06);
+}
+
+.goals-quote p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.8;
+  max-width: none;
 }
 
 section {
@@ -470,4 +567,100 @@ footer {
 footer p {
   opacity: 0.9;
   margin-top: 0.2rem;
+}
+
+/* ===== Branding Subtitle ===== */
+
+.branding-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.site-subtitle {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ===== Hero Description ===== */
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 60ch;
+  margin-bottom: 1.25rem;
+}
+
+/* ===== Skills Section ===== */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.skill-list span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--navy);
+  border-left: 3px solid var(--copper);
+  padding: 0.35rem 0.75rem;
+  border-radius: 0;
+}
+
+/* ===== Projects Section ===== */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--copper);
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(15, 31, 61, 0.1);
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+  color: var(--navy-dark);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: none;
+}
+
+.project-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--copper);
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--navy);
 }

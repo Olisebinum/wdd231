@@ -3,7 +3,7 @@ const courses = [
     subject: "WDD",
     number: 130,
     title: "Web Fundamentals",
-    credits: 1,
+    credits: 2,
     certificate: "Web and Computer Programming",
     description: "Markup and styling language for the World Wide Web, like HTML and CSS.",
     technology: ["HTML", "CSS"],

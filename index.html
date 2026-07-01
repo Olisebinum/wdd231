@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Olise Ebinum's WDD 231 course home page, including links to the Chamber of Commerce and Final projects.">
+    <meta name="description" content="Software Development portfolio of Olise Ebinum featuring WDD 231 coursework, responsive web development projects, the Chamber of Commerce website, and a JavaScript final project.">
     <meta name="author" content="Olise Ebinum">
-    <title>WDD 231 | Olise Ebinum</title>
+    <title>Olise Ebinum | Software Development Portfolio | WDD 231</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -23,8 +23,11 @@
 
     <header>
         <div class="branding">
-            <img src="images/logo.svg" alt="Site logo" class="logo">
-            <span class="site-name">Olise Ebinum</span>
+            <img src="images/logo.svg" alt="OE monogram logo for Olise Ebinum" class="logo">
+            <div class="branding-text">
+                <span class="site-name">Olise Ebinum</span>
+                <span class="site-subtitle">Software Development Student</span>
+            </div>
         </div>
         <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span class="bar"></span>
@@ -34,26 +37,67 @@
         <nav id="primary-nav">
             <a href="index.html" class="current">Home</a>
             <a href="chamber/index.html">Chamber</a>
-            <a href="final/index.html">Final</a>
+            <a href="final/index.html">Final Project</a>
         </nav>
     </header>
 
     <main>
-        <h1>Home</h1>
 
-        <section class="about-grid">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I'm a Software Development student at BYU-Idaho, building skills in HTML, CSS, and JavaScript through the WDD course track. This site is the hub for my weekly projects this term, including the Chamber of Commerce and Final projects linked above.</p>
-                <p>Together, these projects showcase my progress, technical skills, creativity, and commitment to building high-quality, engaging web experiences as I continue my journey toward becoming a professional software developer.
-</p>
-            </div>
-            <div class="about-photo">
-                <h2>Student Photo</h2>
-                <img src="images/profile.webp" alt="Photo of Olise Ebinum">
+        <!-- HERO -->
+        <section class="hero">
+            <p class="hero-subtitle">WDD 231 &bull; BYU–Idaho</p>
+            <h1>Building Modern Websites<br>One Project at a Time</h1>
+            <p class="hero-desc">Welcome to my software development portfolio. I'm continually expanding my knowledge of HTML, CSS, JavaScript, responsive design, and accessibility through real-world projects.</p>
+            <div class="hero-badges">
+                <span class="badge">BYU-Idaho</span>
+                <span class="badge">Software Development</span>
+                <span class="badge">Class of 2027</span>
             </div>
         </section>
 
+        <hr class="section-divider">
+
+        <!-- ABOUT -->
+        <section class="about-grid">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm passionate about creating clean, responsive, and user-friendly websites that combine thoughtful design with practical functionality. Every project I complete strengthens my front-end development skills while improving my ability to solve real-world problems through code.</p>
+                <p>This portfolio serves as the central hub for my coursework, featuring weekly assignments, the Chamber of Commerce website, and my final JavaScript project — each reflecting my commitment to writing clean, accessible, and maintainable code.</p>
+            </div>
+            <div class="about-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Portrait of Olise Ebinum, Software Development student at BYU-Idaho">
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- SKILLS -->
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skill-list">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                <span>Accessibility</span>
+                <span>Git &amp; GitHub</span>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- GOALS -->
+        <section class="goals">
+            <h2>Current Learning Focus</h2>
+            <blockquote class="goals-quote">
+                <p>My objective this term is to strengthen my front-end skills by building responsive websites, improving user experience, writing semantic HTML, mastering CSS layouts, and creating dynamic web applications using JavaScript.</p>
+            </blockquote>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- COURSES -->
         <section class="courses">
             <h2>Web Certificate Courses</h2>
             <div class="filter-buttons">
@@ -61,22 +105,42 @@
                 <button data-filter="CSE">CSE</button>
                 <button data-filter="WDD">WDD</button>
             </div>
-            <div class="course-cards" id="course-cards">
-                <!-- Course cards injected here by course.js -->
+            <div id="course-cards" class="course-cards">
+                <!-- Generated by course.js -->
             </div>
-            <p class="credit-total">The total credits for course listed above is <span id="creditTotal">0</span></p>
+            <p class="credit-total">The total credits for courses listed above is <span id="creditTotal">0</span></p>
         </section>
+
+        <hr class="section-divider">
+
+        <!-- PROJECTS -->
+        <section class="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Chamber of Commerce</h3>
+                    <p>A responsive business directory featuring member listings, weather integration, and dynamic content built with HTML, CSS, and JavaScript.</p>
+                    <a href="chamber/index.html" class="project-link">View Project →</a>
+                </article>
+                <article class="project-card">
+                    <h3>Final Project</h3>
+                    <p>My capstone project demonstrating responsive design, JavaScript functionality, accessibility, and modern web development practices.</p>
+                    <a href="final/index.html" class="project-link">View Project →</a>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <div class="social-links">
         <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
-            <img src="images/linkedin.png" alt="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn icon, links to Olise's LinkedIn profile">
         </a>
         <a href="https://github.com/Olisebinum" target="_blank" rel="noopener" aria-label="GitHub profile">
-            <img src="images/github.png" alt="GitHub">
+            <img src="images/github.png" alt="GitHub icon, links to Olise's GitHub profile">
         </a>
         <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
-            <img src="images/twitter.png" alt="X">
+            <img src="images/twitter.png" alt="X icon, links to Olise's X profile">
         </a>
     </div>
 
