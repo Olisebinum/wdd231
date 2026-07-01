@@ -188,7 +188,7 @@ nav a:focus {
 }
 
 nav a.current {
-  background-color: var(--copper);
+  background-color: #8a5420;
   color: var(--white);
   font-weight: 600;
   box-shadow: inset 3px 0 0 var(--navy-dark);
@@ -656,11 +656,11 @@ footer p {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: var(--copper);
+  color: var(--navy);
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
 
 .project-link:hover {
-  color: var(--navy);
+  color: var(--copper);
 }
