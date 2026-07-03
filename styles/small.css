@@ -188,10 +188,10 @@ nav a:focus {
 }
 
 nav a.current {
-  background-color: #8a5420;
+  background-color: var(--navy);
   color: var(--white);
   font-weight: 600;
-  box-shadow: inset 3px 0 0 var(--navy-dark);
+  box-shadow: inset 3px 0 0 var(--white);
 }
 
 /* ===== Main ===== */
@@ -260,7 +260,7 @@ main > h1::after {
 }
 
 .hero-tagline .dot {
-  color: var(--copper);
+  color: var(--navy);
   margin: 0 0.4rem;
 }
 
@@ -435,6 +435,15 @@ button:-moz-focusring,
   outline-color: var(--navy);
 }
 
+hr {
+  color: var(--border);
+  border-color: var(--border);
+}
+
+abbr[title] {
+  color: inherit;
+}
+
 /* ===== Course Filter Buttons ===== */
 
 .filter-buttons {
@@ -525,7 +534,7 @@ button:-moz-focusring,
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .course-card.completed {
@@ -543,7 +552,7 @@ button:-moz-focusring,
   font-size: 0.85rem;
   font-weight: 500;
   text-align: center;
-  color: var(--muted);
+  color: var(--text);
 }
 
 /* ===== Social Links (standalone, above footer) ===== */
@@ -602,9 +611,18 @@ footer p {
 
 /* ===== Hero Description ===== */
 
+.hero-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
 .hero-desc {
   font-size: 0.95rem;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.8;
   max-width: 60ch;
   margin-bottom: 1.25rem;
