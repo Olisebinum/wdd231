@@ -1,0 +1,28 @@
+{
+  "familyName": "Ebinum",
+  "moveInDate": "2025-05-15",
+  "familySize": 4,
+  "visitedByBishopric": true,
+  "familyMembers": [
+    {
+      "name": "Olise Ebinum",
+      "gender": "Male",
+      "birthDate": "2001-03-12"
+    },
+    {
+      "name": "Grace Ebinum",
+      "gender": "Female",
+      "birthDate": "2003-08-21"
+    },
+    {
+      "name": "John Ebinum",
+      "gender": "Male",
+      "birthDate": "1972-11-09"
+    },
+    {
+      "name": "Mary Ebinum",
+      "gender": "Female",
+      "birthDate": "1976-06-18"
+    }
+  ]
+}
