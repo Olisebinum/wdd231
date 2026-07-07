@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business directory for the Abuja Chamber of Commerce — connecting local businesses, members, and residents across Abuja.">
+    <meta name="author" content="Olise Ebinum">
+    <title>Directory | Abuja Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Directory | Abuja Chamber of Commerce">
+    <meta property="og:description" content="Browse registered businesses and members of the Abuja Chamber of Commerce.">
+    <meta property="og:image" content="https://olisebinum.github.io/wdd231/chamber/images/chamber-social.webp">
+    <meta property="og:url" content="https://olisebinum.github.io/wdd231/chamber/directory.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="branding">
+            <img src="images/logo.svg" alt="Abuja Chamber of Commerce logo" class="logo">
+            <span class="site-name">Abuja Chamber of Commerce</span>
+        </div>
+
+        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="directory.html" class="current" aria-current="page">Directory</a>
+            <a href="events.html">Events</a>
+            <a href="join.html">Join</a>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark and light mode" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main id="main-content">
+
+        <section class="directory-header">
+            <h1>Business Directory</h1>
+            <p id="member-count"></p>
+        </section>
+
+        <section class="directory-controls">
+            <label for="search-input" class="visually-hidden">Search businesses</label>
+            <input type="search" id="search-input" placeholder="Search businesses">
+
+            <label for="category-filter" class="visually-hidden">Filter by category</label>
+            <select id="category-filter">
+                <option value="all">All categories</option>
+            </select>
+
+            <div class="view-toggle" role="group" aria-label="Choose display view">
+                <button id="grid-btn" class="view-btn active" aria-pressed="true">Grid</button>
+                <button id="list-btn" class="view-btn" aria-pressed="false">List</button>
+            </div>
+        </section>
+
+        <section id="directory" class="directory grid-view" aria-live="polite">
+            <!-- Member cards generated dynamically by directory.js -->
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p class="footer-title">Abuja Chamber of Commerce</p>
+            <p>Central Business District, Abuja, Nigeria</p>
+            <p>info@abujachamber.org</p>
+            <p>+234 800 555 1234</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
+                <img src="images/twitter.png" alt="" aria-hidden="true">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <img src="images/linkedin.png" alt="" aria-hidden="true">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener" aria-label="YouTube channel">
+                <img src="images/youtube.png" alt="" aria-hidden="true">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook page">
+                <img src="images/facebook.png" alt="" aria-hidden="true">
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p>WDD 231 Class Project</p>
+            <p>Olise Ebinum</p>
+            <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

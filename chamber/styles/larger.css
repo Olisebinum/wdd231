@@ -1,0 +1,89 @@
+/* =========================================
+   Abuja Chamber of Commerce — larger.css
+   Overrides for wider viewports (48rem / 768px+)
+   ========================================= */
+
+@media only screen and (min-width: 48rem) {
+
+  header {
+    flex-wrap: nowrap;
+    padding: 0.85rem 2rem;
+  }
+
+  .site-name {
+    font-size: 1.15rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    order: 2;
+  }
+
+  nav a {
+    border-top: none;
+    padding: 0.5rem 1rem;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    background-color: transparent;
+    color: var(--copper-light);
+  }
+
+  #theme-toggle {
+    order: 3;
+  }
+
+  main {
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  .directory-header h1 {
+    font-size: 2rem;
+  }
+
+  .directory-controls {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #search-input {
+    flex: 2;
+  }
+
+  #category-filter {
+    flex: 1;
+    width: auto;
+  }
+
+  .view-toggle {
+    margin-left: auto;
+  }
+
+  .directory {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .directory.list-view {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+}

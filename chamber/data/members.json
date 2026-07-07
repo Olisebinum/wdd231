@@ -1,0 +1,95 @@
+{
+  "members": [
+    {
+      "name": "Zaria Textiles & Fashion House",
+      "category": "Retail",
+      "address": "Plot 14 Aminu Kano Crescent, Wuse II, Abuja",
+      "phone": "+234 803 555 0112",
+      "url": "https://zariatextiles.example.com",
+      "image": "zaria-textiles.webp",
+      "membershipLevel": 3,
+      "description": "Boutique fashion and textile retailer specializing in locally made Ankara and Aso-Oke fabrics."
+    },
+    {
+      "name": "Capital Logistics Nigeria",
+      "category": "Logistics",
+      "address": "12 Ademola Adetokunbo Crescent, Wuse II, Abuja",
+      "phone": "+234 802 555 0198",
+      "url": "https://capitallogisticsng.example.com",
+      "image": "capital-logistics.webp",
+      "membershipLevel": 3,
+      "description": "Freight, warehousing, and last-mile delivery services across the FCT and surrounding states."
+    },
+    {
+      "name": "Gwarinpa Bakehouse",
+      "category": "Food & Beverage",
+      "address": "45 Third Avenue, Gwarinpa, Abuja",
+      "phone": "+234 807 555 0143",
+      "url": "https://gwarinpabakehouse.example.com",
+      "image": "gwarinpa-bakehouse.webp",
+      "membershipLevel": 2,
+      "description": "Neighborhood bakery known for fresh bread, pastries, and custom celebration cakes."
+    },
+    {
+      "name": "Maitama Tech Solutions",
+      "category": "Technology",
+      "address": "8 Yedseram Street, Maitama, Abuja",
+      "phone": "+234 809 555 0176",
+      "url": "https://maitamatech.example.com",
+      "image": "maitama-tech.webp",
+      "membershipLevel": 3,
+      "description": "IT consulting, web development, and cloud infrastructure support for small and medium businesses."
+    },
+    {
+      "name": "Utako Real Estate Partners",
+      "category": "Real Estate",
+      "address": "22 Gwandu Street, Utako, Abuja",
+      "phone": "+234 806 555 0165",
+      "url": "https://utakorealestate.example.com",
+      "image": "utako-real-estate.webp",
+      "membershipLevel": 2,
+      "description": "Residential and commercial property sales, leasing, and management across Abuja."
+    },
+    {
+      "name": "Nkechi's Beauty Lounge",
+      "category": "Personal Care",
+      "address": "5 Faskari Street, Area 2, Garki, Abuja",
+      "phone": "+234 810 555 0129",
+      "url": "https://nkechisbeauty.example.com",
+      "image": "nkechis-beauty.webp",
+      "membershipLevel": 1,
+      "description": "Hair, nails, and skincare salon offering a full range of beauty services."
+    },
+    {
+      "name": "Asokoro Financial Advisory",
+      "category": "Finance",
+      "address": "31 Yakubu Gowon Crescent, Asokoro, Abuja",
+      "phone": "+234 805 555 0187",
+      "url": "https://asokorofinancial.example.com",
+      "image": "asokoro-financial.webp",
+      "membershipLevel": 3,
+      "description": "Personal and small business financial planning, tax advisory, and investment guidance."
+    },
+    {
+      "name": "Nyanya Auto Care",
+      "category": "Automotive",
+      "address": "17 Karshi Road, Nyanya, Abuja",
+      "phone": "+234 813 555 0154",
+      "url": "https://nyanyaautocare.example.com",
+      "image": "nyanya-auto-care.webp",
+      "membershipLevel": 1,
+      "description": "Full-service auto repair, diagnostics, and maintenance for cars and light commercial vehicles."
+    },
+    {
+      "name": "Kubwa Learning Centre",
+      "category": "Education",
+      "address": "9 Gado Nasko Road, Kubwa, Abuja",
+      "phone": "+234 814 555 0168",
+      "url": "https://kubwalearningcentre.example.com",
+      "image": "kubwa-learning-centre.webp",
+      "membershipLevel": 2,
+      "description": "After-school tutoring, exam preparation, and computer literacy classes for students of all ages."
+    }
+  ]
+}
+

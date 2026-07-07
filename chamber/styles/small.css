@@ -1,0 +1,413 @@
+/* =========================================
+   Abuja Chamber of Commerce — small.css
+   Mobile-first base styles (320px and up)
+   ========================================= */
+
+:root {
+  /* Brand colors */
+  --navy: #13284A;
+  --navy-light: #1E3A63;
+  --copper: #B76E36;
+  --copper-light: #D08B54;
+  --copper-dark: #8F5427;
+
+  /* Surface / text */
+  --bg: #F8F7F4;
+  --surface: #FFFFFF;
+  --border: #DDD9D2;
+  --text-primary: #1F1F1F;
+  --text-secondary: #5A5A5A;
+  --text-on-navy: #FFFFFF;
+
+  /* Membership badges */
+  --gold: #B8860B;
+  --silver: #7C7C7C;
+  --member: var(--navy);
+
+  --radius: 8px;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #0D1626;
+  --surface: #16233D;
+  --border: #2A3B5C;
+  --text-primary: #F2F2F2;
+  --text-secondary: #B7BEC9;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--copper);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+a {
+  color: var(--copper-dark);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--navy);
+  padding: 0.75rem 1rem;
+  position: relative;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  height: 36px;
+  width: 36px;
+}
+
+.site-name {
+  color: var(--text-on-navy);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+}
+
+.hamburger .bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-on-navy);
+  display: block;
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--text-on-navy);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.theme-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--text-on-navy) 50%, transparent 50%);
+  border: 1px solid var(--text-on-navy);
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--navy-light);
+  order: 3;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: var(--text-on-navy);
+  padding: 0.85rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--navy);
+  text-decoration: none;
+}
+
+nav a.current {
+  color: var(--copper-light);
+  font-weight: 600;
+}
+
+/* =========================
+   MAIN / DIRECTORY
+   ========================= */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.directory-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.directory-header h1 {
+  font-size: 1.6rem;
+}
+
+#member-count {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.directory-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+#search-input,
+#category-filter {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+.view-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  width: fit-content;
+}
+
+.view-btn {
+  border: none;
+  background-color: var(--surface);
+  color: var(--text-secondary);
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.view-btn + .view-btn {
+  border-left: 1px solid var(--border);
+}
+
+.view-btn.active {
+  background-color: var(--navy);
+  color: var(--text-on-navy);
+}
+
+/* Directory grid / list container */
+
+.directory {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+.directory.list-view {
+  grid-template-columns: 1fr;
+}
+
+/* Member card */
+
+.member-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.directory.list-view .member-card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.member-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.directory.list-view .member-card img {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+}
+
+.member-card-body {
+  padding: 0.85rem 1rem;
+  flex: 1;
+}
+
+.member-card-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+}
+
+.member-card-body p {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.member-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge.gold {
+  background-color: var(--gold);
+}
+
+.badge.silver {
+  background-color: var(--silver);
+}
+
+.badge.member {
+  background-color: var(--member);
+}
+
+.details-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--copper-dark);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background-color: var(--navy);
+  color: var(--text-on-navy);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-weight: 600;
+  color: var(--text-on-navy);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.footer-social img {
+  width: 34px;
+  height: 34px;
+}
+
+.footer-meta p {
+  margin: 0.15rem 0;
+  color: rgba(255, 255, 255, 0.75);
+}
