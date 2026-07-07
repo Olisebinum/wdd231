@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--copper);
+  background-color: var(--navy);
   color: #fff;
   padding: 0.6rem 1rem;
   z-index: 100;
