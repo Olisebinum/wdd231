@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for the Abuja Chamber of Commerce website — purpose, audience, goals, personas, and design direction.">
+    <meta name="author" content="Olise Ebinum">
+    <title>Site Plan | Abuja Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet">
+
+    <!-- Shared site styles (used by every page) -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Styles used ONLY on this page. Kept separate so the shared
+         stylesheets above don't grow with one-off rules that no other
+         page needs. -->
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===================== SITE HEADER (shared layout) ===================== -->
+    <header>
+        <div class="branding">
+            <img src="images/logo.svg" alt="Abuja Chamber of Commerce logo" class="logo">
+            <span class="site-name">Abuja Chamber of Commerce</span>
+        </div>
+
+        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- This is the ONLY real <nav> element on the page. Giving it a
+             unique id (primary-nav) means the shared CSS files can target
+             it specifically, instead of styling every <nav> tag on the
+             page (which previously caused the sidebar below to break). -->
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="events.html">Events</a>
+            <a href="join.html">Join</a>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark and light mode" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="plan-hero">
+        <p class="plan-hero-eyebrow">WDD 231 &bull; Project Planning</p>
+        <h1>Site Plan</h1>
+        <p class="plan-hero-sub">A blueprint for the Abuja Chamber of Commerce website &mdash; who it's for, what it does, and how it's designed.</p>
+    </section>
+
+    <div class="plan-layout">
+
+        <!-- ===================== TABLE OF CONTENTS =====================
+             NOTE: this is intentionally a <div>, not a <nav> element.
+             The page already has one <nav> (the header menu above). Using
+             a second <nav> here would let the site-wide nav styles apply
+             to it too, since CSS matches by tag name everywhere on the
+             page. role="navigation" gives screen readers the same
+             information a <nav> tag would, without the styling conflict. -->
+        <div class="plan-toc" role="navigation" aria-label="Site plan sections">
+            <p class="plan-toc-title">On this page</p>
+            <a href="#site-name">01 &nbsp; Site Name</a>
+            <a href="#purpose">02 &nbsp; Purpose</a>
+            <a href="#target-market">03 &nbsp; Target Market</a>
+            <a href="#goals">04 &nbsp; Goals</a>
+            <a href="#personas">05 &nbsp; Personas</a>
+            <a href="#scenarios">06 &nbsp; Scenarios</a>
+            <a href="#seo">07 &nbsp; SEO Plan</a>
+            <a href="#design-brief">08 &nbsp; Design Brief</a>
+            <a href="#sitemap">09 &nbsp; Site Map</a>
+            <a href="#wireframes">10 &nbsp; Wireframes</a>
+        </div>
+
+        <main id="main-content" class="plan-main">
+
+            <!-- 01: Site Name -->
+            <section class="plan-section" id="site-name">
+                <span class="plan-number">01</span>
+                <h2>Site Name</h2>
+                <p class="plan-lead">Abuja Chamber of Commerce</p>
+            </section>
+
+            <!-- 02: Site Purpose -->
+            <section class="plan-section" id="purpose">
+                <span class="plan-number">02</span>
+                <h2>Site Purpose</h2>
+                <p>This website will serve as a resource hub for businesses in Abuja, Nigeria. The site provides information on local events, networking opportunities, a business directory, and encourages residents to support local businesses. It aims to promote local economic growth, support small and medium enterprises, and foster a stronger sense of community among Abuja's business owners.</p>
+            </section>
+
+            <!-- 03: Target Market -->
+            <section class="plan-section" id="target-market">
+                <span class="plan-number">03</span>
+                <h2>Target Market</h2>
+                <p>Business owners, entrepreneurs, and residents in Abuja and the surrounding FCT (Federal Capital Territory) area.</p>
+            </section>
+
+            <!-- 04: Site Goals -->
+            <section class="plan-section" id="goals">
+                <span class="plan-number">04</span>
+                <h2>Site Goals</h2>
+                <ul class="plan-list">
+                    <li>Improve member engagement by providing valuable resources and networking opportunities.</li>
+                    <li>Attract new businesses and encourage economic development within Abuja.</li>
+                    <li>Improve the visibility and reputation of the chamber as a trusted authority on local business matters.</li>
+                </ul>
+            </section>
+
+            <!-- 05: User Personas — three fictional visitor profiles used
+                 to guide design decisions throughout the project -->
+            <section class="plan-section" id="personas">
+                <span class="plan-number">05</span>
+                <h2>User Personas</h2>
+                <div class="persona-grid">
+                    <article class="persona-card">
+                        <span class="persona-avatar" style="background-color:#8F5427;">A</span>
+                        <h3>Amina, 32</h3>
+                        <p class="persona-role">Small Business Owner</p>
+                        <p>Owns a small fashion and textiles shop in Wuse Market. She is looking for networking opportunities, marketing support, and ways to connect with other local entrepreneurs to grow her customer base.</p>
+                    </article>
+                    <article class="persona-card">
+                        <span class="persona-avatar" style="background-color:#13284A;">E</span>
+                        <h3>Emeka, 44</h3>
+                        <p class="persona-role">Corporate Executive</p>
+                        <p>A senior manager at a logistics company considering expansion into Abuja. He is interested in partnership opportunities, economic development data, and networking with established local business leaders.</p>
+                    </article>
+                    <article class="persona-card">
+                        <span class="persona-avatar" style="background-color:#5A5A5A;">D</span>
+                        <h3>David, 26</h3>
+                        <p class="persona-role">New Resident</p>
+                        <p>Recently relocated to Abuja for a new job. He is looking to learn about local services, find a directory of trustworthy businesses, and discover community events to help him settle in.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 06: Scenarios — short "day in the life" stories showing
+                 how each persona would actually use the site -->
+            <section class="plan-section" id="scenarios">
+                <span class="plan-number">06</span>
+                <h2>Scenarios</h2>
+                <ul class="plan-list">
+                    <li>A local business owner is interested in joining the chamber to network with other business owners. They visit the site to learn about membership benefits, fees, and how to apply.</li>
+                    <li>A community member wants to find upcoming events or workshops hosted by the chamber. They visit the site to browse an events calendar and register for something that interests them.</li>
+                    <li>A visitor considering relocating to Abuja wants to understand the local business environment. They explore the chamber's site to review the business directory, available services, and general quality-of-life information.</li>
+                </ul>
+            </section>
+
+            <!-- 07: SEO Plan -->
+            <section class="plan-section" id="seo">
+                <span class="plan-number">07</span>
+                <h2>SEO Plan</h2>
+                <ul class="plan-list">
+                    <li>Use relevant keywords (e.g. "Abuja business directory," "Abuja chamber of commerce," "FCT small business") throughout site descriptions and content.</li>
+                    <li>Verify the site on Google Business Profile.</li>
+                    <li>Get inbound backlinks from member businesses to improve search rankings.</li>
+                    <li>Embed Google Analytics across all site pages to track visitor behavior.</li>
+                </ul>
+            </section>
+
+            <!-- 08: Design Brief — the actual color palette and typography
+                 used across the whole site, shown visually rather than
+                 just listed as text -->
+            <section class="plan-section" id="design-brief">
+                <span class="plan-number">08</span>
+                <h2>Design Brief</h2>
+                <div class="design-brief-grid">
+                    <div class="swatch-card">
+                        <span class="swatch" style="background-color:#13284A;"></span>
+                        <p class="swatch-label">Primary</p>
+                        <p class="swatch-hex">#13284A</p>
+                    </div>
+                    <div class="swatch-card">
+                        <span class="swatch" style="background-color:#B76E36;"></span>
+                        <p class="swatch-label">Secondary</p>
+                        <p class="swatch-hex">#B76E36</p>
+                    </div>
+                    <div class="swatch-card">
+                        <span class="swatch swatch-bordered" style="background-color:#F8F7F4;"></span>
+                        <p class="swatch-label">Background</p>
+                        <p class="swatch-hex">#F8F7F4</p>
+                    </div>
+                    <div class="swatch-card">
+                        <span class="swatch" style="background-color:#1F1F1F;"></span>
+                        <p class="swatch-label">Text</p>
+                        <p class="swatch-hex">#1F1F1F</p>
+                    </div>
+                </div>
+                <div class="font-card">
+                    <p class="font-sample-heading">Aa</p>
+                    <div>
+                        <p class="font-name">Playfair Display</p>
+                        <p class="font-usage">Headings</p>
+                    </div>
+                    <p class="font-sample-body">Aa</p>
+                    <div>
+                        <p class="font-name">Inter</p>
+                        <p class="font-usage">Body text</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 09: Site Map — drawn as a simple visual diagram rather
+                 than a plain bullet list, so the page hierarchy is
+                 immediately obvious at a glance -->
+            <section class="plan-section" id="sitemap">
+                <span class="plan-number">09</span>
+                <h2>Site Map</h2>
+                <div class="sitemap-diagram">
+                    <div class="sitemap-root">Home</div>
+                    <div class="sitemap-branches">
+                        <div class="sitemap-node">About &amp; Membership</div>
+                        <div class="sitemap-node">Business Directory</div>
+                        <div class="sitemap-node">Events Calendar</div>
+                        <div class="sitemap-node">Join / Contact</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10: Wireframes — low-fidelity layout sketches for
+                 desktop and mobile, built directly out of HTML/CSS boxes
+                 so they live as real page content instead of external
+                 image attachments -->
+            <section class="plan-section" id="wireframes">
+                <span class="plan-number">10</span>
+                <h2>Wireframes</h2>
+
+                <p class="wireframe-caption">Desktop</p>
+                <div class="wireframe-box">
+                    <div class="wf-block">Logo / site name &nbsp;&nbsp;&nbsp; Home &nbsp; Directory &nbsp; Events &nbsp; Join</div>
+                    <div class="wf-block wf-hero">Hero banner: city image + headline + search bar</div>
+                    <div class="wf-row">
+                        <div class="wf-block">Current weather + date</div>
+                        <div class="wf-block">Upcoming events preview</div>
+                    </div>
+                    <div class="wf-block">
+                        Member business spotlight
+                        <div class="wf-row wf-cards">
+                            <div class="wf-card">Card 1</div>
+                            <div class="wf-card">Card 2</div>
+                            <div class="wf-card">Card 3</div>
+                        </div>
+                    </div>
+                    <div class="wf-block">Footer: contact info + social links + copyright</div>
+                </div>
+
+                <p class="wireframe-caption">Mobile</p>
+                <div class="wireframe-box wireframe-mobile">
+                    <div class="wf-block">Logo &nbsp; &#9776;</div>
+                    <div class="wf-block wf-hero">Hero: headline + search</div>
+                    <div class="wf-block">Weather + date</div>
+                    <div class="wf-block">Upcoming events</div>
+                    <div class="wf-block">
+                        Member spotlight
+                        <div class="wf-cards">
+                            <div class="wf-card">Card 1</div>
+                            <div class="wf-card">Card 2</div>
+                            <div class="wf-card">Card 3</div>
+                        </div>
+                    </div>
+                    <div class="wf-block">Footer: contact + social + copyright</div>
+                </div>
+
+                <!-- Directory page wireframe — added separately from the
+                     homepage sketch above, since directory.html has its
+                     own layout: no hero, no weather widget, instead a
+                     search bar, category filter, grid/list toggle, and
+                     a full card grid. This reflects the page as it was
+                     actually built, not the general homepage concept. -->
+                <p class="wireframe-caption">Directory Page &mdash; Desktop</p>
+                <div class="wireframe-box">
+                    <div class="wf-block">Logo / site name &nbsp;&nbsp;&nbsp; Home &nbsp; Directory &nbsp; Events &nbsp; Join</div>
+                    <div class="wf-block">Business Directory &nbsp;&middot;&nbsp; 9 registered businesses</div>
+                    <div class="wf-row">
+                        <div class="wf-block">Search businesses</div>
+                        <div class="wf-block">All categories</div>
+                        <div class="wf-block">Grid / List toggle</div>
+                    </div>
+                    <div class="wf-row wf-cards">
+                        <div class="wf-card">
+                            <p class="wf-card-title">Business name</p>
+                            <p class="wf-card-sub">Category</p>
+                            <p class="wf-card-img">Image</p>
+                            <p class="wf-card-sub">Address &middot; phone &middot; url</p>
+                            <p class="wf-card-footer">Badge &nbsp;|&nbsp; View details</p>
+                        </div>
+                        <div class="wf-card">
+                            <p class="wf-card-title">Business name</p>
+                            <p class="wf-card-sub">Category</p>
+                            <p class="wf-card-img">Image</p>
+                            <p class="wf-card-sub">Address &middot; phone &middot; url</p>
+                            <p class="wf-card-footer">Badge &nbsp;|&nbsp; View details</p>
+                        </div>
+                        <div class="wf-card">
+                            <p class="wf-card-title">Business name</p>
+                            <p class="wf-card-sub">Category</p>
+                            <p class="wf-card-img">Image</p>
+                            <p class="wf-card-sub">Address &middot; phone &middot; url</p>
+                            <p class="wf-card-footer">Badge &nbsp;|&nbsp; View details</p>
+                        </div>
+                    </div>
+                    <div class="wf-block">Footer: contact info + social links + copyright</div>
+                </div>
+
+                <p class="wireframe-caption">Directory Page &mdash; Mobile</p>
+                <div class="wireframe-box wireframe-mobile">
+                    <div class="wf-block">Logo &nbsp; &#9776;</div>
+                    <div class="wf-block">Business Directory &nbsp;&middot;&nbsp; 9 businesses</div>
+                    <div class="wf-block">Search businesses</div>
+                    <div class="wf-block">All categories &nbsp;|&nbsp; Grid / List</div>
+                    <div class="wf-cards">
+                        <div class="wf-card wf-card-row">
+                            <p class="wf-card-img">Img</p>
+                            <span>
+                                <p class="wf-card-title">Business name</p>
+                                <p class="wf-card-sub">Address &middot; phone</p>
+                            </span>
+                        </div>
+                        <div class="wf-card wf-card-row">
+                            <p class="wf-card-img">Img</p>
+                            <span>
+                                <p class="wf-card-title">Business name</p>
+                                <p class="wf-card-sub">Address &middot; phone</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="wf-block">Footer: contact + social + copyright</div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ===================== SITE FOOTER (shared layout) ===================== -->
+    <footer>
+        <div class="footer-contact">
+            <p class="footer-title">Abuja Chamber of Commerce</p>
+            <p>Central Business District, Abuja, Nigeria</p>
+            <p>info@abujachamber.org</p>
+            <p>+234 800 555 1234</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
+                <img src="images/twitter.png" alt="" aria-hidden="true">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <img src="images/linkedin.png" alt="" aria-hidden="true">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener" aria-label="YouTube channel">
+                <img src="images/youtube.png" alt="" aria-hidden="true">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook page">
+                <img src="images/facebook.png" alt="" aria-hidden="true">
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p>WDD 231 Class Project</p>
+            <p>Olise Ebinum</p>
+            <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script>
+        // Footer date/year — matches the pattern used on every other
+        // page in the project (see directory.js for the same logic).
+        document.querySelector("#currentyear").textContent = new Date().getFullYear();
+        document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
+
+        // Hamburger menu toggle (mobile only)
+        document.querySelector("#menu-toggle").addEventListener("click", () => {
+            const nav = document.querySelector("#primary-nav");
+            const isOpen = nav.classList.toggle("open");
+            document.querySelector("#menu-toggle").setAttribute("aria-expanded", isOpen);
+        });
+
+        // Dark / light theme toggle
+        document.querySelector("#theme-toggle").addEventListener("click", () => {
+            const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+            document.documentElement.setAttribute("data-theme", isDark ? "light" : "dark");
+        });
+    </script>
+
+</body>
+</html>

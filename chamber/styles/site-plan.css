@@ -1,0 +1,491 @@
+/* =========================================================
+   Abuja Chamber of Commerce — site-plan.css
+   Styles used ONLY on site-plan.html. Kept in its own file so
+   the shared small.css / larger.css stylesheets (used by every
+   page) don't grow with one-off rules that no other page needs.
+
+   Sections in this file, in order:
+     1. Hero banner
+     2. Page layout (sidebar + main content)
+     3. Numbered section headers
+     4. Persona cards
+     5. Design brief (color swatches + font sample)
+     6. Site map diagram
+     7. Wireframe sketches
+     8. Wide-screen (desktop) overrides
+   ========================================================= */
+
+
+/* ---------- 1. Hero banner ---------- */
+
+.plan-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--text-on-navy);
+  text-align: center;
+  padding: 3rem 1.25rem 3.5rem;
+}
+
+.plan-hero-eyebrow {
+  color: var(--copper-light);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.plan-hero h1 {
+  color: var(--text-on-navy);
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.plan-hero-sub {
+  max-width: 34rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+
+/* ---------- 2. Page layout ---------- */
+/* .plan-layout holds two children side by side on wide screens:
+   the .plan-toc sidebar (jump-to-section links) and the
+   .plan-main content column. On narrow screens the sidebar is
+   hidden entirely (see the "On this page" note in section 8). */
+
+.plan-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.plan-main {
+  flex: 1;
+  min-width: 0; /* allows the column to shrink below its content's natural width */
+}
+
+/* Hidden by default (mobile). Turned on again inside the wide-screen
+   media query at the bottom of this file. */
+.plan-toc {
+  display: none;
+}
+
+
+/* ---------- 3. Numbered section headers ---------- */
+/* Each <section class="plan-section"> has a circular numbered badge
+   (01, 02, 03...) positioned in the left margin using absolute
+   positioning, so the heading text itself stays aligned with the
+   rest of the page content. */
+
+.plan-section {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 3.25rem;
+  scroll-margin-top: 1.5rem; /* keeps the heading from hiding under a sticky header when jumped to */
+}
+
+.plan-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background-color: var(--navy);
+  color: var(--text-on-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.plan-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.plan-lead {
+  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  color: var(--copper-dark);
+}
+
+.plan-list {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.plan-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+
+/* ---------- 4. Persona cards ---------- */
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* single column on mobile; becomes 3 columns on wide screens */
+  gap: 1rem;
+}
+
+.persona-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(19, 40, 74, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.persona-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(19, 40, 74, 0.12);
+}
+
+.persona-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.persona-card h3 {
+  margin: 0 0 0.1rem;
+  font-size: 1.05rem;
+}
+
+.persona-role {
+  color: var(--copper-dark);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+
+/* ---------- 5. Design brief ---------- */
+
+.design-brief-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile; 4 on wide screens */
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.swatch-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.swatch {
+  display: block;
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+/* The off-white background swatch needs its own border, since a
+   near-white color would otherwise be invisible against the page. */
+.swatch-bordered {
+  border: 1px solid var(--border);
+}
+
+.swatch-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.swatch-hex {
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0.15rem 0 0;
+}
+
+.font-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.font-sample-heading {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--navy);
+}
+
+.font-sample-body {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--navy);
+}
+
+.font-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.font-usage {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+
+/* ---------- 6. Site map diagram ---------- */
+/* A simple visual tree: one "Home" node on top, with a short
+   vertical connector line down to four branch boxes below. */
+
+.sitemap-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sitemap-root {
+  background-color: var(--navy);
+  color: var(--text-on-navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* The connector line is drawn with a pseudo-element instead of an
+   extra empty <div>, so it doesn't clutter the HTML. */
+.sitemap-root::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 1.5rem;
+  background-color: var(--border-strong, var(--text-secondary));
+}
+
+.sitemap-branches {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile; 4 on wide screens */
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.sitemap-node {
+  background-color: var(--surface);
+  border: 1px solid var(--copper);
+  color: var(--copper-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  border-radius: 8px;
+}
+
+
+/* ---------- 7. Wireframe sketches ---------- */
+/* Low-fidelity boxes with dashed borders, standing in for real
+   layout regions (header, hero, cards, footer). This mirrors the
+   same visual language used in the class wireframe examples. */
+
+.wireframe-caption {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.wireframe-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(19, 40, 74, 0.06);
+}
+
+.wireframe-mobile {
+  max-width: 280px;
+}
+
+.wf-block {
+  border: 1px dashed var(--border-strong, var(--text-secondary));
+  border-radius: 6px;
+  padding: 0.9rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+  background-color: var(--bg);
+}
+
+.wf-hero {
+  padding: 1.8rem 0.9rem;
+}
+
+.wf-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.wf-row .wf-block {
+  flex: 1;
+}
+
+.wf-cards {
+  margin-top: 0.6rem;
+}
+
+.wf-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.9rem;
+  flex: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: var(--surface);
+}
+
+/* Directory-page wireframe cards show more structure than the simple
+   homepage "Card 1 / Card 2" placeholders: a title, a subtitle line,
+   an image placeholder, and a footer row (badge + link). */
+
+.wf-card-title {
+  font-weight: 600;
+  margin: 0 0 0.15rem;
+}
+
+.wf-card-sub {
+  color: var(--text-secondary);
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+}
+
+.wf-card-img {
+  border: 1px dashed var(--border-strong, var(--text-secondary));
+  border-radius: 4px;
+  padding: 0.6rem 0;
+  margin: 0 0 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.wf-card-footer {
+  border-top: 1px dashed var(--border);
+  margin: 0.4rem 0 0;
+  padding-top: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+/* Compact mobile list-style card: image on the left, text stacked
+   on the right, instead of the stacked full-width desktop version. */
+.wf-card-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: left;
+}
+
+.wf-card-row .wf-card-img {
+  width: 44px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0.6rem 0;
+}
+
+.wf-card-row .wf-card-title,
+.wf-card-row .wf-card-sub {
+  margin: 0;
+}
+
+
+/* ---------- 8. Wide-screen (desktop) overrides ---------- */
+
+@media only screen and (min-width: 48rem) {
+
+  .plan-hero h1 {
+    font-size: 3rem;
+  }
+
+  /* Turn the sidebar back on and make it stick in place while the
+     page scrolls, so the jump-to-section links stay reachable. */
+  .plan-toc {
+    display: block;
+    position: sticky;
+    top: 1.5rem;
+    flex-shrink: 0;
+    width: 190px;
+    align-self: flex-start;
+  }
+
+  .plan-toc-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .plan-toc a {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    padding: 0.4rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+  }
+
+  .plan-toc a:hover,
+  .plan-toc a:focus {
+    color: var(--copper-dark);
+    border-left-color: var(--copper);
+    text-decoration: none;
+  }
+
+  .persona-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .design-brief-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sitemap-branches {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

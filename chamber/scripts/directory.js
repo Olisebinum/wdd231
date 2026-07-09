@@ -44,9 +44,12 @@ const renderMembers = (members) => {
         card.classList.add("member-card");
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="260" height="140">
-            <div class="member-card-body">
+            <div class="member-card-header">
                 <h3>${member.name}</h3>
+                <p class="tagline">${member.category}</p>
+            </div>
+            <img src="images/${member.image}" alt="${member.name}" loading="lazy" width="260" height="140">
+            <div class="member-card-body">
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
                 <p><a href="${member.url}" target="_blank" rel="noopener">${member.url.replace(/^https?:\/\//, "")}</a></p>
