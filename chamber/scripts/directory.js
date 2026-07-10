@@ -45,8 +45,11 @@ const renderMembers = (members) => {
 
         card.innerHTML = `
             <div class="member-card-header">
-                <h3>${member.name}</h3>
-                <p class="tagline">${member.category}</p>
+                <div class="member-card-heading">
+                    <h3>${member.name}</h3>
+                    <span class="category-chip">${member.category}</span>
+                </div>
+                <p class="tagline">${member.tagline}</p>
             </div>
             <img src="images/${member.image}" alt="${member.name}" loading="lazy" width="260" height="140">
             <div class="member-card-body">

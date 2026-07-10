@@ -3,6 +3,7 @@
     {
       "name": "Zaria Textiles & Fashion House",
       "category": "Retail",
+      "tagline": "Vibrant Fabrics, Timeless Style",
       "address": "Plot 14 Aminu Kano Crescent, Wuse II, Abuja",
       "phone": "+234 803 555 0112",
       "url": "https://zariatextiles.example.com",
@@ -13,6 +14,7 @@
     {
       "name": "Capital Logistics Nigeria",
       "category": "Logistics",
+      "tagline": "Delivering Abuja, On Time",
       "address": "12 Ademola Adetokunbo Crescent, Wuse II, Abuja",
       "phone": "+234 802 555 0198",
       "url": "https://capitallogisticsng.example.com",
@@ -23,6 +25,7 @@
     {
       "name": "Gwarinpa Bakehouse",
       "category": "Food & Beverage",
+      "tagline": "Fresh Baked, Daily Made",
       "address": "45 Third Avenue, Gwarinpa, Abuja",
       "phone": "+234 807 555 0143",
       "url": "https://gwarinpabakehouse.example.com",
@@ -33,6 +36,7 @@
     {
       "name": "Maitama Tech Solutions",
       "category": "Technology",
+      "tagline": "Smart Solutions for Growing Businesses",
       "address": "8 Yedseram Street, Maitama, Abuja",
       "phone": "+234 809 555 0176",
       "url": "https://maitamatech.example.com",
@@ -43,6 +47,7 @@
     {
       "name": "Utako Real Estate Partners",
       "category": "Real Estate",
+      "tagline": "Building Homes, Building Futures",
       "address": "22 Gwandu Street, Utako, Abuja",
       "phone": "+234 806 555 0165",
       "url": "https://utakorealestate.example.com",
@@ -53,6 +58,7 @@
     {
       "name": "Nkechi's Beauty Lounge",
       "category": "Personal Care",
+      "tagline": "Look Good, Feel Beautiful",
       "address": "5 Faskari Street, Area 2, Garki, Abuja",
       "phone": "+234 810 555 0129",
       "url": "https://nkechisbeauty.example.com",
@@ -63,6 +69,7 @@
     {
       "name": "Asokoro Financial Advisory",
       "category": "Finance",
+      "tagline": "Your Trusted Financial Partner",
       "address": "31 Yakubu Gowon Crescent, Asokoro, Abuja",
       "phone": "+234 805 555 0187",
       "url": "https://asokorofinancial.example.com",
@@ -73,6 +80,7 @@
     {
       "name": "Nyanya Auto Care",
       "category": "Automotive",
+      "tagline": "Keeping Abuja Moving",
       "address": "17 Karshi Road, Nyanya, Abuja",
       "phone": "+234 813 555 0154",
       "url": "https://nyanyaautocare.example.com",
@@ -83,6 +91,7 @@
     {
       "name": "Kubwa Learning Centre",
       "category": "Education",
+      "tagline": "Empowering Minds, One Lesson at a Time",
       "address": "9 Gado Nasko Road, Kubwa, Abuja",
       "phone": "+234 814 555 0168",
       "url": "https://kubwalearningcentre.example.com",
@@ -92,4 +101,3 @@
     }
   ]
 }
-
