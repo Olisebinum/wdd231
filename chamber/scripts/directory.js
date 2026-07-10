@@ -134,3 +134,11 @@ document.querySelector("#currentyear").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
 getMemberData();
+
+directory.classList.add("grid-view");
+
+gridBtn.classList.add("active");
+listBtn.classList.remove("active");
+
+gridBtn.setAttribute("aria-pressed", "true");
+listBtn.setAttribute("aria-pressed", "false");

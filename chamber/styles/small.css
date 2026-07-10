@@ -337,58 +337,78 @@ main {
   object-fit: cover;
 }
 
-.directory.list-view .member-card {
-  flex-direction: row;
-  align-items: center;
+/* =========================
+   LIST VIEW (Rubric Compliant)
+   ========================= */
+
+.directory.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
+.directory.list-view .member-card {
+    display: block;
+    background: var(--surface);
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Hide images in list view */
 .directory.list-view .member-card img {
-  order: 1;
-  width: 72px;
-  height: 72px;
-  flex-shrink: 0;
-  margin: 0.6rem;
-  border-radius: calc(var(--radius) - 2px);
+    display: none;
+}
+
+/* Hide tagline */
+.directory.list-view .tagline {
+    display: none;
+}
+
+/* Hide footer (badge + details link) */
+.directory.list-view .member-card-footer {
+    display: none;
 }
 
 .directory.list-view .member-card-header {
-  order: 2;
-  border-bottom: none;
-  border-right: 1px solid var(--border);
-  padding: 0.6rem 1rem;
-  min-width: 200px;
-  flex-shrink: 0;
+    border: none;
+    padding: 0;
+    margin-bottom: .5rem;
 }
 
 .directory.list-view .member-card-heading {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.3rem;
+    display: block;
+}
+
+.directory.list-view .member-card-header h3 {
+    margin-bottom: .35rem;
+    font-size: 1.1rem;
+}
+
+.directory.list-view .category-chip {
+    display: inline-block;
+    margin-bottom: .5rem;
 }
 
 .directory.list-view .member-card-body {
-  order: 3;
-  flex: 1;
-  padding: 0.6rem 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1.25rem;
+    padding: 0;
 }
 
 .directory.list-view .member-card-body p {
-  margin: 0;
-  white-space: nowrap;
+    margin: .25rem 0;
+    color: var(--text-secondary);
 }
 
-.directory.list-view .member-card-footer {
-  order: 4;
-  flex-shrink: 0;
-  justify-content: flex-start;
-  gap: 0.75rem;
-  border-top: none;
-  border-left: 1px solid var(--border);
-  padding: 0.6rem 1rem;
+.directory.list-view .member-card-body a {
+    word-break: break-word;
 }
+
+.directory.list-view .tagline{
+    display:none;
+}
+
 
 .member-card-body {
   padding: 0.85rem 1rem;
