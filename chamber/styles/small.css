@@ -20,8 +20,8 @@
   --text-on-navy: #FFFFFF;
 
   /* Membership badges */
-  --gold: #B8860B;
-  --silver: #7C7C7C;
+  --gold: #7A5C00;
+  --silver: #6E6E6E;
   --member: var(--navy);
 
   --radius: 8px;
