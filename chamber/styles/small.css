@@ -277,9 +277,6 @@ main {
   grid-template-columns: 1fr;
 }
 
-.directory.list-view {
-  grid-template-columns: 1fr;
-}
 
 /* Member card */
 
@@ -403,10 +400,6 @@ main {
 
 .directory.list-view .member-card-body a {
     word-break: break-word;
-}
-
-.directory.list-view .tagline{
-    display:none;
 }
 
 
