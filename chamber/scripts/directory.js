@@ -46,7 +46,7 @@ const renderMembers = (members) => {
         card.innerHTML = `
             <div class="member-card-header">
                 <div class="member-card-heading">
-                    <h3>${member.name}</h3>
+                    <h2>${member.name}</h2>
                     <span class="category-chip">${member.category}</span>
                 </div>
                 <p class="tagline">${member.tagline}</p>
@@ -128,6 +128,25 @@ themeToggle.addEventListener("click", () => {
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
     document.documentElement.setAttribute("data-theme", isDark ? "light" : "dark");
 });
+
+/* ===== Sticky header scroll effect ===== */
+const siteHeader = document.querySelector("header");
+let scrollTicking = false;
+
+function updateHeaderState() {
+    siteHeader.classList.toggle("scrolled", window.scrollY > 40);
+    scrollTicking = false;
+}
+
+function handleHeaderScroll() {
+    if (!scrollTicking) {
+        requestAnimationFrame(updateHeaderState);
+        scrollTicking = true;
+    }
+}
+
+window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+updateHeaderState();
 
 /* ===== Footer: copyright year + last modified ===== */
 document.querySelector("#currentyear").textContent = new Date().getFullYear();

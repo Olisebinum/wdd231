@@ -7,11 +7,15 @@
 
   header {
     flex-wrap: nowrap;
-    padding: 0.85rem 2rem;
+    padding: 1.1rem 2.5rem;
+  }
+
+  header.scrolled {
+    padding: 0.75rem 2.5rem;
   }
 
   .site-name {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .hamburger {
@@ -21,20 +25,76 @@
   nav {
     display: flex !important;
     flex-direction: row;
+    align-items: center;
     width: auto;
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
     background-color: transparent;
+    backdrop-filter: none;
+    border-radius: 0;
     order: 2;
+    gap: 0.5rem;
   }
 
   nav a {
+    position: relative;
     border-top: none;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.1rem;
+    min-height: auto;
+  }
+
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.15rem;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-gold-light);
+    transition: width 0.3s ease, left 0.3s ease;
   }
 
   nav a:hover,
-  nav a:focus {
+  nav a:focus-visible {
     background-color: transparent;
-    color: var(--copper-light);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  nav a:hover::after,
+  nav a:focus-visible::after {
+    width: calc(100% - 2.2rem);
+    left: 1.1rem;
+  }
+
+  nav a.current::after {
+    width: calc(100% - 2.2rem);
+    left: 1.1rem;
+  }
+
+  /* Join link styled as a distinct CTA button */
+  nav a[href="join.html"] {
+    background-color: var(--accent-gold);
+    color: var(--navy);
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 0.55rem 1.3rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+
+  nav a[href="join.html"]:hover,
+  nav a[href="join.html"]:focus-visible {
+    background-color: var(--accent-gold-light);
+    color: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+  }
+
+  nav a[href="join.html"]::after {
+    display: none;
   }
 
   #theme-toggle {
@@ -75,15 +135,109 @@
     grid-template-columns: 1fr;
   }
 
+  /* Hero */
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    padding: 2rem 4rem;
+  }
+
+  /* Home grid: events + weather, balanced dashboard columns */
+
+  .home-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .card-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Spotlights: multi-column */
+
+  .spotlights {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  /* Stats: 4 across */
+
+  .stats-section {
+    padding: 3.5rem 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .stat-card {
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0 1rem;
+  }
+
+  .stat-card:last-child {
+    border-right: none;
+  }
+
+  .stat-number {
+    font-size: 2.6rem;
+  }
+
+  /* Categories */
+
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Benefits */
+
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* News */
+
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Testimonials */
+
+  .testimonials-section {
+    padding: 4rem 2rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* CTA banner */
+
+  .cta-banner {
+    padding: 3.5rem 2rem;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+
   footer {
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     padding: 2rem;
   }
 
   .footer-social {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abuja Chamber of Commerce - connecting and supporting local businesses across Abuja, Nigeria.">
+    <meta name="author" content="Olise Ebinum">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#13284A">
+    <title>Home | Abuja Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="https://olisebinum.github.io/wdd231/chamber/index.html">
+
+    <!-- Preload the hero photo since it's the Largest Contentful Paint element -->
+    <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
+
+    <!-- Preconnect to external services this page actually fetches from -->
+    <link rel="preconnect" href="https://api.openweathermap.org">
+    <link rel="preconnect" href="https://openweathermap.org">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home | Abuja Chamber of Commerce">
+    <meta property="og:description" content="Abuja Chamber of Commerce - connecting and supporting local businesses across Abuja, Nigeria.">
+    <meta property="og:image" content="https://olisebinum.github.io/wdd231/chamber/images/chamber-social.webp">
+    <meta property="og:url" content="https://olisebinum.github.io/wdd231/chamber/index.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home | Abuja Chamber of Commerce">
+    <meta name="twitter:description" content="Abuja Chamber of Commerce - connecting and supporting local businesses across Abuja, Nigeria.">
+    <meta name="twitter:image" content="https://olisebinum.github.io/wdd231/chamber/images/chamber-social.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/regular.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="branding">
+            <img src="images/logo.svg" alt="Abuja Chamber of Commerce logo" class="logo" width="38" height="38">
+            <span class="site-name">Abuja Chamber of Commerce</span>
+        </div>
+
+        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <a href="index.html" class="current" aria-current="page">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="events.html">Events</a>
+            <a href="join.html">Join</a>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark and light mode" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main id="main-content">
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-eyebrow">Empowering Abuja Businesses</span>
+                <h1>Growing Business in Abuja, Together</h1>
+                <p>Connecting local companies with the resources, network, and visibility they need to thrive.</p>
+                <div class="hero-ctas">
+                    <a href="join.html" class="cta-button">Join the Chamber</a>
+                    <a href="directory.html" class="cta-button secondary">Discover Members</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span class="chevron"></span>
+            </div>
+        </section>
+
+        <section class="stats-section reveal">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+                    <p class="stat-number">240+</p>
+                    <p class="stat-label">Member Businesses</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+                    <p class="stat-number">18</p>
+                    <p class="stat-label">Years Serving Abuja</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                    <p class="stat-number">60+</p>
+                    <p class="stat-label">Events Per Year</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                    <p class="stat-number">₦2.1B</p>
+                    <p class="stat-label">Member Revenue Supported</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-header reveal">
+            <span class="section-kicker">Stay Informed</span>
+            <h2>Events &amp; Weather</h2>
+            <p>Stay informed with upcoming Chamber activities and current weather conditions.</p>
+        </section>
+
+        <section class="home-grid">
+
+            <section class="events-section card-section" aria-labelledby="events-heading">
+                <h2 id="events-heading" class="card-heading">Current Events</h2>
+                <ul class="events-list">
+                    <li class="event-card">
+                        <div class="event-date-badge">
+                            <span class="event-month">JUL</span>
+                            <span class="event-day">22</span>
+                        </div>
+                        <div class="event-body">
+                            <span class="event-tag">Networking</span>
+                            <h3>Abuja Business Networking Breakfast</h3>
+                            <p class="event-desc">Meet fellow members and exchange ideas over breakfast at the Chamber offices.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8:00 AM</span>
+                                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Central Business District</span>
+                            </div>
+                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about Abuja Business Networking Breakfast</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <div class="event-body">
+                            <span class="event-tag">Workshop</span>
+                            <h3>Small Business Growth Workshop</h3>
+                            <p class="event-desc">A half-day workshop on financing, marketing, and scaling for small and medium enterprises.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10:00 AM</span>
+                                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Chamber Training Hall</span>
+                            </div>
+                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about the Small Business Growth Workshop</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </li>
+                    <li class="event-card">
+                        <div class="event-date-badge">
+                            <span class="event-month">AUG</span>
+                            <span class="event-day">19</span>
+                        </div>
+                        <div class="event-body">
+                            <span class="event-tag">Mixer</span>
+                            <h3>Chamber Quarterly Mixer</h3>
+                            <p class="event-desc">Join members old and new for an evening of connection at Utako Real Estate Partners' event hall.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6:00 PM</span>
+                                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Utako, Abuja</span>
+                            </div>
+                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about the Chamber Quarterly Mixer</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="weather-section card-section" aria-labelledby="weather-heading">
+                <h2 id="weather-heading" class="card-heading">Abuja Weather</h2>
+
+                <!-- Skeleton loading state, hidden once data loads -->
+                <div id="weather-skeleton" class="weather-skeleton" aria-hidden="true">
+                    <div class="skeleton-row">
+                        <div class="skeleton-circle"></div>
+                        <div class="skeleton-lines">
+                            <div class="skeleton-line skeleton-line-lg"></div>
+                            <div class="skeleton-line skeleton-line-sm"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-grid">
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                    </div>
+                </div>
+
+                <div id="weather-content" class="weather-content" hidden>
+                    <div class="weather-current">
+                        <img id="weather-icon" src="" alt="" class="weather-icon" width="64" height="64">
+                        <div>
+                            <p id="current-temp" class="current-temp"></p>
+                            <p id="current-desc" class="current-desc"></p>
+                            <p class="weather-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Abuja, Nigeria</p>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="weather-detail">
+                            <i class="fa-solid fa-temperature-half" aria-hidden="true"></i>
+                            <div>
+                                <p class="detail-label">Feels Like</p>
+                                <p id="weather-feelslike" class="detail-value"></p>
+                            </div>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+                            <div>
+                                <p class="detail-label">Humidity</p>
+                                <p id="weather-humidity" class="detail-value"></p>
+                            </div>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fa-solid fa-wind" aria-hidden="true"></i>
+                            <div>
+                                <p class="detail-label">Wind Speed</p>
+                                <p id="weather-wind" class="detail-value"></p>
+                            </div>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+                            <div>
+                                <p class="detail-label">Pressure</p>
+                                <p id="weather-pressure" class="detail-value"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="forecast" class="forecast">
+                        <!-- 3-day forecast rendered by home.js -->
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+
+        <section class="spotlights-section reveal">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights" class="spotlights">
+                <!-- Spotlight cards rendered by home.js -->
+            </div>
+        </section>
+
+        <section class="categories-section reveal">
+            <div class="section-heading">
+                <span class="section-kicker">Explore</span>
+                <h2>Business Categories</h2>
+                <p>Discover members across every corner of Abuja's economy.</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fa-solid fa-shirt" aria-hidden="true"></i>
+                    <h3>Retail</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                    <h3>Logistics</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fa-solid fa-bread-slice" aria-hidden="true"></i>
+                    <h3>Food &amp; Beverage</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                    <h3>Technology</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fa-solid fa-building" aria-hidden="true"></i>
+                    <h3>Real Estate</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fa-solid fa-spa" aria-hidden="true"></i>
+                    <h3>Personal Care</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fa-solid fa-sack-dollar" aria-hidden="true"></i>
+                    <h3>Finance</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    <h3>Education</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section reveal">
+            <div class="section-heading">
+                <span class="section-kicker">Why Join</span>
+                <h2>Benefits of Chamber Membership</h2>
+                <p>Real support to help your business grow, connect, and thrive.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                    <h3>Networking</h3>
+                    <p>Connect with hundreds of local business owners at regular mixers, workshops, and events.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
+                    <h3>Visibility</h3>
+                    <p>Get listed in our business directory and featured in member spotlights across our channels.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+                    <h3>Advocacy</h3>
+                    <p>We represent member interests with local government on policy affecting Abuja businesses.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                    <h3>Growth Resources</h3>
+                    <p>Access workshops, financing guidance, and mentorship to help scale your business.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+                    <h3>Trusted Referrals</h3>
+                    <p>Members frequently refer business to each other, building a strong local trade network.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
+                    <h3>Credibility</h3>
+                    <p>Chamber membership signals trust and legitimacy to customers and partners alike.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section reveal">
+            <div class="section-heading">
+                <span class="section-kicker">Stay Informed</span>
+                <h2>Latest News &amp; Announcements</h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <p class="news-date">July 8, 2026</p>
+                    <h3>Chamber Welcomes 12 New Members This Quarter</h3>
+                    <p>Our membership continues to grow across retail, technology, and logistics sectors.</p>
+                </div>
+                <div class="news-card">
+                    <p class="news-date">June 28, 2026</p>
+                    <h3>Applications Open for Small Business Grant Program</h3>
+                    <p>Eligible member businesses can now apply for the FCT small business growth grant.</p>
+                </div>
+                <div class="news-card">
+                    <p class="news-date">June 15, 2026</p>
+                    <h3>Chamber Partners with Local Banks on SME Financing</h3>
+                    <p>New partnership aims to simplify access to credit for growing member businesses.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section reveal">
+            <div class="section-heading">
+                <span class="section-kicker">Member Voices</span>
+                <h2>What Our Members Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                    <p class="testimonial-quote">Joining the Chamber connected us with partners we never would have found on our own. Our client base has grown steadily since.</p>
+                    <p class="testimonial-author">Adaeze Nwosu</p>
+                    <p class="testimonial-role">Founder, Maitama Tech Solutions</p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                    <p class="testimonial-quote">The networking events alone are worth the membership. We've built real, lasting business relationships here.</p>
+                    <p class="testimonial-author">Chidi Okafor</p>
+                    <p class="testimonial-role">Owner, Capital Logistics Nigeria</p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                    <p class="testimonial-quote">Being featured as a spotlight member brought in new customers within the first week. Highly recommend joining.</p>
+                    <p class="testimonial-author">Fatima Bello</p>
+                    <p class="testimonial-role">Director, Asokoro Financial Advisory</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner reveal">
+            <h2>Ready to Grow Your Business in Abuja?</h2>
+            <p>Join a network of trusted local businesses and unlock resources built to help you succeed.</p>
+            <a href="join.html" class="cta-button">Join the Chamber Today</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p class="footer-title">Abuja Chamber of Commerce</p>
+            <p>Central Business District, Abuja, Nigeria</p>
+            <p>info@abujachamber.org</p>
+            <p>+234 800 555 1234</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
+                <img src="images/twitter.png" alt="Follow us on X" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <img src="images/linkedin.png" alt="Follow us on LinkedIn" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener" aria-label="YouTube channel">
+                <img src="images/youtube.png" alt="Follow us on YouTube" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook page">
+                <img src="images/facebook.png" alt="Follow us on Facebook" aria-hidden="true" width="34" height="34">
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p>WDD 231 Class Project</p>
+            <p>Olise Ebinum</p>
+            <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+</html>
