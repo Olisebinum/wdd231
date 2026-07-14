@@ -91,25 +91,38 @@
             </div>
         </section>
 
-        <section class="stats-section reveal">
+        <section class="stats-section reveal" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="visually-hidden">Chamber Statistics</h2>
+
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-building" aria-hidden="true"></i>
+                    </div>
                     <p class="stat-number">240+</p>
                     <p class="stat-label">Member Businesses</p>
                 </div>
+
                 <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+                    </div>
                     <p class="stat-number">18</p>
                     <p class="stat-label">Years Serving Abuja</p>
                 </div>
+
                 <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                    </div>
                     <p class="stat-number">60+</p>
                     <p class="stat-label">Events Per Year</p>
                 </div>
+
                 <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                    </div>
                     <p class="stat-number">₦2.1B</p>
                     <p class="stat-label">Member Revenue Supported</p>
                 </div>
@@ -122,7 +135,7 @@
             <p>Stay informed with upcoming Chamber activities and current weather conditions.</p>
         </section>
 
-        <section class="home-grid">
+        <div class="home-grid">
 
             <section class="events-section card-section" aria-labelledby="events-heading">
                 <h2 id="events-heading" class="card-heading">Current Events</h2>
@@ -141,6 +154,13 @@
                                 <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Central Business District</span>
                             </div>
                             <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about Abuja Business Networking Breakfast</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </li>
+                    <li class="event-card">
+                        <div class="event-date-badge">
+                            <span class="event-month">JUL</span>
+                            <span class="event-day">25</span>
+                        </div>
                         <div class="event-body">
                             <span class="event-tag">Workshop</span>
                             <h3>Small Business Growth Workshop</h3>
@@ -193,7 +213,7 @@
 
                 <div id="weather-content" class="weather-content" hidden>
                     <div class="weather-current">
-                        <img id="weather-icon" src="" alt="" class="weather-icon" width="64" height="64">
+                        <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Weather condition icon" class="weather-icon" width="64" height="64">
                         <div>
                             <p id="current-temp" class="current-temp"></p>
                             <p id="current-desc" class="current-desc"></p>
@@ -238,8 +258,7 @@
                 </div>
             </section>
 
-        </section>
-
+        </div>
 
         <section class="spotlights-section reveal">
             <h2>Member Spotlights</h2>
