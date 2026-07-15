@@ -73,7 +73,8 @@ body {
 
 /* =========================================
    CONTRAST FIXES — Defensive color inheritance
-   Fixes violations 1, 2, 8: Ensure main content text is always dark on light bg
+   Fixes violations 1, 2, 8: Ensure main content 
+   text is always dark on light bg
    ========================================= */
 main h1,
 main h2,
@@ -593,6 +594,8 @@ main {
   display: flex;
   align-items: center;
 
+  /* CONTRAST FIX: explicit dark bg for audit tool */
+  background-color: #13284A;
   background-image:
     linear-gradient(100deg, rgba(8, 16, 32, 0.94) 0%, rgba(8, 16, 32, 0.78) 38%, rgba(8, 16, 32, 0.35) 68%, rgba(8, 16, 32, 0.08) 100%),
     linear-gradient(0deg, rgba(8, 16, 32, 0.55) 0%, rgba(8, 16, 32, 0) 30%),
@@ -864,14 +867,10 @@ main {
   min-width: 0;
 }
 
-/* =========================================
-   CONTRAST FIX — Violation #4
-   Event tag: darkened text from #8F5427 to #5A2E0F
-   Ratio: 9.99:1 on #F6EEE7 (was 1.53:1) ✅
-   ========================================= */
 .event-tag {
   display: inline-block;
   background-color: #F6EEE7;
+  /* CONTRAST FIX — Violation #4: darkened from #8F5427 to #5A2E0F */
   color: #5A2E0F;
   font-size: 0.68rem;
   font-weight: 700;
@@ -1482,12 +1481,8 @@ main {
   margin: 0 auto;
 }
 
-/* =========================================
-   CONTRAST FIX — Violations #5, #6, #7
-   Ensured solid dark background on testimonial cards
-   White text on #2C466C = 9.55:1 (was 1.00:1) ✅
-   ========================================= */
 .testimonials-section .testimonial-card {
+  /* CONTRAST FIX — Violations #5, #6, #7: explicit solid dark bg */
   background-color: #2C466C;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
@@ -1509,14 +1504,10 @@ main {
   margin: 0 0 1rem;
 }
 
-/* =========================================
-   CONTRAST FIX — Violation #6
-   Ensured solid white for author name
-   #FFFFFF on #2C466C = 9.55:1 ✅
-   ========================================= */
 .testimonial-author {
   font-weight: 600;
   font-size: 0.9rem;
+  /* CONTRAST FIX — Violation #6: explicit solid white */
   color: #FFFFFF;
   margin: 0;
 }
@@ -1532,6 +1523,8 @@ main {
    ========================= */
 
 .cta-banner {
+  /* CONTRAST FIX: explicit dark bg for audit tool */
+  background-color: var(--navy);
   background: linear-gradient(120deg, var(--navy) 0%, var(--navy-light) 100%);
   border-radius: var(--radius-lg);
   padding: 2.5rem 1.5rem;
