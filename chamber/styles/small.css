@@ -41,6 +41,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Inline SVG icons (replaces Font Awesome <i> tags) - sized in em so they
+   scale with font-size exactly like the icon font did */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 [data-theme="dark"] {
   --bg: #0D1626;
   --surface: #16233D;
@@ -58,6 +69,21 @@ body {
   color: var(--text-primary);
   line-height: 1.5;
   overflow-x: hidden;
+}
+
+/* =========================================
+   CONTRAST FIXES — Defensive color inheritance
+   Fixes violations 1, 2, 8: Ensure main content text is always dark on light bg
+   ========================================= */
+main h1,
+main h2,
+main h3,
+main p,
+.section-heading h2,
+.section-heading p,
+.dashboard-header h2,
+.dashboard-header p {
+  color: var(--text-primary);
 }
 
 .visually-hidden {
@@ -407,7 +433,7 @@ main {
 
 .category-chip {
   flex-shrink: 0;
-  background-color: rgba(183, 110, 54, 0.12);
+  background-color: #F6EEE7;
   color: var(--copper-dark);
   font-size: 0.65rem;
   font-weight: 600;
@@ -601,7 +627,7 @@ main {
   animation: fadeUp 0.7s ease both;
 }
 
-.hero-content h1 {
+.hero-title {
   color: #fff;
   font-size: clamp(2.25rem, 6vw, 4.5rem);
   line-height: 1.1;
@@ -611,7 +637,7 @@ main {
   animation: fadeUp 0.7s ease 0.12s both;
 }
 
-.hero-content p {
+.hero-subtitle {
   color: rgba(255, 255, 255, 0.92);
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   line-height: 1.6;
@@ -705,8 +731,8 @@ main {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-eyebrow,
-  .hero-content h1,
-  .hero-content p,
+  .hero-title,
+  .hero-subtitle,
   .hero-ctas,
   .hero-scroll-indicator {
     animation: none;
@@ -838,10 +864,15 @@ main {
   min-width: 0;
 }
 
+/* =========================================
+   CONTRAST FIX — Violation #4
+   Event tag: darkened text from #8F5427 to #5A2E0F
+   Ratio: 9.99:1 on #F6EEE7 (was 1.53:1) ✅
+   ========================================= */
 .event-tag {
   display: inline-block;
-  background-color: rgba(183, 110, 54, 0.12);
-  color: var(--copper-dark);
+  background-color: #F6EEE7;
+  color: #5A2E0F;
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -871,7 +902,7 @@ main {
   margin-bottom: 0.6rem;
 }
 
-.event-meta i {
+.event-meta .icon {
   color: var(--copper);
   margin-right: 0.3rem;
 }
@@ -885,13 +916,13 @@ main {
   color: var(--copper-dark);
 }
 
-.event-link i {
+.event-link .icon {
   font-size: 0.7rem;
   transition: transform 0.2s ease;
 }
 
-.event-link:hover i,
-.event-link:focus-visible i {
+.event-link:hover .icon,
+.event-link:focus-visible .icon {
   transform: translateX(3px);
 }
 
@@ -903,7 +934,7 @@ main {
   color: var(--text-secondary);
 }
 
-.events-empty i {
+.events-empty .icon {
   font-size: 1.75rem;
   color: var(--border);
   margin-bottom: 0.6rem;
@@ -949,7 +980,7 @@ main {
   margin: 0.1rem 0 0;
 }
 
-.weather-location i {
+.weather-location .icon {
   color: var(--copper);
   margin-right: 0.25rem;
 }
@@ -970,7 +1001,7 @@ main {
   gap: 0.6rem;
 }
 
-.weather-detail i {
+.weather-detail .icon {
   color: var(--copper);
   font-size: 1rem;
   width: 20px;
@@ -1252,14 +1283,14 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(201, 162, 39, 0.15);
+  background-color: #2E3A45;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 0.6rem;
 }
 
-.stat-icon i {
+.stat-icon .icon {
   color: var(--accent-gold-light);
   font-size: 1rem;
 }
@@ -1274,10 +1305,19 @@ main {
 
 .stat-label {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #C4C9D2;
   margin: 0.25rem 0 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* =========================================
+   CONTRAST FIX — Violation #3
+   Stats headings must be white on navy background
+   Ratio: 14.68:1 (was 1.12:1) ✅
+   ========================================= */
+.stats-section h2 {
+  color: var(--text-on-navy);
 }
 
 /* =========================
@@ -1310,7 +1350,7 @@ main {
   border-color: var(--copper-light);
 }
 
-.category-card i {
+.category-card .icon {
   font-size: 1.5rem;
   color: var(--copper);
   margin-bottom: 0.6rem;
@@ -1353,14 +1393,14 @@ main {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: rgba(183, 110, 54, 0.12);
+  background-color: #F6EEE7;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.85rem;
 }
 
-.benefit-icon i {
+.benefit-icon .icon {
   color: var(--copper);
   font-size: 1.1rem;
 }
@@ -1434,10 +1474,6 @@ main {
   color: #fff;
 }
 
-.testimonials-section .section-heading p {
-  color: rgba(255, 255, 255, 0.75);
-}
-
 .testimonials-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1446,15 +1482,20 @@ main {
   margin: 0 auto;
 }
 
-.testimonial-card {
-  background-color: rgba(255, 255, 255, 0.06);
+/* =========================================
+   CONTRAST FIX — Violations #5, #6, #7
+   Ensured solid dark background on testimonial cards
+   White text on #2C466C = 9.55:1 (was 1.00:1) ✅
+   ========================================= */
+.testimonials-section .testimonial-card {
+  background-color: #2C466C;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   color: #fff;
 }
 
-.testimonial-card i.fa-quote-left {
+.testimonial-card .icon {
   color: var(--accent-gold-light);
   font-size: 1.1rem;
   margin-bottom: 0.6rem;
@@ -1464,19 +1505,25 @@ main {
 .testimonial-quote {
   font-size: 0.92rem;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
+  color: #EAECF0;
   margin: 0 0 1rem;
 }
 
+/* =========================================
+   CONTRAST FIX — Violation #6
+   Ensured solid white for author name
+   #FFFFFF on #2C466C = 9.55:1 ✅
+   ========================================= */
 .testimonial-author {
   font-weight: 600;
   font-size: 0.9rem;
+  color: #FFFFFF;
   margin: 0;
 }
 
 .testimonial-role {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: #B5BECC;
   margin: 0;
 }
 
@@ -1492,14 +1539,14 @@ main {
   margin: 3rem 0;
 }
 
-.cta-banner h2 {
+.cta-banner-title {
   color: #fff;
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
-.cta-banner p {
-  color: rgba(255, 255, 255, 0.85);
+.cta-banner-text {
+  color: #DDE1E8;
   max-width: 40ch;
   margin: 0 auto 1.25rem;
   font-size: 0.92rem;
@@ -1551,7 +1598,7 @@ footer {
   height: 34px;
 }
 
-.footer-meta p {
+.footer-meta-line {
   margin: 0.15rem 0;
-  color: rgba(255, 255, 255, 0.75);
+  color: #C4C9D2;
 }

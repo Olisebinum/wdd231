@@ -18,7 +18,6 @@
     <!-- Preconnect to external services this page actually fetches from -->
     <link rel="preconnect" href="https://api.openweathermap.org">
     <link rel="preconnect" href="https://openweathermap.org">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -40,9 +39,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/regular.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Icons are inline SVG (extracted from real Font Awesome source) - no external icon font needed -->
 
     <script src="scripts/home.js" defer></script>
 </head>
@@ -79,8 +76,8 @@
         <section class="hero">
             <div class="hero-content">
                 <span class="hero-eyebrow">Empowering Abuja Businesses</span>
-                <h1>Growing Business in Abuja, Together</h1>
-                <p>Connecting local companies with the resources, network, and visibility they need to thrive.</p>
+                <h1 class="hero-title">Growing Business in Abuja, Together</h1>
+                <p class="hero-subtitle">Connecting local companies with the resources, network, and visibility they need to thrive.</p>
                 <div class="hero-ctas">
                     <a href="join.html" class="cta-button">Join the Chamber</a>
                     <a href="directory.html" class="cta-button secondary">Discover Members</a>
@@ -91,38 +88,25 @@
             </div>
         </section>
 
-        <section class="stats-section reveal" aria-labelledby="stats-heading">
-            <h2 id="stats-heading" class="visually-hidden">Chamber Statistics</h2>
-
+        <section class="stats-section reveal">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-building" aria-hidden="true"></i>
-                    </div>
+                    <div class="stat-icon"><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L64 0zM176 352l32 0c17.7 0 32 14.3 32 32l0 80-96 0 0-80c0-17.7 14.3-32 32-32zM96 112c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM240 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM96 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm144-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg></div>
                     <p class="stat-number">240+</p>
                     <p class="stat-label">Member Businesses</p>
                 </div>
-
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-                    </div>
+                    <div class="stat-icon"><svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M320 0c17.7 0 32 14.3 32 32l0 32 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32zm22 161.7c-10.7-7.8-25.7-5.4-33.5 5.3L189.1 331.2 137 279.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.9 7.5 18.8 7s13.4-4.1 17.5-9.8L347.3 195.2c7.8-10.7 5.4-25.7-5.3-33.5z"/></svg></div>
                     <p class="stat-number">18</p>
                     <p class="stat-label">Years Serving Abuja</p>
                 </div>
-
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-                    </div>
+                    <div class="stat-icon"><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M256 0a64 64 0 1 1 0 128 64 64 0 1 1 0-128zm96 312c0 25-12.7 47-32 59.9l0 92.1c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-92.1C172.7 359 160 337 160 312l0-40c0-53 43-96 96-96s96 43 96 96l0 40zM96 32a56 56 0 1 1 0 112 56 56 0 1 1 0-112zm16 240l0 32c0 32.5 12.1 62.1 32 84.7l0 75.3c0 1.2 0 2.5 .1 3.7-8.5 7.6-19.7 12.3-32.1 12.3l-32 0c-26.5 0-48-21.5-48-48l0-56.6C12.9 364.4 0 343.7 0 320l0-32c0-53 43-96 96-96 12.7 0 24.8 2.5 35.9 6.9-12.6 21.4-19.9 46.4-19.9 73.1zM368 464l0-75.3c19.9-22.5 32-52.2 32-84.7l0-32c0-26.7-7.3-51.6-19.9-73.1 11.1-4.5 23.2-6.9 35.9-6.9 53 0 96 43 96 96l0 32c0 23.7-12.9 44.4-32 55.4l0 56.6c0 26.5-21.5 48-48 48l-32 0c-12.3 0-23.6-4.6-32.1-12.3 0-1.2 .1-2.5 .1-3.7zM416 32a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/></svg></div>
                     <p class="stat-number">60+</p>
                     <p class="stat-label">Events Per Year</p>
                 </div>
-
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                    </div>
+                    <div class="stat-icon"><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64L0 400c0 44.2 35.8 80 80 80l400 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 416c-8.8 0-16-7.2-16-16L64 64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7 262.6 153.4c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l73.4-73.4 57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg></div>
                     <p class="stat-number">₦2.1B</p>
                     <p class="stat-label">Member Revenue Supported</p>
                 </div>
@@ -135,7 +119,7 @@
             <p>Stay informed with upcoming Chamber activities and current weather conditions.</p>
         </section>
 
-        <div class="home-grid">
+        <section class="home-grid">
 
             <section class="events-section card-section" aria-labelledby="events-heading">
                 <h2 id="events-heading" class="card-heading">Current Events</h2>
@@ -150,26 +134,19 @@
                             <h3>Abuja Business Networking Breakfast</h3>
                             <p class="event-desc">Meet fellow members and exchange ideas over breakfast at the Chamber offices.</p>
                             <div class="event-meta">
-                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8:00 AM</span>
-                                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Central Business District</span>
+                                <span><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M464 256a208 208 0 1 1 -416 0 208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg> 8:00 AM</span>
+                                <span><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Central Business District</span>
                             </div>
-                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about Abuja Business Networking Breakfast</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </li>
-                    <li class="event-card">
-                        <div class="event-date-badge">
-                            <span class="event-month">JUL</span>
-                            <span class="event-day">25</span>
-                        </div>
+                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about Abuja Business Networking Breakfast</span> <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
                         <div class="event-body">
                             <span class="event-tag">Workshop</span>
                             <h3>Small Business Growth Workshop</h3>
                             <p class="event-desc">A half-day workshop on financing, marketing, and scaling for small and medium enterprises.</p>
                             <div class="event-meta">
-                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10:00 AM</span>
-                                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Chamber Training Hall</span>
+                                <span><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M464 256a208 208 0 1 1 -416 0 208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg> 10:00 AM</span>
+                                <span><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Chamber Training Hall</span>
                             </div>
-                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about the Small Business Growth Workshop</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about the Small Business Growth Workshop</span> <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
                         </div>
                     </li>
                     <li class="event-card">
@@ -182,10 +159,10 @@
                             <h3>Chamber Quarterly Mixer</h3>
                             <p class="event-desc">Join members old and new for an evening of connection at Utako Real Estate Partners' event hall.</p>
                             <div class="event-meta">
-                                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6:00 PM</span>
-                                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Utako, Abuja</span>
+                                <span><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M464 256a208 208 0 1 1 -416 0 208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg> 6:00 PM</span>
+                                <span><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Utako, Abuja</span>
                             </div>
-                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about the Chamber Quarterly Mixer</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about the Chamber Quarterly Mixer</span> <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
                         </div>
                     </li>
                 </ul>
@@ -213,38 +190,38 @@
 
                 <div id="weather-content" class="weather-content" hidden>
                     <div class="weather-current">
-                        <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Weather condition icon" class="weather-icon" width="64" height="64">
+                        <img id="weather-icon" src="" alt="" class="weather-icon" width="64" height="64">
                         <div>
                             <p id="current-temp" class="current-temp"></p>
                             <p id="current-desc" class="current-desc"></p>
-                            <p class="weather-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Abuja, Nigeria</p>
+                            <p class="weather-location"><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Abuja, Nigeria</p>
                         </div>
                     </div>
 
                     <div class="weather-details">
                         <div class="weather-detail">
-                            <i class="fa-solid fa-temperature-half" aria-hidden="true"></i>
+                            <svg viewBox="0 0 320 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M160 0C107 0 64 43 64 96l0 164.7C34.5 287 16 325.4 16 368 16 447.5 80.5 512 160 512s144-64.5 144-144c0-42.6-18.5-81-48-107.3L256 96c0-53-43-96-96-96zm64 368c0 35.3-28.7 64-64 64s-64-28.7-64-64c0-26.9 16.5-49.9 40-59.3l0-92.7c0-13.3 10.7-24 24-24s24 10.7 24 24l0 92.7c23.5 9.5 40 32.5 40 59.3z"/></svg>
                             <div>
                                 <p class="detail-label">Feels Like</p>
                                 <p id="weather-feelslike" class="detail-value"></p>
                             </div>
                         </div>
                         <div class="weather-detail">
-                            <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+                            <svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M192 512C86 512 0 426 0 320 0 228.8 130.2 45.9 166.6-3.5 172.5-11.5 181.8-16 191.8-16l.4 0c10 0 19.3 4.5 25.2 12.5 36.4 49.4 166.6 232.3 166.6 323.5 0 106-86 192-192 192zM112 312c0-13.3-10.7-24-24-24s-24 10.7-24 24c0 75.1 60.9 136 136 136 13.3 0 24-10.7 24-24s-10.7-24-24-24c-48.6 0-88-39.4-88-88z"/></svg>
                             <div>
                                 <p class="detail-label">Humidity</p>
                                 <p id="weather-humidity" class="detail-value"></p>
                             </div>
                         </div>
                         <div class="weather-detail">
-                            <i class="fa-solid fa-wind" aria-hidden="true"></i>
+                            <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M288 32c0 17.7 14.3 32 32 32l40 0c13.3 0 24 10.7 24 24s-10.7 24-24 24L32 112c-17.7 0-32 14.3-32 32s14.3 32 32 32l328 0c48.6 0 88-39.4 88-88S408.6 0 360 0L320 0c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32l32 0c53 0 96-43 96-96s-43-96-96-96L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0c-17.7 0-32 14.3-32 32zM128 512l40 0c48.6 0 88-39.4 88-88s-39.4-88-88-88L32 336c-17.7 0-32 14.3-32 32s14.3 32 32 32l136 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-40 0c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/></svg>
                             <div>
                                 <p class="detail-label">Wind Speed</p>
                                 <p id="weather-wind" class="detail-value"></p>
                             </div>
                         </div>
                         <div class="weather-detail">
-                            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+                            <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM256 416c35.3 0 64-28.7 64-64 0-16.2-6-31.1-16-42.3l69.5-138.9c5.9-11.9 1.1-26.3-10.7-32.2s-26.3-1.1-32.2 10.7L261.1 288.2c-1.7-.1-3.4-.2-5.1-.2-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm352-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
                             <div>
                                 <p class="detail-label">Pressure</p>
                                 <p id="weather-pressure" class="detail-value"></p>
@@ -258,7 +235,8 @@
                 </div>
             </section>
 
-        </div>
+        </section>
+
 
         <section class="spotlights-section reveal">
             <h2>Member Spotlights</h2>
@@ -275,35 +253,35 @@
             </div>
             <div class="categories-grid">
                 <div class="category-card">
-                    <i class="fa-solid fa-shirt" aria-hidden="true"></i>
+                    <svg viewBox="0 0 640 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M320.2 112c44.2 0 80-35.8 80-80l53.5 0c17 0 33.3 6.7 45.3 18.7L617.6 169.4c12.5 12.5 12.5 32.8 0 45.3l-50.7 50.7c-12.5 12.5-32.8 12.5-45.3 0l-41.4-41.4 0 224c0 35.3-28.7 64-64 64l-192 0c-35.3 0-64-28.7-64-64l0-224-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0L22.9 214.6c-12.5-12.5-12.5-32.8 0-45.3L141.5 50.7c12-12 28.3-18.7 45.3-18.7l53.5 0c0 44.2 35.8 80 80 80z"/></svg>
                     <h3>Retail</h3>
                 </div>
                 <div class="category-card">
-                    <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                    <svg viewBox="0 0 576 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 96C0 60.7 28.7 32 64 32l288 0c35.3 0 64 28.7 64 64l0 32 50.7 0c17 0 33.3 6.7 45.3 18.7L557.3 192c12 12 18.7 28.3 18.7 45.3L576 384c0 35.3-28.7 64-64 64l-3.3 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-102.6 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64L64 448c-35.3 0-64-28.7-64-64L0 96zM512 288l0-50.7-45.3-45.3-50.7 0 0 96 96 0zM192 424a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm232 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
                     <h3>Logistics</h3>
                 </div>
                 <div class="category-card">
-                    <i class="fa-solid fa-bread-slice" aria-hidden="true"></i>
+                    <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 432l0-176c-35.3 0-64-28.7-64-64 0-216.5 512-216.5 512 0 0 35.3-28.7 64-64 64l0 176c0 26.5-21.5 48-48 48l-288 0c-26.5 0-48-21.5-48-48z"/></svg>
                     <h3>Food &amp; Beverage</h3>
                 </div>
                 <div class="category-card">
-                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                    <svg viewBox="0 0 640 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 240-64 0 0-240-384 0 0 240-64 0 0-240zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2 0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
                     <h3>Technology</h3>
                 </div>
                 <div class="category-card">
-                    <i class="fa-solid fa-building" aria-hidden="true"></i>
+                    <svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L64 0zM176 352l32 0c17.7 0 32 14.3 32 32l0 80-96 0 0-80c0-17.7 14.3-32 32-32zM96 112c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM240 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM96 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm144-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg>
                     <h3>Real Estate</h3>
                 </div>
                 <div class="category-card">
-                    <i class="fa-solid fa-spa" aria-hidden="true"></i>
+                    <svg viewBox="0 0 576 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M169.7 227.5c34.3 18.7 64.5 44.1 88.8 74.5 11.1 13.9 21 28.9 29.4 44.8 8.5-15.9 18.3-30.8 29.4-44.8 24.3-30.5 54.5-55.9 88.8-74.5 41.7-22.7 89.4-35.5 139.7-35.5l9.9 0c11.1 0 20.1 9 20.1 20.1 0 148-119.9 267.9-267.9 267.9l-40.2 0C119.9 480 0 360.1 0 212.1 0 201 9 192 20.1 192l9.9 0c50.4 0 98.1 12.8 139.7 35.5zM303.9 38c16.9 15.9 61.4 63.4 89 142.3-40.1 20.2-75.8 48.2-104.9 82.1-29.2-33.9-64.8-61.8-104.9-82.1 27.6-78.9 72.2-126.4 89-142.3 4.3-4.1 10-6 15.9-6s11.6 2 15.9 6z"/></svg>
                     <h3>Personal Care</h3>
                 </div>
                 <div class="category-card">
-                    <i class="fa-solid fa-sack-dollar" aria-hidden="true"></i>
+                    <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M328 112l-144 0-37.3-74.5c-1.8-3.6-2.7-7.6-2.7-11.6 0-14.3 11.6-25.9 25.9-25.9L342.1 0c14.3 0 25.9 11.6 25.9 25.9 0 4-.9 8-2.7 11.6L328 112zM169.6 160l172.8 0 48.7 40.6C457.6 256 496 338 496 424.5 496 472.8 456.8 512 408.5 512l-305.1 0C55.2 512 16 472.8 16 424.5 16 338 54.4 256 120.9 200.6L169.6 160zM260 224c-11 0-20 9-20 20l0 4c-28.8 .3-52 23.7-52 52.5 0 25.7 18.5 47.6 43.9 51.8l41.7 7c6 1 10.4 6.2 10.4 12.3 0 6.9-5.6 12.5-12.5 12.5L216 384c-11 0-20 9-20 20s9 20 20 20l24 0 0 4c0 11 9 20 20 20s20-9 20-20l0-4.7c25-4.1 44-25.7 44-51.8 0-25.7-18.5-47.6-43.9-51.8l-41.7-7c-6-1-10.4-6.2-10.4-12.3 0-6.9 5.6-12.5 12.5-12.5l47.5 0c11 0 20-9 20-20s-9-20-20-20l-8 0 0-4c0-11-9-20-20-20z"/></svg>
                     <h3>Finance</h3>
                 </div>
                 <div class="category-card">
-                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    <svg viewBox="0 0 576 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M48 195.8l209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1C309 34.1 298.6 32 288 32s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160L0 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-260.2zm48 71.7L96 384c0 53 86 96 192 96s192-43 192-96l0-116.6-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z"/></svg>
                     <h3>Education</h3>
                 </div>
             </div>
@@ -317,32 +295,32 @@
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                    <div class="benefit-icon"><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M256 0a64 64 0 1 1 0 128 64 64 0 1 1 0-128zm96 312c0 25-12.7 47-32 59.9l0 92.1c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-92.1C172.7 359 160 337 160 312l0-40c0-53 43-96 96-96s96 43 96 96l0 40zM96 32a56 56 0 1 1 0 112 56 56 0 1 1 0-112zm16 240l0 32c0 32.5 12.1 62.1 32 84.7l0 75.3c0 1.2 0 2.5 .1 3.7-8.5 7.6-19.7 12.3-32.1 12.3l-32 0c-26.5 0-48-21.5-48-48l0-56.6C12.9 364.4 0 343.7 0 320l0-32c0-53 43-96 96-96 12.7 0 24.8 2.5 35.9 6.9-12.6 21.4-19.9 46.4-19.9 73.1zM368 464l0-75.3c19.9-22.5 32-52.2 32-84.7l0-32c0-26.7-7.3-51.6-19.9-73.1 11.1-4.5 23.2-6.9 35.9-6.9 53 0 96 43 96 96l0 32c0 23.7-12.9 44.4-32 55.4l0 56.6c0 26.5-21.5 48-48 48l-32 0c-12.3 0-23.6-4.6-32.1-12.3 0-1.2 .1-2.5 .1-3.7zM416 32a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/></svg></div>
                     <h3>Networking</h3>
                     <p>Connect with hundreds of local business owners at regular mixers, workshops, and events.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
+                    <div class="benefit-icon"><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M461.2 18.9C472.7 24 480 35.4 480 48l0 416c0 12.6-7.3 24-18.8 29.1s-24.8 3.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63l0 95.7c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96C57.3 384 0 326.7 0 256S57.3 128 128 128l84.5 0c61.8-.2 121.4-22.7 167.9-63.3l46.6-40.7c9.4-8.3 22.9-10.2 34.3-5.1zM224 320l0 .2c70.3 2.7 137.8 28.5 192 73.4l0-275.3c-54.2 44.9-121.7 70.7-192 73.4L224 320z"/></svg></div>
                     <h3>Visibility</h3>
                     <p>Get listed in our business directory and featured in member spotlights across our channels.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+                    <div class="benefit-icon"><svg viewBox="0 0 640 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M384 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L398.4 96c-5.2 25.8-22.9 47.1-46.4 57.3l0 294.7 160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-384 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0 0-294.7c-23.5-10.3-41.2-31.6-46.4-57.3L128 96c-17.7 0-32-14.3-32-32s14.3-32 32-32l128 0c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288L584.4 320 512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9zM126.8 195.8L54.4 320 199.3 320 126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1-10.8 44.8-63.1 78.9-126 78.9S11.7 382 .9 337.1z"/></svg></div>
                     <h3>Advocacy</h3>
                     <p>We represent member interests with local government on policy affecting Abuja businesses.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                    <div class="benefit-icon"><svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64L0 400c0 44.2 35.8 80 80 80l400 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 416c-8.8 0-16-7.2-16-16L64 64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7 262.6 153.4c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l73.4-73.4 57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg></div>
                     <h3>Growth Resources</h3>
                     <p>Access workshops, financing guidance, and mentorship to help scale your business.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+                    <div class="benefit-icon"><svg viewBox="0 0 576 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M268.9 85.2L152.3 214.8c-4.6 5.1-4.4 13 .5 17.9 30.5 30.5 80 30.5 110.5 0l31.8-31.8c4.2-4.2 9.5-6.5 14.9-6.9 6.8-.6 13.8 1.7 19 6.9L505.6 376 576 320 576 32 464 96 440.2 80.1C424.4 69.6 405.9 64 386.9 64l-70.4 0c-1.1 0-2.3 0-3.4 .1-16.9 .9-32.8 8.5-44.2 21.1zM116.6 182.7L223.4 64 183.8 64c-25.5 0-49.9 10.1-67.9 28.1L112 96 0 32 0 320 156.4 450.3c23 19.2 52 29.7 81.9 29.7l15.7 0-7-7c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l41 41 9 0c19.1 0 37.8-4.3 54.8-12.3L359 441c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l32 32 17.5-17.5c8.9-8.9 11.5-21.8 7.6-33.1l-137.9-136.8-14.9 14.9c-49.3 49.3-129.1 49.3-178.4 0-23-23-23.9-59.9-2.2-84z"/></svg></div>
                     <h3>Trusted Referrals</h3>
                     <p>Members frequently refer business to each other, building a strong local trade network.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
+                    <div class="benefit-icon"><svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M245.9-25.9c-13.4-8.2-30.3-8.2-43.7 0-24.4 14.9-39.5 18.9-68.1 18.3-15.7-.4-30.3 8.1-37.9 21.9-13.7 25.1-24.8 36.2-49.9 49.9-13.8 7.5-22.2 22.2-21.9 37.9 .7 28.6-3.4 43.7-18.3 68.1-8.2 13.4-8.2 30.3 0 43.7 14.9 24.4 18.9 39.5 18.3 68.1-.4 15.7 8.1 30.3 21.9 37.9 22.1 12.1 33.3 22.1 45.1 41.5L42.7 458.5c-5.9 11.9-1.1 26.3 10.7 32.2l86 43c11.5 5.7 25.5 1.4 31.7-9.8l52.8-95.1 52.8 95.1c6.2 11.2 20.2 15.6 31.7 9.8l86-43c11.9-5.9 16.7-20.3 10.7-32.2l-48.6-97.2c11.7-19.4 23-29.4 45.1-41.5 13.8-7.5 22.2-22.2 21.9-37.9-.7-28.6 3.4-43.7 18.3-68.1 8.2-13.4 8.2-30.3 0-43.7-14.9-24.4-18.9-39.5-18.3-68.1 .4-15.7-8.1-30.3-21.9-37.9-25.1-13.7-36.2-24.8-49.9-49.9-7.5-13.8-22.2-22.2-37.9-21.9-28.6 .7-43.7-3.4-68.1-18.3zM224 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg></div>
                     <h3>Credibility</h3>
                     <p>Chamber membership signals trust and legitimacy to customers and partners alike.</p>
                 </div>
@@ -380,19 +358,19 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                    <svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 216zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-136z"/></svg>
                     <p class="testimonial-quote">Joining the Chamber connected us with partners we never would have found on our own. Our client base has grown steadily since.</p>
                     <p class="testimonial-author">Adaeze Nwosu</p>
                     <p class="testimonial-role">Founder, Maitama Tech Solutions</p>
                 </div>
                 <div class="testimonial-card">
-                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                    <svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 216zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-136z"/></svg>
                     <p class="testimonial-quote">The networking events alone are worth the membership. We've built real, lasting business relationships here.</p>
                     <p class="testimonial-author">Chidi Okafor</p>
                     <p class="testimonial-role">Owner, Capital Logistics Nigeria</p>
                 </div>
                 <div class="testimonial-card">
-                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                    <svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 216zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-136z"/></svg>
                     <p class="testimonial-quote">Being featured as a spotlight member brought in new customers within the first week. Highly recommend joining.</p>
                     <p class="testimonial-author">Fatima Bello</p>
                     <p class="testimonial-role">Director, Asokoro Financial Advisory</p>
@@ -401,8 +379,8 @@
         </section>
 
         <section class="cta-banner reveal">
-            <h2>Ready to Grow Your Business in Abuja?</h2>
-            <p>Join a network of trusted local businesses and unlock resources built to help you succeed.</p>
+            <h2 class="cta-banner-title">Ready to Grow Your Business in Abuja?</h2>
+            <p class="cta-banner-text">Join a network of trusted local businesses and unlock resources built to help you succeed.</p>
             <a href="join.html" class="cta-button">Join the Chamber Today</a>
         </section>
 
@@ -432,10 +410,10 @@
         </div>
 
         <div class="footer-meta">
-            <p>WDD 231 Class Project</p>
-            <p>Olise Ebinum</p>
-            <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
-            <p id="lastModified"></p>
+            <p class="footer-meta-line">WDD 231 Class Project</p>
+            <p class="footer-meta-line">Olise Ebinum</p>
+            <p class="footer-meta-line">&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified" class="footer-meta-line"></p>
         </div>
     </footer>
 
