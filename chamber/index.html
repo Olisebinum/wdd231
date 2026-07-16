@@ -88,8 +88,7 @@
             </div>
         </section>
 
-        <!-- FIXED: Warning solved (Changed section to div since it has no heading) -->
-        <div class="stats-section reveal">
+        <section class="stats-section reveal">
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon"><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L64 0zM176 352l32 0c17.7 0 32 14.3 32 32l0 80-96 0 0-80c0-17.7 14.3-32 32-32zM96 112c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM240 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM96 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm144-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg></div>
@@ -112,7 +111,7 @@
                     <p class="stat-label">Member Revenue Supported</p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <section class="dashboard-header reveal">
             <span class="section-kicker">Stay Informed</span>
@@ -120,8 +119,7 @@
             <p>Stay informed with upcoming Chamber activities and current weather conditions.</p>
         </section>
 
-        <!-- FIXED: Warning solved (Changed layout section grid wrapper to a div element) -->
-        <div class="home-grid">
+        <section class="home-grid">
 
             <section class="events-section card-section" aria-labelledby="events-heading">
                 <h2 id="events-heading" class="card-heading">Current Events</h2>
@@ -131,7 +129,6 @@
                             <span class="event-month">JUL</span>
                             <span class="event-day">22</span>
                         </div>
-                        <!-- FIXED: Closing tags correctly nested, errors cleared here -->
                         <div class="event-body">
                             <span class="event-tag">Networking</span>
                             <h3>Abuja Business Networking Breakfast</h3>
@@ -141,13 +138,6 @@
                                 <span><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Central Business District</span>
                             </div>
                             <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about Abuja Business Networking Breakfast</span> <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
-                        </div>
-                    </li>
-                    <li class="event-card">
-                        <div class="event-date-badge">
-                            <span class="event-month">JUL</span>
-                            <span class="event-day">22</span>
-                        </div>
                         <div class="event-body">
                             <span class="event-tag">Workshop</span>
                             <h3>Small Business Growth Workshop</h3>
@@ -200,8 +190,7 @@
 
                 <div id="weather-content" class="weather-content" hidden>
                     <div class="weather-current">
-                        <!-- FIXED: Non-empty valid transparent inline placeholder prevents empty src validation errors -->
-                        <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Current Weather Icon" class="weather-icon" width="64" height="64">
+                        <img id="weather-icon" src="" alt="" class="weather-icon" width="64" height="64">
                         <div>
                             <p id="current-temp" class="current-temp"></p>
                             <p id="current-desc" class="current-desc"></p>
@@ -246,7 +235,7 @@
                 </div>
             </section>
 
-        </div>
+        </section>
 
 
         <section class="spotlights-section reveal">
@@ -268,7 +257,7 @@
                     <h3>Retail</h3>
                 </div>
                 <div class="category-card">
-                    <svg viewBox="0 0 576 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 96C0 60.7 28.7 32 64 32l288 0c35.3 0 64 28.7 64 64l0 32 50.7 0c17 0 33.3 6.7 45.3 18.7L557.3 192c12 12 18.7 28.3 18.7 45.3L576 384c0 35.3-28.7 64-64 64l-3.3 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-102.6 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64L64 448c-35.3 0-64-28.7-64-64l0-288zM512 288l0-50.7-45.3-45.3-50.7 0 0 96 96 0zM192 424a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm232 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+                    <svg viewBox="0 0 576 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 96C0 60.7 28.7 32 64 32l288 0c35.3 0 64 28.7 64 64l0 32 50.7 0c17 0 33.3 6.7 45.3 18.7L557.3 192c12 12 18.7 28.3 18.7 45.3L576 384c0 35.3-28.7 64-64 64l-3.3 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-102.6 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64L64 448c-35.3 0-64-28.7-64-64L0 96zM512 288l0-50.7-45.3-45.3-50.7 0 0 96 96 0zM192 424a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm232 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
                     <h3>Logistics</h3>
                 </div>
                 <div class="category-card">
@@ -338,32 +327,93 @@
             </div>
         </section>
 
-        <!-- FIXED: Completed the news-section, main content, and footer structure -->
         <section class="news-section reveal">
             <div class="section-heading">
                 <span class="section-kicker">Stay Informed</span>
                 <h2>Latest News &amp; Announcements</h2>
             </div>
             <div class="news-grid">
-                <article class="news-card">
-                    <h3>Chamber Launches Annual Trade Fair</h3>
-                    <p>The Abuja Chamber of Commerce is excited to announce the scheduling of our flagship regional trade expo this coming autumn.</p>
-                    <a href="#" class="read-more">Read Article</a>
-                </article>
-                <article class="news-card">
-                    <h3>Empowering Youth in Tech Initiatives</h3>
-                    <p>Collaborating with local tech hubs to seed junior development roles and vocational pathways across the Federal Capital Territory.</p>
-                    <a href="#" class="read-more">Read Article</a>
-                </article>
+                <div class="news-card">
+                    <p class="news-date">July 8, 2026</p>
+                    <h3>Chamber Welcomes 12 New Members This Quarter</h3>
+                    <p>Our membership continues to grow across retail, technology, and logistics sectors.</p>
+                </div>
+                <div class="news-card">
+                    <p class="news-date">June 28, 2026</p>
+                    <h3>Applications Open for Small Business Grant Program</h3>
+                    <p>Eligible member businesses can now apply for the FCT small business growth grant.</p>
+                </div>
+                <div class="news-card">
+                    <p class="news-date">June 15, 2026</p>
+                    <h3>Chamber Partners with Local Banks on SME Financing</h3>
+                    <p>New partnership aims to simplify access to credit for growing member businesses.</p>
+                </div>
             </div>
+        </section>
+
+        <section class="testimonials-section reveal">
+            <div class="section-heading">
+                <span class="section-kicker">Member Voices</span>
+                <h2>What Our Members Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 216zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-136z"/></svg>
+                    <p class="testimonial-quote">Joining the Chamber connected us with partners we never would have found on our own. Our client base has grown steadily since.</p>
+                    <p class="testimonial-author">Adaeze Nwosu</p>
+                    <p class="testimonial-role">Founder, Maitama Tech Solutions</p>
+                </div>
+                <div class="testimonial-card">
+                    <svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 216zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-136z"/></svg>
+                    <p class="testimonial-quote">The networking events alone are worth the membership. We've built real, lasting business relationships here.</p>
+                    <p class="testimonial-author">Chidi Okafor</p>
+                    <p class="testimonial-role">Owner, Capital Logistics Nigeria</p>
+                </div>
+                <div class="testimonial-card">
+                    <svg viewBox="0 0 448 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64L0 216zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-136z"/></svg>
+                    <p class="testimonial-quote">Being featured as a spotlight member brought in new customers within the first week. Highly recommend joining.</p>
+                    <p class="testimonial-author">Fatima Bello</p>
+                    <p class="testimonial-role">Director, Asokoro Financial Advisory</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner reveal">
+            <h2 class="cta-banner-title">Ready to Grow Your Business in Abuja?</h2>
+            <p class="cta-banner-text">Join a network of trusted local businesses and unlock resources built to help you succeed.</p>
+            <a href="join.html" class="cta-button">Join the Chamber Today</a>
         </section>
 
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Abuja Chamber of Commerce. All rights reserved.</p>
-            <p>Designed by Olise Ebinum | WDD231 Coursework</p>
+        <div class="footer-contact">
+            <p class="footer-title">Abuja Chamber of Commerce</p>
+            <p>Central Business District, Abuja, Nigeria</p>
+            <p>info@abujachamber.org</p>
+            <p>+234 800 555 1234</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
+                <img src="images/twitter.png" alt="Follow us on X" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <img src="images/linkedin.png" alt="Follow us on LinkedIn" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener" aria-label="YouTube channel">
+                <img src="images/youtube.png" alt="Follow us on YouTube" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook page">
+                <img src="images/facebook.png" alt="Follow us on Facebook" aria-hidden="true" width="34" height="34">
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p class="footer-meta-line">WDD 231 Class Project</p>
+            <p class="footer-meta-line">Olise Ebinum</p>
+            <p class="footer-meta-line">&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified" class="footer-meta-line"></p>
         </div>
     </footer>
 
