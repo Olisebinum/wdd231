@@ -88,8 +88,12 @@
             </div>
         </section>
 
-        <section class="stats-section reveal">
-            <div class="stats-grid">
+<section class="stats-section reveal" aria-labelledby="stats-heading">
+    <h2 id="stats-heading" class="visually-hidden">
+        Chamber Statistics
+    </h2>
+
+    <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon"><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L64 0zM176 352l32 0c17.7 0 32 14.3 32 32l0 80-96 0 0-80c0-17.7 14.3-32 32-32zM96 112c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM240 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zM96 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm144-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg></div>
                     <p class="stat-number">240+</p>
@@ -119,7 +123,7 @@
             <p>Stay informed with upcoming Chamber activities and current weather conditions.</p>
         </section>
 
-        <section class="home-grid">
+        <div class="home-grid">
 
             <section class="events-section card-section" aria-labelledby="events-heading">
                 <h2 id="events-heading" class="card-heading">Current Events</h2>
@@ -138,6 +142,13 @@
                                 <span><svg viewBox="0 0 384 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg> Central Business District</span>
                             </div>
                             <a href="events.html" class="event-link">Read More<span class="visually-hidden"> about Abuja Business Networking Breakfast</span> <svg viewBox="0 0 512 512" class="icon" aria-hidden="true"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+                        </div>
+                    </li>
+                    <li class="event-card">
+                        <div class="event-date-badge">
+                            <span class="event-month">JUL</span>
+                            <span class="event-day">29</span>
+                        </div>
                         <div class="event-body">
                             <span class="event-tag">Workshop</span>
                             <h3>Small Business Growth Workshop</h3>
@@ -190,7 +201,7 @@
 
                 <div id="weather-content" class="weather-content" hidden>
                     <div class="weather-current">
-                        <img id="weather-icon" src="" alt="" class="weather-icon" width="64" height="64">
+                        <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ycQOw==" alt="" class="weather-icon" width="64" height="64">
                         <div>
                             <p id="current-temp" class="current-temp"></p>
                             <p id="current-desc" class="current-desc"></p>
@@ -235,7 +246,7 @@
                 </div>
             </section>
 
-        </section>
+        </div>
 
 
         <section class="spotlights-section reveal">
