@@ -54,6 +54,40 @@ const courses = [
 const courseContainer = document.querySelector('#course-cards');
 const creditTotal = document.querySelector('#creditTotal');
 const filterButtons = document.querySelectorAll('.filter-buttons button');
+const courseModal = document.querySelector('#course-details');
+
+function displayCourseDetails(course) {
+  courseModal.innerHTML = `
+    <button id="closeModal" aria-label="Close course details">&times;</button>
+    <h3>${course.subject} ${course.number} &mdash; ${course.title}</h3>
+    <p><strong>Credits:</strong> ${course.credits}</p>
+    <p><strong>Certificate:</strong> ${course.certificate}</p>
+    <p><strong>Description:</strong> ${course.description}</p>
+    <p><strong>Technology:</strong> ${course.technology.join(', ')}</p>
+    <p><strong>Status:</strong> ${course.completed ? 'Completed' : 'In Progress'}</p>
+  `;
+
+  courseModal.showModal();
+
+  const closeButton = courseModal.querySelector('#closeModal');
+  closeButton.addEventListener('click', () => {
+    courseModal.close();
+  });
+}
+
+// Close the modal when clicking outside of it (on the backdrop)
+courseModal.addEventListener('click', (event) => {
+  const dialogRect = courseModal.getBoundingClientRect();
+  const clickedInsideDialog =
+    event.clientX >= dialogRect.left &&
+    event.clientX <= dialogRect.right &&
+    event.clientY >= dialogRect.top &&
+    event.clientY <= dialogRect.bottom;
+
+  if (!clickedInsideDialog) {
+    courseModal.close();
+  }
+});
 
 function displayCourses(courseList) {
   courseContainer.innerHTML = '';
@@ -70,6 +104,10 @@ function displayCourses(courseList) {
       <p class="course-title">${course.title}</p>
       <p class="course-credits">${course.credits} credits</p>
     `;
+
+    card.addEventListener('click', () => {
+      displayCourseDetails(course);
+    });
 
     courseContainer.appendChild(card);
   });
