@@ -1,0 +1,264 @@
+/* =========================================================
+   Abuja Chamber of Commerce — join.css
+   Styles used ONLY on join.html (form, membership cards, modals)
+   ========================================================= */
+
+.join-hero {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+
+.join-hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.join-hero-sub {
+  color: var(--text-secondary);
+}
+
+.join-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ---------- Form ---------- */
+
+.join-form {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+.form-group input:invalid:not(:placeholder-shown) {
+  border-color: #B3261E;
+}
+
+.membership-fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.membership-fieldset legend {
+  font-weight: 600;
+  padding: 0 0.4rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.radio-note {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.join-form .cta-button {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  background-color: var(--copper-dark);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.join-form .cta-button:hover,
+.join-form .cta-button:focus-visible {
+  background-color: var(--navy);
+  transform: translateY(-2px);
+}
+
+/* ---------- Membership cards ---------- */
+
+.membership-cards-heading {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.membership-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(14px);
+  animation: cardIn 0.5s ease forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.membership-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.membership-price {
+  color: var(--copper-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5rem;
+}
+
+.card-link {
+  border: 1px solid var(--copper);
+  background: none;
+  color: var(--copper-dark);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  background-color: var(--copper);
+  color: #fff;
+}
+
+/* ---------- Modals ---------- */
+
+.membership-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  background-color: var(--surface);
+  box-shadow: var(--shadow-lg);
+  width: 90%;
+  max-width: 420px;
+}
+
+.membership-modal::backdrop {
+  background-color: rgba(13, 26, 51, 0.6);
+}
+
+.membership-modal h2 {
+  font-size: 1.2rem;
+  padding-right: 2rem;
+}
+
+.membership-modal .plan-list {
+  padding-left: 1.1rem;
+  list-style: disc;
+  margin-top: 0.75rem;
+}
+
+.membership-modal .plan-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  background-color: var(--copper);
+  color: #fff;
+}
+
+/* ---------- Wide-screen layout ---------- */
+
+@media only screen and (min-width: 48rem) {
+
+  .join-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .join-form {
+    flex: 2;
+  }
+
+  .membership-cards {
+    flex: 1;
+    grid-template-columns: 1fr;
+    position: sticky;
+    top: 6rem;
+  }
+}

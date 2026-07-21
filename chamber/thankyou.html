@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for applying to join the Abuja Chamber of Commerce.">
+    <meta name="author" content="Olise Ebinum">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#13284A">
+    <title>Thank You | Abuja Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="branding">
+            <img src="images/logo.svg" alt="Abuja Chamber of Commerce logo" class="logo" width="38" height="38">
+            <span class="site-name">Abuja Chamber of Commerce</span>
+        </div>
+
+        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="events.html">Events</a>
+            <a href="join.html" class="current" aria-current="page">Join</a>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark and light mode" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main id="main-content">
+
+        <section class="join-hero">
+            <span class="section-kicker">Application Received</span>
+            <h1>Thank You for Applying</h1>
+            <p class="join-hero-sub">We've received your membership application and will be in touch soon.</p>
+        </section>
+
+        <section class="join-form" style="max-width: 480px; margin: 0 auto;">
+            <h2>Your Submission</h2>
+            <dl id="submission-summary"></dl>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p class="footer-title">Abuja Chamber of Commerce</p>
+            <p>Central Business District, Abuja, Nigeria</p>
+            <p>info@abujachamber.org</p>
+            <p>+234 800 555 1234</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
+                <img src="images/twitter.png" alt="Follow us on X" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <img src="images/linkedin.png" alt="Follow us on LinkedIn" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener" aria-label="YouTube channel">
+                <img src="images/youtube.png" alt="Follow us on YouTube" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook page">
+                <img src="images/facebook.png" alt="Follow us on Facebook" aria-hidden="true" width="34" height="34">
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p class="footer-meta-line">WDD 231 Class Project</p>
+            <p class="footer-meta-line">Olise Ebinum</p>
+            <p class="footer-meta-line">&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified" class="footer-meta-line"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

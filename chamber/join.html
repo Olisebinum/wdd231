@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply to join the Abuja Chamber of Commerce and connect your business with a trusted local network.">
+    <meta name="author" content="Olise Ebinum">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#13284A">
+    <title>Join | Abuja Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="https://olisebinum.github.io/wdd231/chamber/join.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Join | Abuja Chamber of Commerce">
+    <meta property="og:description" content="Apply to join the Abuja Chamber of Commerce and connect your business with a trusted local network.">
+    <meta property="og:image" content="https://olisebinum.github.io/wdd231/chamber/images/chamber-social.webp">
+    <meta property="og:url" content="https://olisebinum.github.io/wdd231/chamber/join.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join | Abuja Chamber of Commerce">
+    <meta name="twitter:description" content="Apply to join the Abuja Chamber of Commerce and connect your business with a trusted local network.">
+    <meta name="twitter:image" content="https://olisebinum.github.io/wdd231/chamber/images/chamber-social.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="branding">
+            <img src="images/logo.svg" alt="Abuja Chamber of Commerce logo" class="logo" width="38" height="38">
+            <span class="site-name">Abuja Chamber of Commerce</span>
+        </div>
+
+        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="events.html">Events</a>
+            <a href="join.html" class="current" aria-current="page">Join</a>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle dark and light mode" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main id="main-content">
+
+        <section class="join-hero">
+            <span class="section-kicker">Become a Member</span>
+            <h1>Join the Abuja Chamber of Commerce</h1>
+            <p class="join-hero-sub">Fill out the application below to start growing your business with a trusted local network.</p>
+        </section>
+
+        <section class="join-layout">
+
+            <form class="join-form" method="get" action="thankyou.html">
+
+                <div class="form-group">
+                    <label for="first-name">First Name
+                        <input type="text" id="first-name" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name
+                        <input type="text" id="last-name" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="org-title">Organizational Title
+                        <input type="text" id="org-title" name="orgTitle" title="Enter your title within your organization (letters, hyphens, and spaces only, minimum 7 characters)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address
+                        <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="yourname@example.com" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile-phone">Mobile Phone Number
+                        <input type="tel" id="mobile-phone" name="mobilePhone" title="Enter your mobile phone number" autocomplete="tel" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="business-name">Business/Organization Name
+                        <input type="text" id="business-name" name="businessName" title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+                </div>
+
+                <fieldset class="membership-fieldset">
+                    <legend>Membership Level</legend>
+
+                    <label class="radio-label">
+                        <input type="radio" name="membershipLevel" value="np" title="Select NP Membership" autocomplete="off" checked>
+                        NP Membership <span class="radio-note">(no fee)</span>
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="membershipLevel" value="bronze" title="Select Bronze Membership" autocomplete="off">
+                        Bronze Membership
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="membershipLevel" value="silver" title="Select Silver Membership" autocomplete="off">
+                        Silver Membership
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="membershipLevel" value="gold" title="Select Gold Membership" autocomplete="off">
+                        Gold Membership
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="business-description">Business/Organization Description
+                        <textarea id="business-description" name="businessDescription" title="Briefly describe your business or organization" autocomplete="off" rows="4"></textarea>
+                    </label>
+                </div>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application" class="cta-button">
+
+            </form>
+
+            <div class="membership-cards">
+
+                <h2 class="membership-cards-heading">Membership Options</h2>
+
+                <div class="membership-card reveal-card" style="--delay: 0s">
+                    <h3>NP Membership</h3>
+                    <p class="membership-price">No Fee</p>
+                    <p>For registered non-profit organizations.</p>
+                    <button type="button" class="card-link" data-modal="modal-np">Learn More</button>
+                </div>
+
+                <div class="membership-card reveal-card" style="--delay: 0.1s">
+                    <h3>Bronze Membership</h3>
+                    <p class="membership-price">Entry Tier</p>
+                    <p>A solid starting point for new members.</p>
+                    <button type="button" class="card-link" data-modal="modal-bronze">Learn More</button>
+                </div>
+
+                <div class="membership-card reveal-card" style="--delay: 0.2s">
+                    <h3>Silver Membership</h3>
+                    <p class="membership-price">Mid Tier</p>
+                    <p>Greater visibility and added perks.</p>
+                    <button type="button" class="card-link" data-modal="modal-silver">Learn More</button>
+                </div>
+
+                <div class="membership-card reveal-card" style="--delay: 0.3s">
+                    <h3>Gold Membership</h3>
+                    <p class="membership-price">Top Tier</p>
+                    <p>Our most complete membership package.</p>
+                    <button type="button" class="card-link" data-modal="modal-gold">Learn More</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <dialog id="modal-np" class="membership-modal">
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+        <h2>NP Membership</h2>
+        <p class="membership-price">No Fee</p>
+        <ul class="plan-list">
+            <li>Directory listing with full contact details</li>
+            <li>Invitations to public networking events</li>
+            <li>Access to chamber newsletters and announcements</li>
+        </ul>
+    </dialog>
+
+    <dialog id="modal-bronze" class="membership-modal">
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+        <h2>Bronze Membership</h2>
+        <p class="membership-price">Entry Tier</p>
+        <ul class="plan-list">
+            <li>Everything in NP Membership</li>
+            <li>Enhanced directory listing with logo</li>
+            <li>One featured mention in a quarterly newsletter</li>
+            <li>10% discount on chamber event tickets</li>
+        </ul>
+    </dialog>
+
+    <dialog id="modal-silver" class="membership-modal">
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+        <h2>Silver Membership</h2>
+        <p class="membership-price">Mid Tier</p>
+        <ul class="plan-list">
+            <li>Everything in Bronze Membership</li>
+            <li>Priority placement in the member directory</li>
+            <li>Access to small business workshops and mentorship</li>
+            <li>25% discount on chamber event tickets</li>
+        </ul>
+    </dialog>
+
+    <dialog id="modal-gold" class="membership-modal">
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+        <h2>Gold Membership</h2>
+        <p class="membership-price">Top Tier</p>
+        <ul class="plan-list">
+            <li>Everything in Silver Membership</li>
+            <li>Featured homepage spotlight placement</li>
+            <li>VIP access to all networking events</li>
+            <li>Dedicated support from the chamber team</li>
+        </ul>
+    </dialog>
+
+    <footer>
+        <div class="footer-contact">
+            <p class="footer-title">Abuja Chamber of Commerce</p>
+            <p>Central Business District, Abuja, Nigeria</p>
+            <p>info@abujachamber.org</p>
+            <p>+234 800 555 1234</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
+                <img src="images/twitter.png" alt="Follow us on X" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <img src="images/linkedin.png" alt="Follow us on LinkedIn" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener" aria-label="YouTube channel">
+                <img src="images/youtube.png" alt="Follow us on YouTube" aria-hidden="true" width="34" height="34">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook page">
+                <img src="images/facebook.png" alt="Follow us on Facebook" aria-hidden="true" width="34" height="34">
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p class="footer-meta-line">WDD 231 Class Project</p>
+            <p class="footer-meta-line">Olise Ebinum</p>
+            <p class="footer-meta-line">&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified" class="footer-meta-line"></p>
+        </div>
+    </footer>
+
+</body>
+</html>
