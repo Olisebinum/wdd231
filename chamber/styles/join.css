@@ -137,8 +137,12 @@
   opacity: 0;
   transform: translateY(14px);
   animation: cardIn 0.5s ease forwards;
-  animation-delay: var(--delay, 0s);
 }
+
+.membership-card-1 { animation-delay: 0s; }
+.membership-card-2 { animation-delay: 0.1s; }
+.membership-card-3 { animation-delay: 0.2s; }
+.membership-card-4 { animation-delay: 0.3s; }
 
 @keyframes cardIn {
   to {
