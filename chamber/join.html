@@ -23,13 +23,14 @@
     <meta name="twitter:description" content="Apply to join the Abuja Chamber of Commerce and connect your business with a trusted local network.">
     <meta name="twitter:image" content="https://olisebinum.github.io/wdd231/chamber/images/chamber-social.webp">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap&font-display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/playfair-display-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/larger.css"></noscript>
     <link rel="stylesheet" href="styles/join.css">
 
     <script src="scripts/join.js" defer></script>
@@ -241,16 +242,16 @@
 
         <div class="footer-social">
             <a href="https://x.com/ebinumolise" target="_blank" rel="noopener" aria-label="X profile">
-                <img src="images/twitter.png" alt="Follow us on X" aria-hidden="true" width="34" height="34">
+                <img src="images/twitter.png" alt="Follow us on X" aria-hidden="true" width="34" height="34" loading="lazy">
             </a>
             <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener" aria-label="LinkedIn profile">
-                <img src="images/linkedin.png" alt="Follow us on LinkedIn" aria-hidden="true" width="34" height="34">
+                <img src="images/linkedin.png" alt="Follow us on LinkedIn" aria-hidden="true" width="34" height="34" loading="lazy">
             </a>
             <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener" aria-label="YouTube channel">
-                <img src="images/youtube.png" alt="Follow us on YouTube" aria-hidden="true" width="34" height="34">
+                <img src="images/youtube.png" alt="Follow us on YouTube" aria-hidden="true" width="34" height="34" loading="lazy">
             </a>
             <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook page">
-                <img src="images/facebook.png" alt="Follow us on Facebook" aria-hidden="true" width="34" height="34">
+                <img src="images/facebook.png" alt="Follow us on Facebook" aria-hidden="true" width="34" height="34" loading="lazy">
             </a>
         </div>
 
