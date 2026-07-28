@@ -1,0 +1,456 @@
+/* =========================================================
+   Career Compass — site-plan.css
+   Structured to match the numbered-section / TOC pattern used
+   on the Abuja Chamber of Commerce site-plan.html, adapted to
+   Career Compass's own palette and type system.
+
+   Sections in this file, in order:
+     1. Root tokens (self-contained — no shared stylesheet yet,
+        since Career Compass pages haven't been built out)
+     2. Hero banner
+     3. Page layout (sidebar + main content)
+     4. Numbered section headers
+     5. Persona cards
+     6. Design brief (color swatches + font samples)
+     7. Site map diagram
+     8. Wireframe placeholders
+     9. Wide-screen (desktop) overrides
+   ========================================================= */
+
+
+/* ---------- 1. Root tokens ---------- */
+
+:root {
+  --navy: #0f172a;
+  --navy-light: #1e2a47;
+  --sky: #3b82f6;
+  --sky-light: #93c5fd;
+  --emerald: #10b981;
+  --text-on-navy: #f8fafc;
+  --surface: #ffffff;
+  --bg: #f8fafc;
+  --border: #e2e8f0;
+  --border-strong: #94a3b8;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+
+/* ---------- 1b. Skip link ---------- */
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.5rem;
+  z-index: 100;
+  background-color: var(--navy);
+  color: var(--text-on-navy);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+
+/* ---------- 2. Hero banner ---------- */
+
+.plan-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e2a47 100%);
+  color: var(--text-on-navy);
+  text-align: center;
+  padding: 3rem 1.25rem 3.5rem;
+}
+
+.plan-hero-eyebrow {
+  color: var(--sky-light);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.plan-hero h1 {
+  font-family: var(--font-heading);
+  color: var(--text-on-navy);
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.plan-hero-sub {
+  max-width: 34rem;
+  margin: 0 auto;
+  color: rgba(248, 250, 252, 0.8);
+  font-size: 1rem;
+}
+
+
+/* ---------- 3. Page layout ---------- */
+
+.plan-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.plan-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-toc {
+  display: none; /* re-enabled at desktop width, section 9 */
+}
+
+
+/* ---------- 4. Numbered section headers ---------- */
+
+.plan-section {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 3.25rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.plan-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background-color: var(--navy);
+  color: var(--text-on-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.plan-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--navy);
+  margin-bottom: 0.85rem;
+}
+
+.plan-lead {
+  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  color: var(--sky);
+}
+
+.plan-list {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.plan-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+
+/* ---------- 5. Persona cards ---------- */
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.persona-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.persona-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.persona-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.persona-card h3 {
+  font-family: var(--font-heading);
+  margin: 0 0 0.1rem;
+  font-size: 1.05rem;
+}
+
+.persona-role {
+  color: var(--sky);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+
+/* ---------- 6. Design brief ---------- */
+
+.design-brief-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.swatch-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.swatch {
+  display: block;
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+.swatch-bordered { border: 1px solid var(--border); }
+
+.swatch-label { font-weight: 600; font-size: 0.85rem; margin: 0; }
+
+.swatch-hex {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0.15rem 0 0;
+}
+
+.swatch-usage {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  margin: 0.35rem 0 0;
+  line-height: 1.4;
+}
+
+.font-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6rem 1rem;
+  align-items: center;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.font-card + .font-card { margin-top: 0.75rem; }
+
+.font-sample-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--navy);
+}
+
+.font-sample-body {
+  font-family: var(--font-body);
+  font-size: 2rem;
+  margin: 0;
+  color: var(--navy);
+}
+
+.font-sample-mono {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--navy);
+}
+
+.font-name { margin: 0; font-weight: 600; }
+
+.font-usage { margin: 0; font-size: 0.8rem; color: var(--text-secondary); }
+
+
+/* ---------- 7. Site map diagram ---------- */
+
+.sitemap-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sitemap-root {
+  background-color: var(--navy);
+  color: var(--text-on-navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.sitemap-root::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 1.5rem;
+  background-color: var(--border-strong);
+}
+
+.sitemap-branches {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.sitemap-node {
+  background-color: var(--surface);
+  border: 1px solid var(--emerald);
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  border-radius: 8px;
+}
+
+
+/* ---------- 8. Wireframe placeholders ---------- */
+/* These stay as empty slots rather than simulated page content.
+   The Home page wireframe (small + large viewport) can be a
+   hand-drawn sketch (photographed/scanned) or built in a tool
+   like Balsamiq, Excalidraw, or Figma — either is acceptable as
+   long as it's black-and-white and focused on structure/layout,
+   not final design. This section only reproduces the Chamber
+   plan's visual container (caption + dashed box) as a slot to
+   drop that image into. */
+
+.wireframe-caption {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.wireframe-box {
+  background-color: var(--surface);
+  border: 1px dashed var(--sky);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.wireframe-mobile { max-width: 420px; min-height: 340px; margin-left: auto; margin-right: auto; }
+
+.wireframe-box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* ---------- 9. Wide-screen (desktop) overrides ---------- */
+
+@media only screen and (min-width: 48rem) {
+
+  .plan-hero h1 { font-size: 3rem; }
+
+  .plan-toc {
+    display: block;
+    position: sticky;
+    top: 1.5rem;
+    flex-shrink: 0;
+    width: 190px;
+    align-self: flex-start;
+  }
+
+  .plan-toc-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .plan-toc a {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    padding: 0.4rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+    text-decoration: none;
+  }
+
+  .plan-toc a:hover,
+  .plan-toc a:focus {
+    color: var(--sky);
+    border-left-color: var(--sky);
+  }
+
+  .persona-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .design-brief-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .sitemap-branches { grid-template-columns: repeat(3, 1fr); }
+
+  .wireframe-box { display: block; text-align: left; }
+}

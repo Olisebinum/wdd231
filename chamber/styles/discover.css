@@ -1,0 +1,448 @@
+/* =========================================
+   Abuja Chamber of Commerce — discover.css
+   Page-specific styles for discover.html only.
+   Shared tokens, header/nav/footer/theme rules
+   live in small.css and larger.css.
+
+   Design direction: "a field guide to the capital" —
+   full-bleed photographic hero (matching the homepage's
+   cinematic scrim treatment), magazine-style photo cards
+   with the title and category overlaid on the image, and
+   a functional category filter as the page's one
+   interactive signature moment.
+   ========================================= */
+
+/* ---------- Hero: full-bleed photo + scrim ---------- */
+
+.discover-hero {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -1.5rem;
+
+  background-color: #13284a;
+  background-image:
+    linear-gradient(180deg, rgba(8, 16, 32, 0.82) 0%, rgba(8, 16, 32, 0.68) 45%, rgba(8, 16, 32, 0.92) 100%),
+    url("../images/discover-hero.webp");
+  background-size: cover;
+  background-position: center 65%;
+  background-repeat: no-repeat;
+
+  padding: 3.5rem 1.25rem 2.25rem;
+}
+
+.discover-hero-inner {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.discover-hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-gold-light);
+  margin-bottom: 0.75rem;
+}
+
+.discover-hero h1 {
+  font-family: var(--font-heading);
+  color: var(--text-on-navy);
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin-bottom: 0.65rem;
+}
+
+.discover-hero-sub {
+  max-width: 30rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Last-visit message, populated by discover.js via localStorage */
+.visit-message {
+  display: inline-block;
+  margin: 1.1rem auto 0;
+  background-color: rgba(201, 162, 39, 0.16);
+  border: 1px solid var(--accent-gold);
+  color: var(--text-on-navy);
+  border-radius: var(--radius);
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* ---------- Category filter chips (the page's signature interaction) ---------- */
+
+.discover-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.filter-chip {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-on-navy);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.45rem 1.05rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--accent-gold-light);
+}
+
+.filter-chip:focus-visible {
+  outline: 2px solid var(--accent-gold-light);
+  outline-offset: 2px;
+}
+
+.filter-chip[aria-pressed="true"] {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #1f1706;
+}
+
+.results-count {
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---------- Card grid: layout 1 of 3 (mobile, single column) ---------- */
+
+.discover-grid {
+  display: grid;
+  gap: 1.1rem;
+  padding: 2.25rem 1.25rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+}
+
+.discover-card:nth-child(1) { grid-area: c1; }
+.discover-card:nth-child(2) { grid-area: c2; }
+.discover-card:nth-child(3) { grid-area: c3; }
+.discover-card:nth-child(4) { grid-area: c4; }
+.discover-card:nth-child(5) { grid-area: c5; }
+.discover-card:nth-child(6) { grid-area: c6; }
+.discover-card:nth-child(7) { grid-area: c7; }
+.discover-card:nth-child(8) { grid-area: c8; }
+
+.discover-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.discover-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s ease;
+}
+
+.discover-card.is-hidden {
+  display: none;
+}
+
+/* Photo + scrim + overlaid title/category — the magazine-card treatment */
+.discover-card-figure {
+  position: relative;
+  overflow: hidden;
+  height: 190px;
+  flex-shrink: 0;
+}
+
+.discover-card-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.discover-card-scrim {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.85rem 0.9rem;
+  background: linear-gradient(180deg, rgba(8, 16, 32, 0) 45%, rgba(8, 16, 32, 0.82) 100%);
+}
+
+.discover-card-scrim .category-chip {
+  align-self: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.discover-card-scrim h2 {
+  font-family: var(--font-heading);
+  color: #fff;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.discover-card-body {
+  padding: 0.95rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.discover-card-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.discover-card-address .icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: var(--copper);
+}
+
+.discover-card-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.learn-more-btn {
+  align-self: flex-start;
+  background-color: var(--copper);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus-visible {
+  background-color: var(--copper-dark);
+  transform: translateY(-1px);
+}
+
+/* Reused directory category-chip visual language, for site-wide consistency.
+   Color is fixed (not var(--copper-dark)) because the chip's cream background
+   stays the same in both themes — but --copper-dark itself is redefined to a
+   lighter shade in dark mode (to stay readable on dark surfaces elsewhere),
+   which would fail contrast against this always-light chip background. */
+.category-chip {
+  flex-shrink: 0;
+  background-color: #f6eee7;
+  color: #8f5427;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---------- Details modal ---------- */
+
+.discover-dialog {
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  max-width: 440px;
+  width: 90vw;
+  box-shadow: var(--shadow-lg);
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+.discover-dialog::backdrop {
+  background-color: rgba(5, 12, 26, 0.6);
+}
+
+.discover-dialog-figure {
+  position: relative;
+}
+
+.discover-dialog-figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-dialog-figure .category-chip {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+}
+
+.discover-dialog-body {
+  padding: 1.1rem 1.3rem 1.4rem;
+}
+
+.discover-dialog-body h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 0.3rem;
+}
+
+.discover-dialog-body .discover-card-address {
+  margin-bottom: 0.75rem;
+}
+
+.discover-dialog-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
+}
+
+.discover-dialog-actions a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--copper-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.discover-dialog-close {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  margin-left: auto;
+}
+
+.discover-dialog-close:hover,
+.discover-dialog-close:focus-visible {
+  border-color: var(--copper);
+  color: var(--copper-dark);
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .discover-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Wide-screen overrides: layouts 2 and 3 of 3 ---------- */
+
+/* Layout 2: tablet, 2-column bento with a featured lead card */
+@media only screen and (min-width: 37.5rem) {
+
+  .discover-hero {
+    padding: 4.5rem 1.5rem 3rem;
+  }
+
+  .discover-hero h1 {
+    font-size: 3rem;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c1"
+      "c2 c3"
+      "c4 c5"
+      "c6 c7"
+      "c8 c8";
+  }
+
+  .discover-card:nth-child(1) .discover-card-figure,
+  .discover-card:nth-child(8) .discover-card-figure {
+    height: 240px;
+  }
+
+  .discover-card:nth-child(1) .discover-card-scrim h2,
+  .discover-card:nth-child(8) .discover-card-scrim h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Hover effect applies in larger views only — not on mobile/touch */
+  .discover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .discover-card:hover .discover-card-figure img {
+    transform: scale(1.06);
+  }
+}
+
+/* Layout 3: desktop, 3-column magazine layout with a large lead card */
+@media only screen and (min-width: 64rem) {
+
+  .discover-hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "c1 c1 c2"
+      "c1 c1 c3"
+      "c4 c5 c6"
+      "c7 c7 c8";
+    gap: 1.4rem;
+  }
+
+  .discover-card:nth-child(1) {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .discover-card:nth-child(1) .discover-card-figure {
+    height: 100%;
+  }
+
+  .discover-card:nth-child(1) .discover-card-scrim h2 {
+    font-size: 1.7rem;
+  }
+
+  .discover-card:nth-child(7) .discover-card-figure {
+    height: 240px;
+  }
+}

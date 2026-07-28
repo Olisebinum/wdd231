@@ -1,0 +1,60 @@
+{
+  "attractions": [
+    {
+      "name": "Aso Rock",
+      "category": "Nature",
+      "address": "Three Arms Zone, Central Business District, Abuja",
+      "description": "A massive 400-metre monolith overlooking the capital, and one of the most recognizable natural landmarks in Nigeria.",
+      "image": "aso-rock.webp"
+    },
+    {
+      "name": "Nigerian National Mosque",
+      "category": "Faith & Worship",
+      "address": "Independence Avenue, Central Business District, Abuja",
+      "description": "The national mosque of Nigeria, with a gold dome and four minarets, standing near the National Christian Centre as a symbol of religious coexistence.",
+      "image": "national-mosque.webp"
+    },
+    {
+      "name": "National Christian Centre",
+      "category": "Faith & Worship",
+      "address": "Independence Avenue, Central Business District, Abuja",
+      "description": "The ecumenical centre serving as Nigeria's national house of worship for Christians, known for its striking dome and cross.",
+      "image": "christian-centre.webp"
+    },
+    {
+      "name": "Millennium Park",
+      "category": "Recreation",
+      "address": "Cadastral Zone A00, Central Business District, Abuja",
+      "description": "Abuja's largest public park, designed by an Italian architect, with landscaped gardens, arch bridges, and open lawns for relaxing or walking.",
+      "image": "millennium-park.webp"
+    },
+    {
+      "name": "Jabi Lake",
+      "category": "Recreation",
+      "address": "Jabi District, Abuja",
+      "description": "A scenic reservoir surrounded by restaurants, a boardwalk, and boat rides, popular for evenings and weekend outings.",
+      "image": "jabi-lake.webp"
+    },
+    {
+      "name": "Zuma Rock",
+      "category": "Nature",
+      "address": "Along Abuja-Kaduna Expressway, Niger State (near Abuja)",
+      "description": "A dramatic 725-metre monolith just outside the city, often called the 'Gateway to Abuja' and featured on the old 100-naira note.",
+      "image": "zuma-rock.webp"
+    },
+    {
+      "name": "Wonderland Amusement Park",
+      "category": "Recreation",
+      "address": "Independence Avenue, Central Business District, Abuja",
+      "description": "A family-friendly amusement park with a Ferris wheel, rides, and games, located next to Millennium Park.",
+      "image": "wonderland-park.webp"
+    },
+    {
+      "name": "MKO Abiola National Stadium",
+      "category": "Sports",
+      "address": "Airport Road, Abuja",
+      "description": "Nigeria's national stadium, home to major football matches and athletics events, with seating for over 60,000 spectators.",
+      "image": "national-stadium.webp"
+    }
+  ]
+}
