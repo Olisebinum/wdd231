@@ -264,22 +264,13 @@
   transform: translateY(-1px);
 }
 
-/* Reused directory category-chip visual language, for site-wide consistency.
-   Color is fixed (not var(--copper-dark)) because the chip's cream background
-   stays the same in both themes — but --copper-dark itself is redefined to a
-   lighter shade in dark mode (to stay readable on dark surfaces elsewhere),
-   which would fail contrast against this always-light chip background. */
+/* Overrides only the color, since --copper-dark flips lighter in dark
+   mode (for text-on-surface contrast elsewhere) which would fail
+   contrast against this chip's always-light background. Everything
+   else is inherited from the shared .category-chip rule in small.css —
+   loads after it, so cascade order handles the rest. */
 .category-chip {
-  flex-shrink: 0;
-  background-color: #f6eee7;
   color: #8f5427;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  white-space: nowrap;
 }
 
 /* ---------- Details modal ---------- */
