@@ -10,6 +10,12 @@
   --copper: #B76E36;
   --copper-light: #D08B54;
   --copper-dark: #8F5427;
+  /* Fixed, theme-independent — for solid button backgrounds paired with
+     white text. Unlike --copper-dark (which flips lighter in dark mode
+     for text-on-surface contrast), a button supplies its own background,
+     so it needs one contrast-safe value in both themes. 6.06:1 vs white. */
+  --copper-button: #8F5427;
+  --copper-button-hover: #74421F;
 
   /* Surface / text */
   --bg: #F8F7F4;

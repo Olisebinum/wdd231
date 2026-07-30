@@ -116,6 +116,7 @@
 
 .results-count {
   margin-top: 0.85rem;
+  min-height: 1.2em;
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.65);
 }
@@ -129,6 +130,9 @@
   max-width: 1200px;
   margin: 0 auto;
   grid-template-columns: 1fr;
+  min-height: 3499px; /* reserves the rendered-content height so the grid
+    populating via JS doesn't cause a layout shift; matches the 1-col
+    mobile layout below */
   grid-template-areas:
     "c1"
     "c2"
@@ -243,7 +247,7 @@
 
 .learn-more-btn {
   align-self: flex-start;
-  background-color: var(--copper);
+  background-color: var(--copper-button);
   color: #fff;
   border: none;
   border-radius: 999px;
@@ -256,7 +260,7 @@
 
 .learn-more-btn:hover,
 .learn-more-btn:focus-visible {
-  background-color: var(--copper-dark);
+  background-color: var(--copper-button-hover);
   transform: translateY(-1px);
 }
 
@@ -383,6 +387,7 @@
 
   .discover-grid {
     grid-template-columns: repeat(2, 1fr);
+    min-height: 2250px;
     grid-template-areas:
       "c1 c1"
       "c2 c3"
@@ -421,6 +426,7 @@
 
   .discover-grid {
     grid-template-columns: repeat(3, 1fr);
+    min-height: 1868px;
     grid-template-areas:
       "c1 c1 c2"
       "c1 c1 c3"

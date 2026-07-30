@@ -67,7 +67,7 @@ const renderAttractions = (attractions) => {
 
         card.innerHTML = `
             <div class="discover-card-figure">
-                <img src="images/${place.image}" alt="${place.name}" loading="lazy" width="640" height="416">
+                <img src="images/${place.image}" alt="${place.name}" ${index < 2 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} width="400" height="260">
                 <div class="discover-card-scrim">
                     <span class="category-chip">${place.category}</span>
                     <h2>${place.name}</h2>
