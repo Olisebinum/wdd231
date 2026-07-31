@@ -206,6 +206,10 @@
 .discover-card-scrim .category-chip {
   align-self: flex-start;
   margin-bottom: 0.4rem;
+  /* Fixed color, not var(--copper-dark): that variable flips lighter in
+     dark mode (for text-on-surface contrast elsewhere), which would
+     fail contrast against this chip's always-light background. */
+  color: #8f5427;
 }
 
 .discover-card-scrim h2 {
@@ -264,15 +268,6 @@
   transform: translateY(-1px);
 }
 
-/* Overrides only the color, since --copper-dark flips lighter in dark
-   mode (for text-on-surface contrast elsewhere) which would fail
-   contrast against this chip's always-light background. Everything
-   else is inherited from the shared .category-chip rule in small.css —
-   loads after it, so cascade order handles the rest. */
-.category-chip {
-  color: #8f5427;
-}
-
 /* ---------- Details modal ---------- */
 
 .discover-dialog {
@@ -305,6 +300,7 @@
   position: absolute;
   top: 0.9rem;
   left: 0.9rem;
+  color: #8f5427;
 }
 
 .discover-dialog-body {
