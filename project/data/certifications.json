@@ -1,0 +1,137 @@
+[
+  {
+    "name": "freeCodeCamp Full Stack",
+    "provider": "freeCodeCamp",
+    "category": "Engineering",
+    "level": "Beginner",
+    "format": "Self-paced, free",
+    "description": "A free, project-based curriculum covering HTML, CSS, JavaScript, and back-end basics.",
+    "url": "https://www.freecodecamp.org"
+  },
+  {
+    "name": "Meta Front-End Developer",
+    "provider": "Meta (via Coursera)",
+    "category": "Engineering",
+    "level": "Beginner",
+    "format": "Self-paced, subscription",
+    "description": "Covers React and front-end fundamentals, built by the team behind React itself.",
+    "url": "https://www.coursera.org/professional-certificates/meta-front-end-developer"
+  },
+  {
+    "name": "Apple Developer Program",
+    "provider": "Apple",
+    "category": "Engineering",
+    "level": "Intermediate",
+    "format": "Annual membership",
+    "description": "Required to publish apps to the App Store; includes access to Xcode cloud tools and TestFlight.",
+    "url": "https://developer.apple.com/programs/"
+  },
+  {
+    "name": "Google Associate Android Developer",
+    "provider": "Google",
+    "category": "Engineering",
+    "level": "Intermediate",
+    "format": "Proctored exam",
+    "description": "Validates hands-on ability to build and debug a real Android app.",
+    "url": "https://developer.android.com/certification"
+  },
+  {
+    "name": "Google Data Analytics",
+    "provider": "Google (via Coursera)",
+    "category": "Data",
+    "level": "Beginner",
+    "format": "Self-paced, subscription",
+    "description": "No prior experience required \u2014 covers spreadsheets, SQL, and data visualization basics.",
+    "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+  },
+  {
+    "name": "IBM Data Analyst",
+    "provider": "IBM (via Coursera)",
+    "category": "Data",
+    "level": "Beginner",
+    "format": "Self-paced, subscription",
+    "description": "Similar scope to Google's, with more emphasis on Python and dashboarding tools.",
+    "url": "https://www.coursera.org/professional-certificates/ibm-data-analyst"
+  },
+  {
+    "name": "IBM Data Science Professional Certificate",
+    "provider": "IBM (via Coursera)",
+    "category": "Data",
+    "level": "Intermediate",
+    "format": "Self-paced, subscription",
+    "description": "A step up from the analyst track \u2014 adds machine learning and applied statistics.",
+    "url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+  },
+  {
+    "name": "DeepLearning.AI ML Specialization",
+    "provider": "DeepLearning.AI (via Coursera)",
+    "category": "Data",
+    "level": "Advanced",
+    "format": "Self-paced, subscription",
+    "description": "Andrew Ng's widely-used specialization covering core machine learning algorithms and math.",
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction"
+  },
+  {
+    "name": "CompTIA Security+",
+    "provider": "CompTIA",
+    "category": "Security",
+    "level": "Intermediate",
+    "format": "Proctored exam",
+    "description": "The most commonly requested entry-level cybersecurity certification in job listings.",
+    "url": "https://www.comptia.org/certifications/security"
+  },
+  {
+    "name": "CompTIA Network+",
+    "provider": "CompTIA",
+    "category": "Security",
+    "level": "Beginner",
+    "format": "Proctored exam",
+    "description": "Networking fundamentals \u2014 a common prerequisite before attempting Security+.",
+    "url": "https://www.comptia.org/certifications/network"
+  },
+  {
+    "name": "AWS Cloud Practitioner",
+    "provider": "Amazon Web Services",
+    "category": "Infrastructure",
+    "level": "Beginner",
+    "format": "Proctored exam",
+    "description": "The standard starting point for AWS certifications \u2014 broad, non-technical overview of cloud concepts.",
+    "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+  },
+  {
+    "name": "AWS Solutions Architect Associate",
+    "provider": "Amazon Web Services",
+    "category": "Infrastructure",
+    "level": "Intermediate",
+    "format": "Proctored exam",
+    "description": "Tests hands-on ability to design cost-effective, resilient systems on AWS.",
+    "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+  },
+  {
+    "name": "Docker Certified Associate",
+    "provider": "Docker / Mirantis",
+    "category": "Infrastructure",
+    "level": "Intermediate",
+    "format": "Proctored exam",
+    "description": "Validates container fundamentals \u2014 image building, orchestration, and troubleshooting.",
+    "url": "https://www.docker.com/certification/"
+  },
+  {
+    "name": "Google UX Design Certificate",
+    "provider": "Google (via Coursera)",
+    "category": "Design",
+    "level": "Beginner",
+    "format": "Self-paced, subscription",
+    "description": "Walks through the full design process, ending with a portfolio-ready case study.",
+    "url": "https://www.coursera.org/professional-certificates/google-ux-design"
+  },
+  {
+    "name": "Product School PM Certificate",
+    "provider": "Product School",
+    "category": "Product",
+    "level": "Intermediate",
+    "format": "Cohort-based, paid",
+    "description": "A more structured, mentor-led option for people transitioning into product management.",
+    "url": "https://productschool.com/"
+  }
+]

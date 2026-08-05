@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Certifications and learning resources for every tech career path, plus a way to get in touch with Career Compass.">
+<meta name="author" content="Olise Ebinum">
+<title>Learning Hub | Career Compass</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&family=Fira+Code:wght@500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&family=Fira+Code:wght@500&display=swap" rel="stylesheet"></noscript>
+
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/explorer.css">
+<link rel="stylesheet" href="styles/learning-hub.css">
+<script src="scripts/main.js" defer></script>
+<script src="scripts/learning-hub.js" defer></script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="30" height="30">
+                    <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <g class="brand-needle">
+                        <path d="M20 6 L24 20 L20 34 L16 20 Z" fill="currentColor"/>
+                    </g>
+                    <circle cx="20" cy="20" r="2.5" fill="var(--bg)"/>
+                </svg>
+            </span>
+            <span class="brand-name">Career Compass</span>
+        </a>
+
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="career-explorer.html">Career Explorer</a>
+            <a href="learning-hub.html" class="current" aria-current="page">Learning Hub</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+
+    <section class="explorer-hero">
+        <div class="section-inner">
+            <p class="hero-eyebrow">Learning Hub</p>
+            <h1>Certifications and resources, without the guesswork</h1>
+            <p class="explorer-hero-sub">A curated list tied to the paths in the Career Explorer — not everything that exists, just what's actually worth your time.</p>
+        </div>
+    </section>
+
+    <section class="section certs-section" aria-labelledby="certs-heading">
+        <div class="section-inner">
+            <p class="section-eyebrow">Certifications</p>
+            <h2 id="certs-heading">Worth putting on your resume</h2>
+            <p class="section-sub">Filter by the path you're working toward.</p>
+
+            <div class="filter-chips" id="cert-filters" role="group" aria-label="Filter certifications by category">
+                <button type="button" class="chip active" data-category="all">All</button>
+            </div>
+
+            <div id="cert-grid" class="cert-grid"></div>
+        </div>
+    </section>
+
+    <section class="section resources-section" aria-labelledby="resources-heading">
+        <div class="section-inner">
+            <p class="section-eyebrow">Learning Resources</p>
+            <h2 id="resources-heading">Where to actually start learning</h2>
+            <p class="section-sub">A mix of free and paid, structured courses and hands-on practice.</p>
+
+            <div class="filter-chips" id="resource-filters" role="group" aria-label="Filter resources by category">
+                <button type="button" class="chip active" data-category="all">All</button>
+            </div>
+
+            <div id="resource-grid" class="resource-grid"></div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="section-inner contact-inner">
+            <div class="contact-copy">
+                <p class="section-eyebrow">Get in touch</p>
+                <h2 id="contact-heading">Questions, feedback, or a path we're missing?</h2>
+                <p class="section-sub">Fill out the form and let us know what's on your mind.</p>
+
+                <ul class="contact-reasons">
+                    <li>
+                        <span class="contact-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 4 L21 8.5 L12 13 L3 8.5 Z"/>
+                                <path d="M7 10.5 V15 C 7 16.5 9.2 18 12 18 S 17 16.5 17 15 V10.5"/>
+                            </svg>
+                        </span>
+                        Suggest a career path we're missing
+                    </li>
+                    <li>
+                        <span class="contact-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 8 v5 M12 16 h.01"/>
+                            </svg>
+                        </span>
+                        Report a broken or outdated resource link
+                    </li>
+                    <li>
+                        <span class="contact-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19 C 8 15, 8 11, 12 11 S 16 7, 20 5" stroke-dasharray="2.5 2.8"/>
+                                <circle cx="4" cy="19" r="1.6" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </span>
+                        Share feedback on a roadmap
+                    </li>
+                </ul>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-field">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" required minlength="2">
+                    <p class="field-error" id="name-error" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="email" required>
+                    <p class="field-error" id="email-error" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="4" required minlength="10"></textarea>
+                    <p class="field-error" id="message-error" role="alert"></p>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p id="form-success" class="form-success" role="status" hidden>Thanks — your message looks good and is ready to send.</p>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-col footer-col-brand">
+            <div class="footer-brand">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" width="26" height="26">
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 6 L24 20 L20 34 L16 20 Z" fill="currentColor"/>
+                        <circle cx="20" cy="20" r="2.5" fill="var(--navy)"/>
+                    </svg>
+                </span>
+                <span>Career Compass</span>
+            </div>
+            <p class="footer-tagline">Find your bearing in tech.</p>
+        </div>
+
+        <div class="footer-col footer-col-social">
+            <a href="https://github.com/Olisebinum/wdd231" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="View source on GitHub">
+                <img src="images/github.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow on X">
+                <img src="images/twitter.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Connect on LinkedIn">
+                <img src="images/linkedin.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Subscribe on YouTube">
+                <img src="images/youtube.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow on Facebook">
+                <img src="images/facebook.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+        </div>
+
+        <div class="footer-col footer-col-meta">
+            <p>WDD 231 Individual Project</p>
+            <p>Olise Ebinum</p>
+            <p>&copy; <span id="current-year"></span> Career Compass</p>
+            <p>Last updated: <span id="last-modified"></span></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

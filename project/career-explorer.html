@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore tech careers with real salary, demand, and growth data. Compare paths side by side, follow a roadmap, and bookmark your favorites.">
+<meta name="author" content="Olise Ebinum">
+<title>Career Explorer | Career Compass</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&family=Fira+Code:wght@500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&family=Fira+Code:wght@500&display=swap" rel="stylesheet"></noscript>
+
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/explorer.css">
+<script src="scripts/main.js" defer></script>
+<script src="scripts/explorer.js" defer></script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="30" height="30">
+                    <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <g class="brand-needle">
+                        <path d="M20 6 L24 20 L20 34 L16 20 Z" fill="currentColor"/>
+                    </g>
+                    <circle cx="20" cy="20" r="2.5" fill="var(--bg)"/>
+                </svg>
+            </span>
+            <span class="brand-name">Career Compass</span>
+        </a>
+
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="career-explorer.html" class="current" aria-current="page">Career Explorer</a>
+            <a href="learning-hub.html">Learning Hub</a>
+            <a href="learning-hub.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+
+    <section class="explorer-hero">
+        <div class="section-inner">
+            <p class="hero-eyebrow">Career Explorer</p>
+            <h1>Compare paths before you commit to one</h1>
+            <p class="explorer-hero-sub">Real salary ranges, demand, growth, and a realistic timeline for every path. Bookmark what interests you, compare up to three side by side.</p>
+        </div>
+    </section>
+
+    <section class="section chart-section" aria-labelledby="chart-heading">
+        <div class="section-inner">
+            <p class="section-eyebrow">At a glance</p>
+            <h2 id="chart-heading">How salaries compare across paths</h2>
+            <p class="section-sub">Average salary by career, highest to lowest.</p>
+            <div id="salary-chart" class="salary-chart"></div>
+        </div>
+    </section>
+
+    <section class="section explorer-main-section">
+        <div class="section-inner explorer-layout">
+
+            <aside class="explorer-sidebar" aria-label="Filter careers">
+                <div class="sidebar-block">
+                    <label for="career-search" class="sidebar-label">Search</label>
+                    <div class="search-wrap">
+                        <input type="search" id="career-search" placeholder="Title or skill (e.g. Python)" autocomplete="off">
+                        <ul id="search-suggestions" class="search-suggestions" hidden></ul>
+                    </div>
+                </div>
+
+                <div class="sidebar-block">
+                    <p class="sidebar-label">Category</p>
+                    <div class="filter-chips sidebar-chips" id="category-filters" role="group" aria-label="Filter by category">
+                        <button type="button" class="chip active" data-category="all">All categories</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-block">
+                    <label class="bookmark-toggle">
+                        <input type="checkbox" id="bookmarked-only">
+                        <span>Bookmarked only</span>
+                    </label>
+                </div>
+            </aside>
+
+            <div class="explorer-results">
+                <div class="explorer-toolbar">
+                    <p id="results-count" class="results-count" aria-live="polite"></p>
+                    <div class="sort-field">
+                        <label for="sort-select" class="visually-hidden">Sort by</label>
+                        <select id="sort-select">
+                            <option value="default">Sort: Featured</option>
+                            <option value="salary-desc">Salary: High to Low</option>
+                            <option value="salary-asc">Salary: Low to High</option>
+                            <option value="growth-desc">Growth: High to Low</option>
+                            <option value="az">Alphabetical (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h2 id="grid-heading" class="visually-hidden">Career results</h2>
+                <div id="career-grid" class="career-grid explorer-career-grid"></div>
+                <p id="no-results" class="no-results" hidden>No careers match your search. Try a different term or clear filters.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-heading">
+        <div class="section-inner">
+            <p class="section-eyebrow">Common questions</p>
+            <h2 id="faq-heading">Before you choose a path</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Do I need a degree to get into tech?
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For most paths on this list — software development, data analytics, cybersecurity, cloud, design — no. A portfolio, certifications, and demonstrated skill matter more to most employers than the degree itself. Product management is the one exception here; it's rarely an entry-level role.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        How long does it actually take to become job-ready?
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The time-to-learn estimate on each card assumes consistent part-time study (roughly 10-15 hours a week). Going full-time can cut that in half; studying inconsistently can double it. Treat the estimate as a floor, not a promise.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Can I switch careers into tech from an unrelated field?
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes — it's common. Data analytics, UI/UX design, and QA-adjacent roles tend to be the most accessible starting points for career changers, since they lean on transferable skills like communication and domain knowledge from your previous field.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Which certifications actually matter to employers?
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It varies by path. Cloud and cybersecurity employers weight certifications heavily (AWS, Security+) because they signal verified, current skill. In software development, a certification matters far less than a working portfolio of real projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div id="compare-bar" class="compare-bar" hidden>
+    <span id="compare-count"></span>
+    <div class="compare-bar-actions">
+        <button type="button" id="compare-open-btn" class="btn btn-primary btn-sm" disabled>Compare</button>
+        <button type="button" id="compare-clear-btn" class="btn-text">Clear</button>
+    </div>
+</div>
+
+<div id="detail-modal" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close details">&times;</button>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<div id="compare-modal" class="modal-overlay" hidden>
+    <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title">
+        <button type="button" class="modal-close" id="compare-close-btn" aria-label="Close comparison">&times;</button>
+        <h2 id="compare-modal-title">Compare careers</h2>
+        <div id="compare-body" class="compare-table-wrap"></div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-col footer-col-brand">
+            <div class="footer-brand">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" width="26" height="26">
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 6 L24 20 L20 34 L16 20 Z" fill="currentColor"/>
+                        <circle cx="20" cy="20" r="2.5" fill="var(--navy)"/>
+                    </svg>
+                </span>
+                <span>Career Compass</span>
+            </div>
+            <p class="footer-tagline">Find your bearing in tech.</p>
+        </div>
+
+        <div class="footer-col footer-col-social">
+            <a href="https://github.com/Olisebinum/wdd231" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="View source on GitHub">
+                <img src="images/github.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://x.com/ebinumolise" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow on X">
+                <img src="images/twitter.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Connect on LinkedIn">
+                <img src="images/linkedin.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Subscribe on YouTube">
+                <img src="images/youtube.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+            <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow on Facebook">
+                <img src="images/facebook.png" alt="" width="34" height="34" loading="lazy">
+            </a>
+        </div>
+
+        <div class="footer-col footer-col-meta">
+            <p>WDD 231 Individual Project</p>
+            <p>Olise Ebinum</p>
+            <p>&copy; <span id="current-year"></span> Career Compass</p>
+            <p>Last updated: <span id="last-modified"></span></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

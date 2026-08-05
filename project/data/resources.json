@@ -1,0 +1,102 @@
+[
+  {
+    "title": "freeCodeCamp",
+    "provider": "freeCodeCamp",
+    "type": "Course",
+    "cost": "Free",
+    "difficulty": "Beginner",
+    "category": "Engineering",
+    "description": "Hundreds of hours of project-based curriculum covering web development end to end.",
+    "url": "https://www.freecodecamp.org"
+  },
+  {
+    "title": "The Odin Project",
+    "provider": "The Odin Project",
+    "type": "Course",
+    "cost": "Free",
+    "difficulty": "Beginner",
+    "category": "Engineering",
+    "description": "A full-stack path built around building real projects rather than watching videos.",
+    "url": "https://www.theodinproject.com"
+  },
+  {
+    "title": "CS50: Introduction to Computer Science",
+    "provider": "Harvard (via edX)",
+    "type": "Course",
+    "cost": "Free (paid certificate optional)",
+    "difficulty": "Beginner",
+    "category": "Engineering",
+    "description": "One of the most well-known intro CS courses \u2014 heavier on fundamentals than most bootcamp-style options.",
+    "url": "https://cs50.harvard.edu/x/"
+  },
+  {
+    "title": "LeetCode",
+    "provider": "LeetCode",
+    "type": "Practice",
+    "cost": "Free + paid tier",
+    "difficulty": "Intermediate",
+    "category": "Engineering",
+    "description": "The standard place to drill coding interview problems before applying.",
+    "url": "https://leetcode.com"
+  },
+  {
+    "title": "Kaggle Learn",
+    "provider": "Kaggle",
+    "type": "Course",
+    "cost": "Free",
+    "difficulty": "Beginner",
+    "category": "Data",
+    "description": "Short, hands-on micro-courses in Python, SQL, and machine learning basics.",
+    "url": "https://www.kaggle.com/learn"
+  },
+  {
+    "title": "SQLZoo",
+    "provider": "SQLZoo",
+    "type": "Practice",
+    "cost": "Free",
+    "difficulty": "Beginner",
+    "category": "Data",
+    "description": "Interactive SQL exercises \u2014 a good complement to any data analytics roadmap.",
+    "url": "https://sqlzoo.net"
+  },
+  {
+    "title": "TryHackMe",
+    "provider": "TryHackMe",
+    "type": "Practice",
+    "cost": "Free + paid tier",
+    "difficulty": "Beginner",
+    "category": "Security",
+    "description": "Guided, gamified labs for learning cybersecurity hands-on instead of just reading theory.",
+    "url": "https://tryhackme.com"
+  },
+  {
+    "title": "AWS Skill Builder",
+    "provider": "Amazon Web Services",
+    "type": "Course",
+    "cost": "Free + paid tier",
+    "difficulty": "Beginner",
+    "category": "Infrastructure",
+    "description": "AWS's own training platform \u2014 the most direct prep for their certification exams.",
+    "url": "https://skillbuilder.aws"
+  },
+  {
+    "title": "Figma Community",
+    "provider": "Figma",
+    "type": "Practice",
+    "cost": "Free",
+    "difficulty": "Beginner",
+    "category": "Design",
+    "description": "Thousands of real design files you can duplicate and take apart to learn how things are built.",
+    "url": "https://www.figma.com/community"
+  },
+  {
+    "title": "Product School Resources",
+    "provider": "Product School",
+    "type": "Article",
+    "cost": "Free + paid courses",
+    "difficulty": "Intermediate",
+    "category": "Product",
+    "description": "Blog and guides covering PM fundamentals, interview prep, and sample PRDs.",
+    "url": "https://productschool.com/resources"
+  }
+]

@@ -1,0 +1,623 @@
+[
+  {
+    "id": "software-development",
+    "title": "Software Development",
+    "category": "Engineering",
+    "icon": "&lt;/&gt;",
+    "summary": "Build the applications, websites, and systems that people use every day.",
+    "salary": "$85,000",
+    "demand": "Very High",
+    "growth": "+22%",
+    "timeToLearn": "8-12 months",
+    "education": "Bachelor's preferred, not required",
+    "skills": [
+      "JavaScript",
+      "Git",
+      "APIs",
+      "Problem Solving"
+    ],
+    "description": "Software developers design, build, test, and maintain the programs and systems that power everything from mobile apps to enterprise platforms. It's one of the most flexible entry points into tech \u2014 the work ranges from front-end interfaces to back-end infrastructure.",
+    "responsibilities": [
+      "Write and test code across the stack",
+      "Debug and fix issues in existing systems",
+      "Collaborate with designers and product teams",
+      "Review code and ship features incrementally"
+    ],
+    "roadmap": [
+      {
+        "step": "HTML, CSS & Git basics",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "JavaScript fundamentals",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "A framework (React or similar)",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Build 3 portfolio projects",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "Apply + technical interview prep",
+        "duration": "4 weeks"
+      }
+    ],
+    "certifications": [
+      "freeCodeCamp Full Stack",
+      "Meta Front-End Developer"
+    ],
+    "relatedCareers": [
+      "ui-ux-design",
+      "devops",
+      "mobile-development"
+    ],
+    "difficulty": "Beginner",
+    "salaryRange": {
+      "junior": "$55,000",
+      "mid": "$85,000",
+      "senior": "$130,000"
+    },
+    "dayInLife": "Most days are a mix of writing code, reviewing pull requests, and syncing with your team on what to build next. Expect a daily standup, a few hours of focused coding, and the occasional debugging rabbit hole."
+  },
+  {
+    "id": "data-analytics",
+    "title": "Data Analytics",
+    "category": "Data",
+    "icon": "&#9636;",
+    "summary": "Turn raw numbers into decisions \u2014 find the pattern, tell the story.",
+    "salary": "$70,000",
+    "demand": "High",
+    "growth": "+18%",
+    "timeToLearn": "6-9 months",
+    "education": "Bachelor's in any field + certification",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Data Visualization"
+    ],
+    "description": "Data analysts collect, clean, and interpret data to help organizations make decisions. It's one of the most accessible tech-adjacent paths for people coming from a non-technical background.",
+    "responsibilities": [
+      "Query and clean datasets",
+      "Build dashboards and reports",
+      "Identify trends and anomalies",
+      "Present findings to stakeholders"
+    ],
+    "roadmap": [
+      {
+        "step": "Excel + spreadsheet fundamentals",
+        "duration": "3 weeks"
+      },
+      {
+        "step": "SQL for querying data",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Python (pandas) basics",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Dashboard tools (Tableau/Power BI)",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Portfolio project + apply",
+        "duration": "5 weeks"
+      }
+    ],
+    "certifications": [
+      "Google Data Analytics",
+      "IBM Data Analyst"
+    ],
+    "relatedCareers": [
+      "data-science",
+      "artificial-intelligence",
+      "product-management"
+    ],
+    "difficulty": "Beginner",
+    "salaryRange": {
+      "junior": "$50,000",
+      "mid": "$70,000",
+      "senior": "$95,000"
+    },
+    "dayInLife": "You'll spend your morning pulling data and cleaning messy spreadsheets, then the afternoon building or updating dashboards and explaining what the numbers mean to people who don't work with data every day."
+  },
+  {
+    "id": "cybersecurity",
+    "title": "Cybersecurity",
+    "category": "Security",
+    "icon": "&#128274;",
+    "summary": "Defend systems and data against the people trying to break them.",
+    "salary": "$95,000",
+    "demand": "Very High",
+    "growth": "+32%",
+    "timeToLearn": "9-14 months",
+    "education": "Certifications matter more than a degree here",
+    "skills": [
+      "Networking",
+      "Linux",
+      "Risk Assessment",
+      "Incident Response"
+    ],
+    "description": "Cybersecurity professionals protect networks, systems, and data from unauthorized access and attacks. Demand consistently outpaces supply, making it one of the more resilient tech career paths.",
+    "responsibilities": [
+      "Monitor systems for threats and breaches",
+      "Run vulnerability assessments",
+      "Respond to and contain incidents",
+      "Maintain security policies and access controls"
+    ],
+    "roadmap": [
+      {
+        "step": "Networking fundamentals",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Linux + systems basics",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "CompTIA Security+ prep",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "Home lab + capture-the-flag practice",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "Entry-level SOC analyst applications",
+        "duration": "6 weeks"
+      }
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "CompTIA Network+"
+    ],
+    "relatedCareers": [
+      "cloud-computing",
+      "devops",
+      "software-development"
+    ],
+    "difficulty": "Intermediate",
+    "salaryRange": {
+      "junior": "$65,000",
+      "mid": "$95,000",
+      "senior": "$135,000"
+    },
+    "dayInLife": "Expect to start by checking overnight security alerts, then split your time between monitoring systems, patching vulnerabilities, and occasionally responding to an active incident that needs immediate attention."
+  },
+  {
+    "id": "cloud-computing",
+    "title": "Cloud Computing",
+    "category": "Infrastructure",
+    "icon": "&#9729;",
+    "summary": "Design and run the infrastructure that modern software depends on.",
+    "salary": "$105,000",
+    "demand": "Very High",
+    "growth": "+25%",
+    "timeToLearn": "8-12 months",
+    "education": "Certifications carry significant weight",
+    "skills": [
+      "AWS",
+      "Docker",
+      "Linux",
+      "Networking"
+    ],
+    "description": "Cloud engineers design, deploy, and manage infrastructure on platforms like AWS, Azure, and GCP. As companies move off physical servers, this skill set has become one of the highest-paid entry paths in tech.",
+    "responsibilities": [
+      "Provision and manage cloud infrastructure",
+      "Automate deployments",
+      "Monitor uptime and cost",
+      "Secure cloud environments"
+    ],
+    "roadmap": [
+      {
+        "step": "Linux + networking basics",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Core AWS services",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "AWS Cloud Practitioner cert",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Docker + basic automation",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Associate-level cert + apply",
+        "duration": "8 weeks"
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner",
+      "AWS Solutions Architect Associate"
+    ],
+    "relatedCareers": [
+      "devops",
+      "cybersecurity",
+      "software-development"
+    ],
+    "difficulty": "Intermediate",
+    "salaryRange": {
+      "junior": "$75,000",
+      "mid": "$105,000",
+      "senior": "$145,000"
+    },
+    "dayInLife": "A typical day involves provisioning or troubleshooting cloud infrastructure, writing automation scripts, and keeping an eye on cost and performance dashboards across your team's services."
+  },
+  {
+    "id": "ui-ux-design",
+    "title": "UI/UX Design",
+    "category": "Design",
+    "icon": "&#9673;",
+    "summary": "Shape how a product looks, feels, and works for the person using it.",
+    "salary": "$75,000",
+    "demand": "Moderate",
+    "growth": "+13%",
+    "timeToLearn": "6-9 months",
+    "education": "Portfolio matters more than a degree",
+    "skills": [
+      "Figma",
+      "User Research",
+      "Wireframing",
+      "Prototyping"
+    ],
+    "description": "UI/UX designers research how people use a product and design interfaces that are clear, usable, and pleasant. A strong portfolio of case studies is the main thing that gets you hired.",
+    "responsibilities": [
+      "Conduct user research and interviews",
+      "Build wireframes and prototypes",
+      "Run usability tests",
+      "Collaborate closely with developers"
+    ],
+    "roadmap": [
+      {
+        "step": "Design fundamentals (color, type, layout)",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Figma proficiency",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "User research methods",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "2-3 full case study projects",
+        "duration": "10 weeks"
+      },
+      {
+        "step": "Portfolio site + apply",
+        "duration": "4 weeks"
+      }
+    ],
+    "certifications": [
+      "Google UX Design Certificate"
+    ],
+    "relatedCareers": [
+      "software-development",
+      "product-management"
+    ],
+    "difficulty": "Beginner",
+    "salaryRange": {
+      "junior": "$55,000",
+      "mid": "$75,000",
+      "senior": "$105,000"
+    },
+    "dayInLife": "You'll move between research (talking to users or reviewing feedback), designing in Figma, and presenting your work to developers and stakeholders for feedback before it gets built."
+  },
+  {
+    "id": "artificial-intelligence",
+    "title": "Artificial Intelligence",
+    "category": "Data",
+    "icon": "&#8734;",
+    "summary": "Build systems that learn from data instead of being explicitly programmed.",
+    "salary": "$115,000",
+    "demand": "Very High",
+    "growth": "+35%",
+    "timeToLearn": "10-14 months",
+    "education": "Math-heavy; a degree helps but isn't mandatory",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Statistics",
+      "Data Modeling"
+    ],
+    "description": "AI and machine learning practitioners build models that recognize patterns and make predictions from data. It's one of the fastest-growing and most competitive fields, and generally expects stronger math fundamentals than other paths on this list.",
+    "responsibilities": [
+      "Prepare and clean training data",
+      "Build and evaluate models",
+      "Tune performance and accuracy",
+      "Deploy models into production systems"
+    ],
+    "roadmap": [
+      {
+        "step": "Python + statistics fundamentals",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Linear algebra & calculus refresh",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Core ML algorithms",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "Applied projects (regression, classification)",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "Portfolio + apply",
+        "duration": "6 weeks"
+      }
+    ],
+    "certifications": [
+      "DeepLearning.AI ML Specialization"
+    ],
+    "relatedCareers": [
+      "data-science",
+      "data-analytics"
+    ],
+    "difficulty": "Advanced",
+    "salaryRange": {
+      "junior": "$85,000",
+      "mid": "$115,000",
+      "senior": "$160,000"
+    },
+    "dayInLife": "Much of the day goes into preparing data, training and evaluating models, and reading about new techniques, with regular syncs to translate results into something the rest of the team can use."
+  },
+  {
+    "id": "devops",
+    "title": "DevOps Engineering",
+    "category": "Infrastructure",
+    "icon": "&#9881;",
+    "summary": "Connect development and operations so software ships fast and stays stable.",
+    "salary": "$100,000",
+    "demand": "High",
+    "growth": "+20%",
+    "timeToLearn": "9-12 months",
+    "education": "Usually a step up from software development or cloud roles",
+    "skills": [
+      "CI/CD",
+      "Docker",
+      "Linux",
+      "Scripting"
+    ],
+    "description": "DevOps engineers build and maintain the pipelines and infrastructure that let teams deploy software quickly and reliably. It blends software development with systems administration.",
+    "responsibilities": [
+      "Build and maintain CI/CD pipelines",
+      "Manage containerized deployments",
+      "Monitor system health and incidents",
+      "Automate repetitive operational tasks"
+    ],
+    "roadmap": [
+      {
+        "step": "Linux + scripting (Bash/Python)",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Git + CI/CD fundamentals",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Docker + containers",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Cloud basics (AWS or Azure)",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Home-lab project + apply",
+        "duration": "6 weeks"
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner",
+      "Docker Certified Associate"
+    ],
+    "relatedCareers": [
+      "cloud-computing",
+      "cybersecurity",
+      "software-development"
+    ],
+    "difficulty": "Advanced",
+    "salaryRange": {
+      "junior": "$70,000",
+      "mid": "$100,000",
+      "senior": "$140,000"
+    },
+    "dayInLife": "You're often the person keeping deployments smooth: writing pipeline scripts, responding to alerts, and automating away the manual steps that used to eat up everyone's time."
+  },
+  {
+    "id": "data-science",
+    "title": "Data Science",
+    "category": "Data",
+    "icon": "&#128202;",
+    "summary": "Go beyond dashboards to build predictive models from data.",
+    "salary": "$110,000",
+    "demand": "High",
+    "growth": "+21%",
+    "timeToLearn": "10-14 months",
+    "education": "Bachelor's helpful; strong math and stats expected",
+    "skills": [
+      "Python",
+      "Statistics",
+      "SQL",
+      "Machine Learning"
+    ],
+    "description": "Data scientists go a step further than analysts \u2014 building predictive models, running experiments, and answering harder \"what will happen next\" questions rather than just \"what happened.\"",
+    "responsibilities": [
+      "Design and run experiments",
+      "Build predictive models",
+      "Communicate statistical findings clearly",
+      "Partner with engineering to productionize models"
+    ],
+    "roadmap": [
+      {
+        "step": "Statistics + Python fundamentals",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "SQL + data wrangling",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Machine learning fundamentals",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "End-to-end capstone project",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "Portfolio + apply",
+        "duration": "5 weeks"
+      }
+    ],
+    "certifications": [
+      "IBM Data Science Professional Certificate"
+    ],
+    "relatedCareers": [
+      "data-analytics",
+      "artificial-intelligence"
+    ],
+    "difficulty": "Advanced",
+    "salaryRange": {
+      "junior": "$80,000",
+      "mid": "$110,000",
+      "senior": "$150,000"
+    },
+    "dayInLife": "Expect a mix of exploratory analysis, model-building, and communicating uncertain results clearly to people who want a simple yes-or-no answer."
+  },
+  {
+    "id": "mobile-development",
+    "title": "Mobile App Development",
+    "category": "Engineering",
+    "icon": "&#128241;",
+    "summary": "Build the apps people carry in their pocket.",
+    "salary": "$90,000",
+    "demand": "High",
+    "growth": "+17%",
+    "timeToLearn": "8-12 months",
+    "education": "Bachelor's preferred, not required",
+    "skills": [
+      "Swift or Kotlin",
+      "APIs",
+      "UI Design Basics",
+      "Git"
+    ],
+    "description": "Mobile developers build native or cross-platform apps for iOS and Android. It's a strong path for people who want tight feedback loops and visible, tangible results from their work.",
+    "responsibilities": [
+      "Build and maintain mobile app features",
+      "Integrate with backend APIs",
+      "Optimize for performance across devices",
+      "Publish and maintain app store listings"
+    ],
+    "roadmap": [
+      {
+        "step": "Programming fundamentals",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Swift (iOS) or Kotlin (Android)",
+        "duration": "7 weeks"
+      },
+      {
+        "step": "App architecture + APIs",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Build 2-3 published apps",
+        "duration": "8 weeks"
+      },
+      {
+        "step": "Portfolio + apply",
+        "duration": "4 weeks"
+      }
+    ],
+    "certifications": [
+      "Apple Developer Program",
+      "Google Associate Android Developer"
+    ],
+    "relatedCareers": [
+      "software-development",
+      "ui-ux-design"
+    ],
+    "difficulty": "Intermediate",
+    "salaryRange": {
+      "junior": "$65,000",
+      "mid": "$90,000",
+      "senior": "$125,000"
+    },
+    "dayInLife": "You'll build and test features on real devices, fix platform-specific bugs, and coordinate closely with design to make sure the app feels right, not just works."
+  },
+  {
+    "id": "product-management",
+    "title": "Product Management",
+    "category": "Product",
+    "icon": "&#128203;",
+    "summary": "Decide what gets built and why, and keep everyone rowing the same direction.",
+    "salary": "$100,000",
+    "demand": "Moderate",
+    "growth": "+10%",
+    "timeToLearn": "6-10 months",
+    "education": "Rarely an entry-level role; usually a transition from another field",
+    "skills": [
+      "Prioritization",
+      "User Research",
+      "Communication",
+      "Basic Data Analysis"
+    ],
+    "description": "Product managers sit between users, business goals, and engineering, deciding what a team should build next and why. It's typically not a first tech job \u2014 most PMs transition in from engineering, design, or business roles.",
+    "responsibilities": [
+      "Define product requirements and priorities",
+      "Talk to users and analyze feedback",
+      "Coordinate between design and engineering",
+      "Track metrics and iterate on the roadmap"
+    ],
+    "roadmap": [
+      {
+        "step": "Learn product fundamentals",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Basic data analysis + metrics",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "User research methods",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Write sample PRDs / case studies",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Network + apply (often via referral)",
+        "duration": "8 weeks"
+      }
+    ],
+    "certifications": [
+      "Product School PM Certificate"
+    ],
+    "relatedCareers": [
+      "ui-ux-design",
+      "data-analytics"
+    ],
+    "difficulty": "Intermediate",
+    "salaryRange": {
+      "junior": "$70,000",
+      "mid": "$100,000",
+      "senior": "$145,000"
+    },
+    "dayInLife": "Your day is mostly meetings and messages: aligning engineering and design, talking to users, and constantly re-prioritizing what matters most this week."
+  }
+]
