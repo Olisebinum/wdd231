@@ -392,7 +392,7 @@
 
 .difficulty-beginner { background: rgba(16, 185, 129, 0.14); color: #0A7A56; }
 .difficulty-intermediate { background: rgba(59, 130, 246, 0.14); color: #1D4ED8; }
-.difficulty-advanced { background: rgba(217, 119, 6, 0.14); color: #B45309; }
+.difficulty-advanced { background: rgba(217, 119, 6, 0.14); color: #92400E; }
 
 .card-actions {
   display: flex;

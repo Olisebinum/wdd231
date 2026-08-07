@@ -9,14 +9,21 @@
 :root {
   --navy: #0F172A;
   --navy-soft: #1E2A47;
-  --sky: #3B82F6;
+  /* #3B82F6 only gave 3.5:1 contrast as text on light backgrounds, failing
+     WCAG AA (needs 4.5:1). This shade passes at 4.7-5.2:1 in every context
+     it's used (links, eyebrows, chip hover states) and is already the
+     approved on-brand shade used for .btn-primary's default state. */
+  --sky: #2563EB;
   --sky-light: #93C5FD;
   --emerald: #10B981;
   --white: #FFFFFF;
   --bg: #F8FAFC;
   --border: #E2E8F0;
   --text: #1E293B;
-  --text-secondary: #64748B;
+  /* #64748B measured 4.28-4.43:1 against the lightest category tint
+     backgrounds — just under the 4.5:1 minimum. This shade clears it
+     (5.6-5.8:1) without reading as a different color. */
+  --text-secondary: #556072;
 
   --font-heading: "Poppins", sans-serif;
   --font-body: "Roboto", sans-serif;
@@ -35,10 +42,15 @@
    across all pages that reference career categories. */
 .cat-engineering    { --cat-color: #2563EB; --cat-tint: #EFF4FE; }
 .cat-data           { --cat-color: #7C3AED; --cat-tint: #F5F1FE; }
-.cat-security       { --cat-color: #D97706; --cat-tint: #FDF6EC; }
-.cat-infrastructure { --cat-color: #0891B2; --cat-tint: #ECF8FA; }
+.cat-security       { --cat-color: #92400E; --cat-tint: #FDF6EC; }
+.cat-infrastructure { --cat-color: #155E75; --cat-tint: #ECF8FA; }
 .cat-design         { --cat-color: #DB2777; --cat-tint: #FDF0F6; }
-.cat-product        { --cat-color: #059669; --cat-tint: #ECFAF5; }
+.cat-product        { --cat-color: #065F46; --cat-tint: #ECFAF5; }
+
+/* Security/Infrastructure/Product deepened from their original values —
+   the originals measured 3.2-3.8:1 as text on white (used for links,
+   badges, growth ribbons), failing WCAG AA's 4.5:1. Engineering, Data,
+   and Design already passed (4.6-5.7:1) and are unchanged. */
 
 * { box-sizing: border-box; }
 
@@ -258,12 +270,16 @@ nav#primary-nav a:focus-visible {
 }
 
 .btn-primary {
-  background: var(--sky);
+  /* var(--sky) only gives 3.67:1 contrast with white text, which fails
+     WCAG AA's 4.5:1 requirement for normal-size text. This darker shade
+     gives 5.17:1 while staying recognizably on-brand (it's the same
+     color already used for the hover state elsewhere). */
+  background: #2563EB;
   color: var(--white);
 }
 
 .btn-primary:hover, .btn-primary:focus-visible {
-  background: #2563EB;
+  background: #1D4ED8;
   transform: translateY(-1px);
 }
 
@@ -806,40 +822,29 @@ nav#primary-nav a:focus-visible {
 
 .footer-tagline { font-size: 0.85rem; margin: 0; }
 
-.footer-github {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.footer-github:hover, .footer-github:focus-visible { color: var(--white); }
-
 .footer-col-social {
   display: flex;
   flex-direction: row;
-  gap: 0.6rem;
+  gap: 0.75rem;
+  align-items: center;
 }
 
 .social-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.85);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.85rem;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  border-radius: 50%;
+  outline-offset: 3px;
 }
 
-.social-icon:hover, .social-icon:focus-visible {
-  background: rgba(255, 255, 255, 0.18);
-  color: var(--white);
+.social-icon img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-icon:hover img, .social-icon:focus-visible img {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .footer-col-meta p { font-size: 0.8rem; margin: 0; }
