@@ -1,25 +1,84 @@
 /* =========================================================
-   Learning Hub — page-specific styles
-   Reuses explorer.css category colors, chip filters, and
-   difficulty badges for visual consistency across pages.
+   Career Compass — Learning Hub
+   WDD 231 Final Project
+   Page-specific styles
    ========================================================= */
 
-.certs-section { background: var(--bg); }
-.resources-section { background: var(--white); }
+
+/* ---------- Learning Hub Sections ---------- */
+
+.certs-section {
+  background: var(--bg);
+}
+
+.resources-section {
+  background: var(--white);
+}
 
 .certs-section .filter-chips,
-.resources-section .filter-chips { margin: 1.5rem 0; }
+.resources-section .filter-chips {
+  margin: 1.5rem 0;
+}
 
 
-/* ---------- Certification cards ---------- */
+/* =========================================================
+   Learning Hub Hero
+   ========================================================= */
 
-.cert-grid, .resource-grid {
+/*
+   The original hero inherited a light background while using
+   white text. This caused the WCAG contrast violation.
+
+   Explicitly define the hero background and text colors here.
+*/
+
+.explorer-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 3rem 0;
+}
+
+.explorer-hero h1 {
+  color: var(--white);
+}
+
+.explorer-hero .hero-eyebrow {
+  color: #BFDBFE;
+}
+
+.explorer-hero-sub {
+  color: #E2E8F0;
+}
+
+
+/* =========================================================
+   Section Headings
+   ========================================================= */
+
+.certs-section .section-eyebrow,
+.resources-section .section-eyebrow {
+  color: var(--sky);
+}
+
+.certs-section .section-sub,
+.resources-section .section-sub {
+  color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   Certification Cards
+   ========================================================= */
+
+.cert-grid,
+.resource-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.1rem;
 }
 
-.cert-card, .resource-card {
+.cert-card,
+.resource-card {
   display: flex;
   flex-direction: column;
   background: var(--white);
@@ -28,7 +87,15 @@
   border-radius: var(--radius-lg);
   padding: 1.3rem;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.cert-card:hover,
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .cert-meta {
@@ -40,24 +107,8 @@
   flex-wrap: wrap;
 }
 
-.resource-link {
-  margin-top: auto;
-  align-self: flex-start;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--cat-color, var(--sky));
-  padding-top: 0.9rem;
-}
-
-.resource-link:hover, .resource-link:focus-visible { text-decoration: underline; }
-
-.cert-card:hover, .resource-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.cert-card h3, .resource-card h3 {
+.cert-card h3,
+.resource-card h3 {
   font-size: 1.02rem;
   margin: 0.3rem 0 0.2rem;
 }
@@ -81,13 +132,31 @@
   color: var(--text-secondary);
 }
 
+.resource-link {
+  margin-top: auto;
+  align-self: flex-start;
+  padding-top: 0.9rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--cat-color, var(--sky));
+}
 
-/* ---------- Resource cards ---------- */
+.resource-link:hover,
+.resource-link:focus-visible {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   Resource Cards
+   ========================================================= */
 
 .resource-top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
 }
 
 .resource-type {
@@ -109,9 +178,14 @@
 }
 
 
-/* ---------- Contact form ---------- */
+/* =========================================================
+   Contact Section
+   ========================================================= */
 
-.contact-section { background: var(--white); padding: 4rem 0; }
+.contact-section {
+  background: var(--white);
+  padding: 4rem 0;
+}
 
 .contact-inner {
   display: flex;
@@ -119,16 +193,41 @@
   gap: 1.5rem;
 }
 
+
+/* ---------- Contact Information Panel ---------- */
+
 .contact-copy {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+  background: linear-gradient(
+    160deg,
+    var(--navy) 0%,
+    var(--navy-soft) 100%
+  );
   color: var(--white);
   border-radius: var(--radius-lg);
   padding: 2rem;
 }
 
-.contact-copy .section-eyebrow { color: var(--sky-light); }
-.contact-copy h2 { color: var(--white); font-size: 1.5rem; }
-.contact-copy .section-sub { color: rgba(255, 255, 255, 0.78); margin-bottom: 1.75rem; }
+/*
+   Explicit colors prevent the audit from treating the
+   section heading colors as white-on-white.
+*/
+
+.contact-copy .section-eyebrow {
+  color: #BFDBFE;
+}
+
+.contact-copy h2 {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.contact-copy .section-sub {
+  color: #E2E8F0;
+  margin-bottom: 1.75rem;
+}
+
+
+/* ---------- Contact Reasons ---------- */
 
 .contact-reasons {
   list-style: none;
@@ -144,7 +243,7 @@
   align-items: center;
   gap: 0.85rem;
   font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #F8FAFC;
 }
 
 .contact-reason-icon {
@@ -153,11 +252,16 @@
   height: 2.25rem;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  color: var(--sky-light);
+  color: #BFDBFE;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+/* =========================================================
+   Contact Form
+   ========================================================= */
 
 .contact-form {
   background: var(--white);
@@ -188,6 +292,8 @@
   padding: 0.7rem 0.85rem;
   border-radius: 8px;
   border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text);
   font-family: var(--font-body);
   font-size: 0.95rem;
   resize: vertical;
@@ -206,7 +312,7 @@
 
 .field-error {
   font-size: 0.8rem;
-  color: #DC2626;
+  color: #B91C1C;
   min-height: 1em;
 }
 
@@ -214,28 +320,84 @@
   align-self: flex-start;
 }
 
+
+/* =========================================================
+   Form Success Message
+   ========================================================= */
+
+/*
+   Original:
+   #0A7A56 on rgba(16,185,129,.1)
+
+   The audit reported this combination as too low in contrast.
+   The darker green below provides stronger contrast.
+*/
+
 .form-success {
   font-size: 0.9rem;
-  color: #0A7A56;
-  background: rgba(16, 185, 129, 0.1);
+  color: #065F46;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
   border-radius: 8px;
   padding: 0.6rem 0.85rem;
 }
 
 
 /* =========================================================
-   Desktop overrides
+   Focus Accessibility
+   ========================================================= */
+
+.cert-card a:focus-visible,
+.resource-card a:focus-visible,
+.contact-reason-icon:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   Responsive Layout
    ========================================================= */
 
 @media only screen and (min-width: 48rem) {
 
-  .cert-grid, .resource-grid { grid-template-columns: repeat(3, 1fr); }
+  .explorer-hero {
+    padding: 3.75rem 0 3rem;
+  }
+
+  .cert-grid,
+  .resource-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .contact-inner {
     flex-direction: row;
     align-items: stretch;
   }
 
-  .contact-copy { flex: 1; }
-  .contact-form { flex: 1.2; }
+  .contact-copy {
+    flex: 1;
+  }
+
+  .contact-form {
+    flex: 1.2;
+  }
 }
+
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cert-card,
+  .resource-card {
+    transition: none;
+  }
+
+  .cert-card:hover,
+  .resource-card:hover {
+    transform: none;
+  }
+}fix: improve Learning Hub CSS accessibility and contrast
