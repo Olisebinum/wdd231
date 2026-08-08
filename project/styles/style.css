@@ -12,7 +12,7 @@
   /* #3B82F6 only gave 3.5:1 contrast as text on light backgrounds, failing
      WCAG AA (needs 4.5:1). This shade passes at 4.7-5.2:1 in every context
      it's used (links, eyebrows, chip hover states) and is already the
-     approved on-brand shade used for .btn-primary's default state. */
+     approved on-brand shade used for .action-btn-primary's default state. */
   --sky: #2563EB;
   --sky-light: #93C5FD;
   --emerald: #10B981;
@@ -258,7 +258,7 @@ nav#primary-nav a:focus-visible {
   margin-top: 1.75rem;
 }
 
-.btn {
+.action-btn {
   display: inline-block;
   font-family: var(--font-heading);
   font-weight: 600;
@@ -269,7 +269,7 @@ nav#primary-nav a:focus-visible {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
-.btn-primary {
+.action-btn-primary {
   /* var(--sky) only gives 3.67:1 contrast with white text, which fails
      WCAG AA's 4.5:1 requirement for normal-size text. This darker shade
      gives 5.17:1 while staying recognizably on-brand (it's the same
@@ -278,18 +278,18 @@ nav#primary-nav a:focus-visible {
   color: var(--white);
 }
 
-.btn-primary:hover, .btn-primary:focus-visible {
+.action-btn-primary:hover, .action-btn-primary:focus-visible {
   background: #1D4ED8;
   transform: translateY(-1px);
 }
 
-.btn-secondary {
+.action-btn-secondary {
   background: transparent;
   color: var(--white);
   border: 1.5px solid rgba(255, 255, 255, 0.4);
 }
 
-.btn-secondary:hover, .btn-secondary:focus-visible {
+.action-btn-secondary:hover, .action-btn-secondary:focus-visible {
   border-color: var(--white);
 }
 

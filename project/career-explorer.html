@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Explore tech careers with real salary, demand, and growth data. Compare paths side by side, follow a roadmap, and bookmark your favorites.">
 <meta name="author" content="Olise Ebinum">
+
+<meta property="og:title" content="Career Explorer — Compare Tech Careers Side by Side">
+<meta property="og:description" content="See real salary, demand, and growth data for tech careers. Compare paths, bookmark favorites, and follow a roadmap built for beginners.">
+<meta property="og:image" content="https://olisebinum.github.io/wdd231/project/images/og-image.png">
+<meta property="og:url" content="https://olisebinum.github.io/wdd231/project/career-explorer.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <title>Career Explorer | Career Compass</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,22 +178,22 @@
 <div id="compare-bar" class="compare-bar" hidden>
     <span id="compare-count"></span>
     <div class="compare-bar-actions">
-        <button type="button" id="compare-open-btn" class="btn btn-primary btn-sm" disabled>Compare</button>
-        <button type="button" id="compare-clear-btn" class="btn-text">Clear</button>
+        <button type="button" id="compare-open-btn" class="action-btn action-btn-primary action-btn-sm" disabled>Compare</button>
+        <button type="button" id="compare-clear-btn" class="action-btn-text">Clear</button>
     </div>
 </div>
 
-<div id="detail-modal" class="modal-overlay" hidden>
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close details">&times;</button>
-        <div id="modal-body"></div>
+<div id="detail-dialog" class="dialog-overlay" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+        <button type="button" class="dialog-close" id="dialog-close-btn" aria-label="Close details">&times;</button>
+        <div id="dialog-body"></div>
     </div>
 </div>
 
-<div id="compare-modal" class="modal-overlay" hidden>
-    <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title">
-        <button type="button" class="modal-close" id="compare-close-btn" aria-label="Close comparison">&times;</button>
-        <h2 id="compare-modal-title">Compare careers</h2>
+<div id="compare-dialog" class="dialog-overlay" hidden>
+    <div class="dialog dialog-wide" role="dialog" aria-modal="true" aria-labelledby="compare-dialog-title">
+        <button type="button" class="dialog-close" id="compare-close-btn" aria-label="Close comparison">&times;</button>
+        <h2 id="compare-dialog-title">Compare careers</h2>
         <div id="compare-body" class="compare-table-wrap"></div>
     </div>
 </div>
@@ -209,19 +216,19 @@
 
         <div class="footer-col footer-col-social">
             <a href="https://github.com/Olisebinum/wdd231" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="View source on GitHub">
-                <img src="images/github.png" alt="" width="34" height="34" loading="lazy">
+                <img src="images/github.png" alt="GitHub" width="34" height="34" loading="lazy">
             </a>
             <a href="https://x.com/ebinumolise" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow on X">
-                <img src="images/twitter.png" alt="" width="34" height="34" loading="lazy">
+                <img src="images/twitter.png" alt="X (Twitter)" width="34" height="34" loading="lazy">
             </a>
             <a href="https://linkedin.com/in/olisebinum" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Connect on LinkedIn">
-                <img src="images/linkedin.png" alt="" width="34" height="34" loading="lazy">
+                <img src="images/linkedin.png" alt="LinkedIn" width="34" height="34" loading="lazy">
             </a>
             <a href="https://www.youtube.com/@oliseossai5784" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Subscribe on YouTube">
-                <img src="images/youtube.png" alt="" width="34" height="34" loading="lazy">
+                <img src="images/youtube.png" alt="YouTube" width="34" height="34" loading="lazy">
             </a>
             <a href="https://www.facebook.com/share/1BhN86vmmR/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow on Facebook">
-                <img src="images/facebook.png" alt="" width="34" height="34" loading="lazy">
+                <img src="images/facebook.png" alt="Facebook" width="34" height="34" loading="lazy">
             </a>
         </div>
 

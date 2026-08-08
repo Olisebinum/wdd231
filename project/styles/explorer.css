@@ -276,7 +276,7 @@
   align-items: flex-start;
 }
 
-.career-card-icon {
+.card-banner .career-card-icon {
   width: 2.75rem;
   height: 2.75rem;
   display: flex;
@@ -458,14 +458,14 @@
   gap: 0.75rem;
 }
 
-.btn-sm { padding: 0.5rem 1.1rem; font-size: 0.85rem; }
+.action-btn-sm { padding: 0.5rem 1.1rem; font-size: 0.85rem; }
 
-.btn-primary:disabled {
+.action-btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.btn-text {
+.action-btn-text {
   background: none;
   border: none;
   color: rgba(255, 255, 255, 0.7);
@@ -473,12 +473,12 @@
   cursor: pointer;
 }
 
-.btn-text:hover, .btn-text:focus-visible { color: var(--white); }
+.action-btn-text:hover, .action-btn-text:focus-visible { color: var(--white); }
 
 
 /* ---------- Modals (detail + compare) ---------- */
 
-.modal-overlay {
+.dialog-overlay {
   position: fixed;
   inset: 0;
   background: rgba(15, 23, 42, 0.6);
@@ -489,9 +489,9 @@
   padding: 0;
 }
 
-.modal-overlay[hidden] { display: none; }
+.dialog-overlay[hidden] { display: none; }
 
-.modal {
+.dialog {
   background: var(--white);
   width: 100%;
   max-height: 88vh;
@@ -501,7 +501,7 @@
   position: relative;
 }
 
-.modal-close {
+.dialog-close {
   position: sticky;
   float: right;
   top: 0;
@@ -516,14 +516,14 @@
   color: var(--text-secondary);
 }
 
-.modal-tabs {
+.dialog-tabs {
   display: flex;
   gap: 1.5rem;
   border-bottom: 1px solid var(--border);
   margin: 1.25rem 0 1.5rem;
 }
 
-.modal-tab {
+.dialog-tab {
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
@@ -536,21 +536,21 @@
   margin-bottom: -1px;
 }
 
-.modal-tab.active {
+.dialog-tab.active {
   color: var(--cat-color, var(--sky));
   border-bottom-color: var(--cat-color, var(--sky));
 }
 
-.modal-tab:hover:not(.active) { color: var(--navy); }
+.dialog-tab:hover:not(.active) { color: var(--navy); }
 
-.modal-tabpanel .modal-section:first-child { margin-top: 0; }
+.dialog-tabpanel .dialog-section:first-child { margin-top: 0; }
 
-.modal-title-row h2 {
+.dialog-title-row h2 {
   font-size: 1.4rem;
   margin-bottom: 0.4rem;
 }
 
-.modal-category {
+.dialog-category {
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 0.75rem;
@@ -559,7 +559,7 @@
   letter-spacing: 0.06em;
 }
 
-.modal-stats {
+.dialog-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.85rem;
@@ -569,20 +569,20 @@
   margin: 1.25rem 0;
 }
 
-.modal-section { margin-bottom: 1.5rem; }
+.dialog-section { margin-bottom: 1.5rem; }
 
-.modal-section h3 {
+.dialog-section h3 {
   font-size: 1.02rem;
   margin-bottom: 0.6rem;
 }
 
-.modal-section p, .modal-section li {
+.dialog-section p, .dialog-section li {
   color: var(--text-secondary);
   font-size: 0.92rem;
 }
 
-.modal-section ul { padding-left: 1.1rem; margin: 0; }
-.modal-section li { margin-bottom: 0.4rem; }
+.dialog-section ul { padding-left: 1.1rem; margin: 0; }
+.dialog-section li { margin-bottom: 0.4rem; }
 
 /* Roadmap timeline */
 .roadmap-list {
@@ -835,15 +835,15 @@
 
   .explorer-career-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .modal-overlay { align-items: center; }
+  .dialog-overlay { align-items: center; }
 
-  .modal {
+  .dialog {
     max-width: 42rem;
     border-radius: var(--radius-lg);
     max-height: 82vh;
   }
 
-  .modal-wide { max-width: 56rem; }
+  .dialog-wide { max-width: 56rem; }
 }
 
 @media only screen and (min-width: 75rem) {

@@ -21,11 +21,11 @@ const compareCountEl = document.getElementById("compare-count");
 const compareOpenBtn = document.getElementById("compare-open-btn");
 const compareClearBtn = document.getElementById("compare-clear-btn");
 
-const detailModal = document.getElementById("detail-modal");
-const modalBody = document.getElementById("modal-body");
-const modalCloseBtn = document.getElementById("modal-close-btn");
+const detailModal = document.getElementById("detail-dialog");
+const modalBody = document.getElementById("dialog-body");
+const modalCloseBtn = document.getElementById("dialog-close-btn");
 
-const compareModal = document.getElementById("compare-modal");
+const compareModal = document.getElementById("compare-dialog");
 const compareBody = document.getElementById("compare-body");
 const compareCloseBtn = document.getElementById("compare-close-btn");
 
@@ -270,7 +270,7 @@ function renderSuggestions() {
     suggestionsEl.hidden = false;
 
     suggestionsEl.querySelectorAll(".suggestion-item").forEach((btn) => {
-        btn.addEventListener("click", () => selectSuggestion(btn.dataset.id));
+        action-btn.addEventListener("click", () => selectSuggestion(btn.dataset.id));
     });
 }
 
@@ -396,7 +396,7 @@ compareModal.addEventListener("click", (e) => {
     if (e.target === compareModal) compareModal.hidden = true;
 });
 
-// ---------- Detail modal ----------
+// ---------- Detail dialog ----------
 
 function downloadRoadmap(career) {
     const lines = [
@@ -435,28 +435,28 @@ function openDetailModal(id) {
 
     modalBody.className = categorySlug(career.category);
     modalBody.innerHTML = `
-        <div class="modal-title-row">
-            <p class="modal-category">${career.category}</p>
-            <h2 id="modal-title">${career.title}</h2>
+        <div class="dialog-title-row">
+            <p class="dialog-category">${career.category}</p>
+            <h2 id="dialog-title">${career.title}</h2>
         </div>
 
-        <div class="modal-tabs" role="tablist" aria-label="Career details">
-            <button type="button" class="modal-tab active" role="tab" aria-selected="true" data-tab="overview">Overview</button>
-            <button type="button" class="modal-tab" role="tab" aria-selected="false" data-tab="roadmap">Roadmap</button>
-            <button type="button" class="modal-tab" role="tab" aria-selected="false" data-tab="related">Related</button>
+        <div class="dialog-tabs" role="tablist" aria-label="Career details">
+            <button type="button" class="dialog-tab active" role="tab" aria-selected="true" data-tab="overview">Overview</button>
+            <button type="button" class="dialog-tab" role="tab" aria-selected="false" data-tab="roadmap">Roadmap</button>
+            <button type="button" class="dialog-tab" role="tab" aria-selected="false" data-tab="related">Related</button>
         </div>
 
-        <div class="modal-tabpanel" id="tabpanel-overview" role="tabpanel">
+        <div class="dialog-tabpanel" id="tabpanel-overview" role="tabpanel">
             <p>${career.description}</p>
 
-            <div class="modal-stats">
+            <div class="dialog-stats">
                 <div><span class="card-stat-label">Demand</span><span class="card-stat-value"><span class="demand-badge ${demandClass(career.demand)}">${career.demand}</span></span></div>
                 <div><span class="card-stat-label">Difficulty</span><span class="card-stat-value"><span class="difficulty-badge ${difficultyClass(career.difficulty)}">${career.difficulty}</span></span></div>
                 <div><span class="card-stat-label">Growth</span><span class="card-stat-value">${career.growth}</span></div>
                 <div><span class="card-stat-label">Time to Learn</span><span class="card-stat-value">${career.timeToLearn}</span></div>
             </div>
 
-            <div class="modal-section">
+            <div class="dialog-section">
                 <h3>Salary by experience</h3>
                 <div class="salary-progression">
                     <div class="salary-step">
@@ -477,18 +477,18 @@ function openDetailModal(id) {
                 </div>
             </div>
 
-            <div class="modal-section">
+            <div class="dialog-section">
                 <h3>A day in the life</h3>
                 <p class="day-in-life">${career.dayInLife}</p>
             </div>
 
-            <div class="modal-section">
+            <div class="dialog-section">
                 <h3>What you'd actually do</h3>
                 <ul>${career.responsibilities.map((r) => `<li>${r}</li>`).join("")}</ul>
             </div>
         </div>
 
-        <div class="modal-tabpanel" id="tabpanel-roadmap" role="tabpanel" hidden>
+        <div class="dialog-tabpanel" id="tabpanel-roadmap" role="tabpanel" hidden>
             <div class="roadmap-header">
                 <h3>Learning roadmap</h3>
                 <button type="button" class="download-roadmap-btn" id="download-roadmap-btn">&#8595; Download</button>
@@ -503,14 +503,14 @@ function openDetailModal(id) {
             </ul>
         </div>
 
-        <div class="modal-tabpanel" id="tabpanel-related" role="tabpanel" hidden>
-            <div class="modal-section">
+        <div class="dialog-tabpanel" id="tabpanel-related" role="tabpanel" hidden>
+            <div class="dialog-section">
                 <h3>Worth looking into</h3>
                 <p>${career.certifications.join(" &bull; ")}</p>
             </div>
 
             ${relatedTitles.length ? `
-            <div class="modal-section">
+            <div class="dialog-section">
                 <h3>Related paths</h3>
                 <div class="related-chips">
                     ${relatedTitles.map((r) => `<button type="button" class="related-chip" data-id="${r.id}">${r.title}</button>`).join("")}
@@ -519,13 +519,13 @@ function openDetailModal(id) {
         </div>
     `;
 
-    modalBody.querySelectorAll(".modal-tab").forEach((tab) => {
+    modalBody.querySelectorAll(".dialog-tab").forEach((tab) => {
         tab.addEventListener("click", () => {
-            modalBody.querySelectorAll(".modal-tab").forEach((t) => {
+            modalBody.querySelectorAll(".dialog-tab").forEach((t) => {
                 t.classList.remove("active");
                 t.setAttribute("aria-selected", "false");
             });
-            modalBody.querySelectorAll(".modal-tabpanel").forEach((p) => (p.hidden = true));
+            modalBody.querySelectorAll(".dialog-tabpanel").forEach((p) => (p.hidden = true));
             tab.classList.add("active");
             tab.setAttribute("aria-selected", "true");
             document.getElementById(`tabpanel-${tab.dataset.tab}`).hidden = false;
@@ -557,9 +557,9 @@ document.addEventListener("keydown", (e) => {
 // ---------- FAQ accordion ----------
 
 document.querySelectorAll(".faq-question").forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const item = btn.closest(".faq-item");
+    action-btn.addEventListener("click", () => {
+        const item = action-btn.closest(".faq-item");
         const isOpen = item.classList.toggle("open");
-        btn.setAttribute("aria-expanded", isOpen);
+        action-btn.setAttribute("aria-expanded", isOpen);
     });
 });
