@@ -460,6 +460,10 @@ nav#primary-nav a:focus-visible {
   padding: 1.75rem 0;
 }
 
+.stats-band h2.visually-hidden {
+  color: var(--white);
+}
+
 .stats-inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -487,7 +491,6 @@ nav#primary-nav a:focus-visible {
 }
 
 /* ---------- Skeleton Loading ---------- */
-
 .skeleton-card {
   cursor: default;
 }
