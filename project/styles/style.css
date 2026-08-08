@@ -1,22 +1,21 @@
 /* =========================================================
-   Career Compass — style.css
-   Design tokens: navy #0F172A / sky #3B82F6 / emerald #10B981
-   Poppins (headings) / Roboto (body) / Fira Code (tags/code)
-   Signature: the compass motif in the hero — literal, not
-   decorative, since the whole brand is about direction/bearing.
+   CAREER COMPASS — style.css
+   W06 FINAL CLEAN VERSION
    ========================================================= */
+
+/* ---------- Design Tokens ---------- */
 
 :root {
   --navy: #0F172A;
   --navy-soft: #1E2A47;
---sky: #2563EB;
+  --sky: #2563EB;
   --sky-light: #93C5FD;
   --emerald: #10B981;
   --white: #FFFFFF;
   --bg: #F8FAFC;
   --border: #E2E8F0;
   --text: #1E293B;
---text-secondary: #556072;
+  --text-secondary: #556072;
 
   --font-heading: "Poppins", sans-serif;
   --font-body: "Roboto", sans-serif;
@@ -28,18 +27,43 @@
   --shadow-md: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
-/* Category accent identity — distinct hue per career category so
-   cards read as organized groups instead of identical repeats.
-   Kept as tints (light backgrounds, saturated icon/text) so they
-   stay quiet next to the core navy/sky/emerald brand. Shared
-   across all pages that reference career categories. */
-.cat-engineering    { --cat-color: #2563EB; --cat-tint: #EFF4FE; }
-.cat-data           { --cat-color: #7C3AED; --cat-tint: #F5F1FE; }
-.cat-security       { --cat-color: #92400E; --cat-tint: #FDF6EC; }
-.cat-infrastructure { --cat-color: #155E75; --cat-tint: #ECF8FA; }
-.cat-design         { --cat-color: #BE185D; --cat-tint: #FDF0F6; }
-.cat-product        { --cat-color: #065F46; --cat-tint: #ECFAF5; }
-* { box-sizing: border-box; }
+/* ---------- Career Category Colors ---------- */
+
+.cat-engineering {
+  --cat-color: #2563EB;
+  --cat-tint: #EFF4FE;
+}
+
+.cat-data {
+  --cat-color: #7C3AED;
+  --cat-tint: #F5F1FE;
+}
+
+.cat-security {
+  --cat-color: #92400E;
+  --cat-tint: #FDF6EC;
+}
+
+.cat-infrastructure {
+  --cat-color: #155E75;
+  --cat-tint: #ECF8FA;
+}
+
+.cat-design {
+  --cat-color: #BE185D;
+  --cat-tint: #FDF0F6;
+}
+
+.cat-product {
+  --cat-color: #065F46;
+  --cat-tint: #ECFAF5;
+}
+
+/* ---------- Global ---------- */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -49,7 +73,9 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--navy);
@@ -67,15 +93,24 @@ a {
   text-decoration: none;
 }
 
-img, svg { display: block; max-width: 100%; }
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- Accessibility ---------- */
 
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+  border: 0;
 }
 
 .skip-link {
@@ -90,12 +125,16 @@ img, svg { display: block; max-width: 100%; }
   transition: top 0.15s ease;
 }
 
-.skip-link:focus { top: 0.5rem; }
+.skip-link:focus {
+  top: 0.5rem;
+}
 
 :focus-visible {
   outline: 2px solid var(--sky);
   outline-offset: 2px;
 }
+
+/* ---------- Layout ---------- */
 
 .section-inner {
   max-width: 1180px;
@@ -128,7 +167,10 @@ img, svg { display: block; max-width: 100%; }
   color: var(--white);
 }
 
-.brand-mark { color: var(--sky-light); display: flex; }
+.brand-mark {
+  color: var(--sky-light);
+  display: flex;
+}
 
 .brand-name {
   font-family: var(--font-heading);
@@ -136,17 +178,28 @@ img, svg { display: block; max-width: 100%; }
   font-size: 1.1rem;
 }
 
-/* Needle gives a quiet ambient hint of motion — settles, doesn't spin forever */
+/* ---------- Brand Animation ---------- */
+
 .brand-needle {
   transform-origin: 20px 20px;
   animation: brand-settle 1.6s ease-out;
 }
 
 @keyframes brand-settle {
-  0%   { transform: rotate(-35deg); }
-  60%  { transform: rotate(8deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(-35deg);
+  }
+
+  60% {
+    transform: rotate(8deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
+
+/* ---------- Mobile Navigation ---------- */
 
 .nav-toggle {
   display: flex;
@@ -173,7 +226,9 @@ nav#primary-nav {
   background: var(--navy-soft);
 }
 
-nav#primary-nav.open { display: flex; }
+nav#primary-nav.open {
+  display: flex;
+}
 
 nav#primary-nav a {
   color: rgba(255, 255, 255, 0.82);
@@ -192,11 +247,16 @@ nav#primary-nav a:focus-visible {
   color: var(--sky-light);
 }
 
-/* ---------- Hero + compass signature ---------- */
+/* ---------- Hero ---------- */
 
 .hero {
   background-color: var(--navy);
-  background-image: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+  background-image:
+    linear-gradient(
+      160deg,
+      var(--navy) 0%,
+      var(--navy-soft) 100%
+    );
   color: var(--white);
   padding: 3rem 0 3.5rem;
 }
@@ -225,10 +285,12 @@ nav#primary-nav a:focus-visible {
   margin-bottom: 0.75rem;
 }
 
-.hero-copy { text-align: center; }
+.hero-copy {
+  text-align: center;
+}
 
 .hero-copy h1 {
-  color: #FFFFFF;
+  color: var(--white);
   font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -240,6 +302,8 @@ nav#primary-nav a:focus-visible {
   max-width: 34rem;
   margin: 0 auto;
 }
+
+/* ---------- Hero Actions ---------- */
 
 .hero-actions {
   display: flex;
@@ -256,15 +320,19 @@ nav#primary-nav a:focus-visible {
   padding: 0.8rem 1.6rem;
   border-radius: 999px;
   text-align: center;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .primary-action {
-background: #2563EB;
+  background: #2563EB;
   color: var(--white);
 }
 
-.primary-action:hover, .primary-action:focus-visible {
+.primary-action:hover,
+.primary-action:focus-visible {
   background: #1D4ED8;
   transform: translateY(-1px);
 }
@@ -275,16 +343,22 @@ background: #2563EB;
   border: 1.5px solid rgba(255, 255, 255, 0.4);
 }
 
-.secondary-action:hover, .secondary-action:focus-visible {
+.secondary-action:hover,
+.secondary-action:focus-visible {
   border-color: var(--white);
 }
+
+/* ---------- Hero Compass ---------- */
 
 .hero-compass {
   width: 100%;
   max-width: 280px;
 }
 
-.compass-svg { width: 100%; height: auto; }
+.compass-svg {
+  width: 100%;
+  height: auto;
+}
 
 .compass-ring-outer {
   fill: none;
@@ -313,25 +387,73 @@ background: #2563EB;
 
 .compass-needle-group {
   transform-origin: 140px 140px;
-  animation: needle-settle 2.2s cubic-bezier(0.2, 0.9, 0.3, 1);
+  animation:
+    needle-settle 2.2s cubic-bezier(0.2, 0.9, 0.3, 1);
 }
 
 @keyframes needle-settle {
-  0%   { transform: rotate(-200deg); }
-  55%  { transform: rotate(20deg); }
-  100% { transform: rotate(0deg); }
-}
+  0% {
+    transform: rotate(-200deg);
+  }
 
-.compass-needle-main { fill: var(--sky-light); }
-.compass-needle-hub { fill: var(--emerald); }
+  55% {
+    transform: rotate(20deg);
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  .compass-needle-group, .brand-needle {
-    animation: none;
+  100% {
+    transform: rotate(0deg);
   }
 }
 
-/* ---------- Stat counters ---------- */
+.compass-needle-main {
+  fill: var(--sky-light);
+}
+
+.compass-needle-hub {
+  fill: var(--emerald);
+}
+
+/* ---------- Hero Popular Links ---------- */
+
+/*
+   IMPORTANT:
+   These colors replace the old translucent hero-tag colors.
+   This gives the links a real background and sufficient contrast.
+*/
+
+.hero-popular {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.hero-popular-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #E2E8F0;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--white);
+  background: #334155;
+  border: 1px solid #475569;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.hero-tag:hover,
+.hero-tag:focus-visible {
+  color: var(--white);
+  background: #475569;
+  border-color: #64748B;
+}
+
+/* ---------- Statistics ---------- */
 
 .stats-band {
   background: var(--navy-soft);
@@ -364,39 +486,69 @@ background: #2563EB;
   margin-top: 0.2rem;
 }
 
-/* ---------- Skeleton loading states ---------- */
+/* ---------- Skeleton Loading ---------- */
 
-.skeleton-card { cursor: default; }
-.skeleton-card:hover { transform: none; box-shadow: var(--shadow-sm); }
+.skeleton-card {
+  cursor: default;
+}
+
+.skeleton-card:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
 
 .skeleton-line {
-  background: linear-gradient(90deg, var(--border) 25%, #EEF2F7 37%, var(--border) 63%);
+  background:
+    linear-gradient(
+      90deg,
+      var(--border) 25%,
+      #EEF2F7 37%,
+      var(--border) 63%
+    );
   background-size: 400% 100%;
   animation: skeleton-shimmer 1.4s ease infinite;
   border-radius: 6px;
   margin-bottom: 0.7rem;
 }
 
-.skeleton-icon { width: 2.6rem; height: 2.6rem; border-radius: 10px; }
-.skeleton-title { height: 1.1rem; width: 70%; }
-.skeleton-text { height: 0.8rem; width: 100%; }
-.skeleton-text.short { width: 55%; }
+.skeleton-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 10px;
+}
+
+.skeleton-title {
+  height: 1.1rem;
+  width: 70%;
+}
+
+.skeleton-text {
+  height: 0.8rem;
+  width: 100%;
+}
+
+.skeleton-text.short {
+  width: 55%;
+}
 
 @keyframes skeleton-shimmer {
-  0% { background-position: 100% 50%; }
-  100% { background-position: 0 50%; }
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .skeleton-line { animation: none; background: var(--border); }
-}
-
-/* ---------- Scroll reveal ---------- */
+/* ---------- Scroll Reveal ---------- */
 
 .reveal {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .reveal-visible {
@@ -404,38 +556,11 @@ background: #2563EB;
   transform: none;
 }
 
-.hero-popular {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+/* ---------- Shared Section Rhythm ---------- */
+
+.section {
+  padding: 3.5rem 0;
 }
-
-.hero-popular-label {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 0.75rem;
-  color: #E2E8F0;
-}
-
-.hero-tag {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 0.3rem 0.75rem;
-  border-radius: 999px;
-}
-
-.hero-tag:hover, .hero-tag:focus-visible {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.35);
-}
-
-/* ---------- Shared section rhythm ---------- */
-
-.section { padding: 3.5rem 0; }
 
 .section-eyebrow {
   font-family: var(--font-mono);
@@ -459,9 +584,11 @@ background: #2563EB;
   margin-bottom: 2rem;
 }
 
-/* ---------- Career Journey timeline ---------- */
+/* ---------- Career Journey ---------- */
 
-.journey-section { background: var(--white); }
+.journey-section {
+  background: var(--white);
+}
 
 .journey-list {
   list-style: none;
@@ -515,7 +642,7 @@ background: #2563EB;
   font-size: 0.95rem;
 }
 
-/* ---------- Career cards ---------- */
+/* ---------- Career Cards ---------- */
 
 .career-grid {
   display: grid;
@@ -533,7 +660,10 @@ background: #2563EB;
   box-shadow: var(--shadow-sm);
   color: inherit;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .career-card:hover,
@@ -554,7 +684,9 @@ background: #2563EB;
   margin-top: 0.2rem;
 }
 
-.career-card:hover .card-link-arrow { text-decoration: underline; }
+.career-card:hover .card-link-arrow {
+  text-decoration: underline;
+}
 
 .career-card-icon {
   width: 2.6rem;
@@ -581,7 +713,11 @@ background: #2563EB;
   margin-bottom: 0.9rem;
 }
 
-.career-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.career-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
 
 .tag {
   font-family: var(--font-mono);
@@ -600,11 +736,16 @@ background: #2563EB;
   color: var(--sky);
 }
 
-.link-arrow:hover, .link-arrow:focus-visible { text-decoration: underline; }
+.link-arrow:hover,
+.link-arrow:focus-visible {
+  text-decoration: underline;
+}
 
-/* ---------- Why section ---------- */
+/* ---------- Why Section ---------- */
 
-.why-section { background: var(--white); }
+.why-section {
+  background: var(--white);
+}
 
 .why-grid {
   display: grid;
@@ -623,9 +764,20 @@ background: #2563EB;
   margin-bottom: 0.9rem;
 }
 
-.why-icon-navy { background: rgba(15, 23, 42, 0.08); color: var(--navy); }
-.why-icon-emerald { background: rgba(16, 185, 129, 0.12); color: var(--emerald); }
-.why-icon-sky { background: #E8F0FE; color: var(--navy); }
+.why-icon-navy {
+  background: rgba(15, 23, 42, 0.08);
+  color: var(--navy);
+}
+
+.why-icon-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--emerald);
+}
+
+.why-icon-sky {
+  background: #E8F0FE;
+  color: var(--navy);
+}
 
 .why-card h3 {
   font-size: 1.05rem;
@@ -639,7 +791,9 @@ background: #2563EB;
 
 /* ---------- Testimonials ---------- */
 
-.testimonials-section { background: var(--bg); }
+.testimonials-section {
+  background: var(--bg);
+}
 
 .testimonial-grid {
   display: grid;
@@ -664,7 +818,7 @@ background: #2563EB;
   font-family: Georgia, serif;
   font-size: 2.75rem;
   line-height: 1;
-  color: var(--border);
+  color: #64748B;
 }
 
 .testimonial-card blockquote {
@@ -726,7 +880,9 @@ background: #2563EB;
   color: var(--white);
 }
 
-.newsletter-inner { text-align: center; }
+.newsletter-inner {
+  text-align: center;
+}
 
 .newsletter-section h2 {
   color: var(--white);
@@ -758,7 +914,9 @@ background: #2563EB;
   font-size: 0.95rem;
 }
 
-.newsletter-form input::placeholder { color: #CBD5E1; }
+.newsletter-form input::placeholder {
+  color: #CBD5E1;
+}
 
 .newsletter-form input:focus-visible {
   outline: 2px solid var(--sky-light);
@@ -785,7 +943,12 @@ background: #2563EB;
   text-align: center;
 }
 
-.footer-col { display: flex; flex-direction: column; gap: 0.6rem; align-items: center; }
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
 
 .footer-brand {
   display: flex;
@@ -796,7 +959,10 @@ background: #2563EB;
   font-weight: 700;
 }
 
-.footer-tagline { font-size: 0.85rem; margin: 0; }
+.footer-tagline {
+  font-size: 0.85rem;
+  margin: 0;
+}
 
 .footer-col-social {
   display: flex;
@@ -815,23 +981,48 @@ background: #2563EB;
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
-.social-icon:hover img, .social-icon:focus-visible img {
+.social-icon:hover img,
+.social-icon:focus-visible img {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.footer-col-meta p { font-size: 0.8rem; margin: 0; }
+.footer-col-meta p {
+  font-size: 0.8rem;
+  margin: 0;
+}
 
-/* =========================================================
-   Desktop / wide-screen overrides
-   ========================================================= */
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .compass-needle-group,
+  .brand-needle,
+  .skeleton-line {
+    animation: none;
+  }
+
+  .skeleton-line {
+    background: var(--border);
+  }
+
+  .journey-step:not(:last-child)::after,
+  .journey-list::before {
+    background: var(--border);
+  }
+}
+
+/* ---------- Desktop / Wide Screens ---------- */
 
 @media only screen and (min-width: 48rem) {
 
-  .nav-toggle { display: none; }
+  .nav-toggle {
+    display: none;
+  }
 
   nav#primary-nav {
     display: flex;
@@ -845,7 +1036,9 @@ background: #2563EB;
     padding: 0.5rem 0.9rem;
   }
 
-  .hero { padding: 5rem 0 6rem; }
+  .hero {
+    padding: 5rem 0 6rem;
+  }
 
   .hero-inner {
     flex-direction: row;
@@ -853,19 +1046,36 @@ background: #2563EB;
     gap: 3.5rem;
   }
 
-  .hero-copy { text-align: left; flex: 1.1; }
+  .hero-copy {
+    text-align: left;
+    flex: 1.1;
+  }
 
-  .hero-copy h1 { font-size: 2.9rem; }
+  .hero-copy h1 {
+    font-size: 2.9rem;
+  }
 
-  .hero-sub { margin: 0; }
+  .hero-sub {
+    margin: 0;
+  }
 
-  .hero-actions { flex-direction: row; margin-top: 2.25rem; }
+  .hero-actions {
+    flex-direction: row;
+    margin-top: 2.25rem;
+  }
 
-  .hero-compass { flex: 1; max-width: 360px; }
+  .hero-compass {
+    flex: 1;
+    max-width: 360px;
+  }
 
-  .section h2 { font-size: 2rem; }
+  .section h2 {
+    font-size: 2rem;
+  }
 
-  .career-grid { grid-template-columns: repeat(3, 1fr); }
+  .career-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .journey-list {
     flex-direction: row;
@@ -891,17 +1101,29 @@ background: #2563EB;
     padding-bottom: 0;
   }
 
-  .journey-step::after { display: none; }
+  .journey-step::after {
+    display: none;
+  }
 
-  .journey-label { font-size: 0.82rem; }
+  .journey-label {
+    font-size: 0.82rem;
+  }
 
-  .why-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-  .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-  .newsletter-form { flex-direction: row; }
+  .newsletter-form {
+    flex-direction: row;
+  }
 
-  .newsletter-form input { flex: 1; }
+  .newsletter-form input {
+    flex: 1;
+  }
 
   .footer-inner {
     display: grid;
@@ -911,51 +1133,12 @@ background: #2563EB;
     text-align: left;
   }
 
-  .footer-col-brand { align-items: flex-start; }
-  .footer-col-meta { align-items: flex-end; text-align: right; }
-}
+  .footer-col-brand {
+    align-items: flex-start;
+  }
 
-/* Final accessibility overrides */
-.hero a.hero-tag {
-  color: #FFFFFF;
-  background: #334155;
-  border-color: #475569;
-}
-
-.hero a.hero-tag:hover,
-.hero a.hero-tag:focus-visible {
-  color: #FFFFFF;
-  background: #475569;
-  border-color: #64748B;
-}
-
-.stats-band h2.visually-hidden {
-  color: #FFFFFF;
-}
-
-.testimonial-card span.quote-mark {
-  color: #64748B;
-}
-
-/* ---------- Final W06 accessibility corrections ---------- */
-
-.hero a.hero-tag {
-  color: #FFFFFF;
-  background: #334155;
-  border: 1px solid #475569;
-}
-
-.hero a.hero-tag:hover,
-.hero a.hero-tag:focus-visible {
-  color: #FFFFFF;
-  background: #475569;
-  border-color: #64748B;
-}
-
-.stats-band h2.visually-hidden {
-  color: #FFFFFF;
-}
-
-.testimonial-card span.quote-mark {
-  color: #64748B;
+  .footer-col-meta {
+    align-items: flex-end;
+    text-align: right;
+  }
 }
