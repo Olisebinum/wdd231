@@ -312,7 +312,7 @@ nav#primary-nav a:focus-visible {
   margin-top: 1.75rem;
 }
 
-.action-btn {
+.action-button {
   display: inline-block;
   font-family: var(--font-heading);
   font-weight: 600;
