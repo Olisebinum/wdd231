@@ -16,10 +16,7 @@
   --bg: #F8FAFC;
   --border: #E2E8F0;
   --text: #1E293B;
-  /* #64748B measured 4.28-4.43:1 against the lightest category tint
-     backgrounds — just under the 4.5:1 minimum. This shade clears it
-     (5.6-5.8:1) without reading as a different color. */
-  --text-secondary: #556072;
+--text-secondary: #556072;
 
   --font-heading: "Poppins", sans-serif;
   --font-body: "Roboto", sans-serif;
@@ -916,4 +913,49 @@ background: #2563EB;
 
   .footer-col-brand { align-items: flex-start; }
   .footer-col-meta { align-items: flex-end; text-align: right; }
+}
+
+/* Final accessibility overrides */
+.hero a.hero-tag {
+  color: #FFFFFF;
+  background: #334155;
+  border-color: #475569;
+}
+
+.hero a.hero-tag:hover,
+.hero a.hero-tag:focus-visible {
+  color: #FFFFFF;
+  background: #475569;
+  border-color: #64748B;
+}
+
+.stats-band h2.visually-hidden {
+  color: #FFFFFF;
+}
+
+.testimonial-card span.quote-mark {
+  color: #64748B;
+}
+
+/* ---------- Final W06 accessibility corrections ---------- */
+
+.hero a.hero-tag {
+  color: #FFFFFF;
+  background: #334155;
+  border: 1px solid #475569;
+}
+
+.hero a.hero-tag:hover,
+.hero a.hero-tag:focus-visible {
+  color: #FFFFFF;
+  background: #475569;
+  border-color: #64748B;
+}
+
+.stats-band h2.visually-hidden {
+  color: #FFFFFF;
+}
+
+.testimonial-card span.quote-mark {
+  color: #64748B;
 }
