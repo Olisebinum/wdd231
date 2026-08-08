@@ -935,6 +935,15 @@ nav#primary-nav a:focus-visible {
   padding: 2.5rem 0;
 }
 
+.site-footer a {
+    color: var(--sky-light);
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: var(--white);
+}
+
 .footer-inner {
   max-width: 1180px;
   margin: 0 auto;
