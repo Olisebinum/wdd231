@@ -76,7 +76,6 @@ img, svg { display: block; max-width: 100%; }
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  color: var(--white);
 }
 
 .skip-link {
@@ -665,7 +664,7 @@ background: #2563EB;
   font-family: Georgia, serif;
   font-size: 2.75rem;
   line-height: 1;
-  color: #64748B;
+  color: var(--border);
 }
 
 .testimonial-card blockquote {
@@ -914,4 +913,49 @@ background: #2563EB;
 
   .footer-col-brand { align-items: flex-start; }
   .footer-col-meta { align-items: flex-end; text-align: right; }
+}
+
+/* Final accessibility overrides */
+.hero a.hero-tag {
+  color: #FFFFFF;
+  background: #334155;
+  border-color: #475569;
+}
+
+.hero a.hero-tag:hover,
+.hero a.hero-tag:focus-visible {
+  color: #FFFFFF;
+  background: #475569;
+  border-color: #64748B;
+}
+
+.stats-band h2.visually-hidden {
+  color: #FFFFFF;
+}
+
+.testimonial-card span.quote-mark {
+  color: #64748B;
+}
+
+/* ---------- Final W06 accessibility corrections ---------- */
+
+.hero a.hero-tag {
+  color: #FFFFFF;
+  background: #334155;
+  border: 1px solid #475569;
+}
+
+.hero a.hero-tag:hover,
+.hero a.hero-tag:focus-visible {
+  color: #FFFFFF;
+  background: #475569;
+  border-color: #64748B;
+}
+
+.stats-band h2.visually-hidden {
+  color: #FFFFFF;
+}
+
+.testimonial-card span.quote-mark {
+  color: #64748B;
 }
