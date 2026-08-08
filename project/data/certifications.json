@@ -41,7 +41,7 @@
     "category": "Data",
     "level": "Beginner",
     "format": "Self-paced, subscription",
-    "description": "No prior experience required \u2014 covers spreadsheets, SQL, and data visualization basics.",
+    "description": "No prior experience required — covers spreadsheets, SQL, and data visualization basics.",
     "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
   },
   {
@@ -59,7 +59,7 @@
     "category": "Data",
     "level": "Intermediate",
     "format": "Self-paced, subscription",
-    "description": "A step up from the analyst track \u2014 adds machine learning and applied statistics.",
+    "description": "A step up from the analyst track — adds machine learning and applied statistics.",
     "url": "https://www.coursera.org/professional-certificates/ibm-data-science"
   },
   {
@@ -86,7 +86,7 @@
     "category": "Security",
     "level": "Beginner",
     "format": "Proctored exam",
-    "description": "Networking fundamentals \u2014 a common prerequisite before attempting Security+.",
+    "description": "Networking fundamentals — a common prerequisite before attempting Security+.",
     "url": "https://www.comptia.org/certifications/network"
   },
   {
@@ -95,7 +95,7 @@
     "category": "Infrastructure",
     "level": "Beginner",
     "format": "Proctored exam",
-    "description": "The standard starting point for AWS certifications \u2014 broad, non-technical overview of cloud concepts.",
+    "description": "The standard starting point for AWS certifications — broad, non-technical overview of cloud concepts.",
     "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
   },
   {
@@ -113,7 +113,7 @@
     "category": "Infrastructure",
     "level": "Intermediate",
     "format": "Proctored exam",
-    "description": "Validates container fundamentals \u2014 image building, orchestration, and troubleshooting.",
+    "description": "Validates container fundamentals — image building, orchestration, and troubleshooting.",
     "url": "https://www.docker.com/certification/"
   },
   {
@@ -133,5 +133,14 @@
     "format": "Cohort-based, paid",
     "description": "A more structured, mentor-led option for people transitioning into product management.",
     "url": "https://productschool.com/"
+  },
+  {
+    "name": "Nielsen Norman Group UX Certification",
+    "provider": "Nielsen Norman Group",
+    "category": "Design",
+    "level": "Intermediate",
+    "format": "Self-paced modules, paid",
+    "description": "A widely respected UX certification covering research methods, usability testing, and interaction design from the field's leading research firm.",
+    "url": "https://www.nngroup.com/ux-certification/"
   }
 ]

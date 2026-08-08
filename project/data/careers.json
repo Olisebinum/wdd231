@@ -16,7 +16,7 @@
       "APIs",
       "Problem Solving"
     ],
-    "description": "Software developers design, build, test, and maintain the programs and systems that power everything from mobile apps to enterprise platforms. It's one of the most flexible entry points into tech \u2014 the work ranges from front-end interfaces to back-end infrastructure.",
+    "description": "Software developers design, build, test, and maintain the programs and systems that power everything from mobile apps to enterprise platforms. It's one of the most flexible entry points into tech — the work ranges from front-end interfaces to back-end infrastructure.",
     "responsibilities": [
       "Write and test code across the stack",
       "Debug and fix issues in existing systems",
@@ -67,7 +67,7 @@
     "title": "Data Analytics",
     "category": "Data",
     "icon": "&#9636;",
-    "summary": "Turn raw numbers into decisions \u2014 find the pattern, tell the story.",
+    "summary": "Turn raw numbers into decisions — find the pattern, tell the story.",
     "salary": "$70,000",
     "demand": "High",
     "growth": "+18%",
@@ -453,7 +453,7 @@
       "SQL",
       "Machine Learning"
     ],
-    "description": "Data scientists go a step further than analysts \u2014 building predictive models, running experiments, and answering harder \"what will happen next\" questions rather than just \"what happened.\"",
+    "description": "Data scientists go a step further than analysts — building predictive models, running experiments, and answering harder \"what will happen next\" questions rather than just \"what happened.\"",
     "responsibilities": [
       "Design and run experiments",
       "Build predictive models",
@@ -576,7 +576,7 @@
       "Communication",
       "Basic Data Analysis"
     ],
-    "description": "Product managers sit between users, business goals, and engineering, deciding what a team should build next and why. It's typically not a first tech job \u2014 most PMs transition in from engineering, design, or business roles.",
+    "description": "Product managers sit between users, business goals, and engineering, deciding what a team should build next and why. It's typically not a first tech job — most PMs transition in from engineering, design, or business roles.",
     "responsibilities": [
       "Define product requirements and priorities",
       "Talk to users and analyze feedback",
@@ -619,5 +619,318 @@
       "senior": "$145,000"
     },
     "dayInLife": "Your day is mostly meetings and messages: aligning engineering and design, talking to users, and constantly re-prioritizing what matters most this week."
+  },
+  {
+    "id": "qa-engineering",
+    "title": "QA Engineering",
+    "category": "Engineering",
+    "icon": "&#128027;",
+    "summary": "Catch what breaks before your users do — build the tests that keep software honest.",
+    "salary": "$78,000",
+    "demand": "High",
+    "growth": "+17%",
+    "timeToLearn": "6-9 months",
+    "education": "Bachelor's preferred, not required",
+    "skills": [
+      "Test Automation",
+      "JavaScript",
+      "CI/CD",
+      "Bug Tracking"
+    ],
+    "description": "QA engineers design and run the tests that catch bugs before they reach users — from manual exploratory testing to automated test suites that run on every code change. It's a strong entry point into software teams for people who think in edge cases and “what if a user does this instead.”",
+    "responsibilities": [
+      "Write and maintain automated test suites",
+      "Perform manual and exploratory testing on new features",
+      "Track, reproduce, and document bugs for developers",
+      "Integrate testing into the CI/CD pipeline"
+    ],
+    "roadmap": [
+      {
+        "step": "HTML, CSS & JavaScript basics",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Manual testing fundamentals & bug reporting",
+        "duration": "3 weeks"
+      },
+      {
+        "step": "Test automation (Selenium/Playwright)",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "CI/CD basics for automated test runs",
+        "duration": "3 weeks"
+      },
+      {
+        "step": "Apply + QA interview prep",
+        "duration": "4 weeks"
+      }
+    ],
+    "certifications": [
+      "freeCodeCamp Full Stack",
+      "Meta Front-End Developer"
+    ],
+    "relatedCareers": [
+      "software-development",
+      "devops",
+      "mobile-development"
+    ],
+    "difficulty": "Beginner",
+    "salaryRange": {
+      "junior": "$52,000",
+      "mid": "$78,000",
+      "senior": "$115,000"
+    },
+    "dayInLife": "Expect a mix of running automated test suites, digging into a flaky test that fails intermittently, writing up a bug report with clear repro steps, and syncing with developers on whether something is a real bug or expected behavior."
+  },
+  {
+    "id": "data-engineering",
+    "title": "Data Engineering",
+    "category": "Data",
+    "icon": "&#128736;",
+    "summary": "Build the pipelines that get clean data where it needs to go, reliably.",
+    "salary": "$98,000",
+    "demand": "Very High",
+    "growth": "+21%",
+    "timeToLearn": "9-12 months",
+    "education": "Bachelor's in CS or related field preferred",
+    "skills": [
+      "SQL",
+      "Python",
+      "ETL Pipelines",
+      "Cloud Data Warehouses"
+    ],
+    "description": "Data engineers build and maintain the infrastructure that moves and transforms data — the pipelines that data analysts and scientists depend on to do their jobs. It's a more infrastructure-heavy path than analytics, closer to software engineering with a data focus.",
+    "responsibilities": [
+      "Design and build ETL/ELT data pipelines",
+      "Maintain data warehouses and ensure data quality",
+      "Optimize queries and pipeline performance at scale",
+      "Partner with analysts and data scientists on data needs"
+    ],
+    "roadmap": [
+      {
+        "step": "SQL & database fundamentals",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Python for data pipelines",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "ETL tools & workflow orchestration",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Cloud data warehouses (BigQuery/Redshift)",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Build a portfolio pipeline project + apply",
+        "duration": "6 weeks"
+      }
+    ],
+    "certifications": [
+      "IBM Data Analyst",
+      "IBM Data Science Professional Certificate"
+    ],
+    "relatedCareers": [
+      "data-analytics",
+      "data-science",
+      "cloud-computing"
+    ],
+    "difficulty": "Intermediate",
+    "salaryRange": {
+      "junior": "$68,000",
+      "mid": "$98,000",
+      "senior": "$145,000"
+    },
+    "dayInLife": "A typical day involves checking that overnight pipelines ran cleanly, debugging a data quality issue someone flagged, and working on a new pipeline to bring in a data source a team has been asking for."
+  },
+  {
+    "id": "security-operations",
+    "title": "Security Operations Analyst",
+    "category": "Security",
+    "icon": "&#128737;",
+    "summary": "Watch the systems, catch the alerts, and respond before a small issue becomes a breach.",
+    "salary": "$72,000",
+    "demand": "High",
+    "growth": "+20%",
+    "timeToLearn": "6-9 months",
+    "education": "Bachelor's preferred, certifications carry real weight",
+    "skills": [
+      "SIEM Tools",
+      "Incident Response",
+      "Networking",
+      "Log Analysis"
+    ],
+    "description": "Security operations (SOC) analysts monitor an organization's systems for threats in real time, triage alerts, and respond to incidents as they happen. It's often the most accessible entry point into cybersecurity, with a clear path toward more specialized security roles.",
+    "responsibilities": [
+      "Monitor security alerts and dashboards for threats",
+      "Triage and investigate suspicious activity",
+      "Escalate and help coordinate incident response",
+      "Document findings and update detection rules"
+    ],
+    "roadmap": [
+      {
+        "step": "Networking fundamentals",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Security+ core concepts",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "SIEM tools & log analysis",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Incident response basics",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Apply + SOC interview prep",
+        "duration": "4 weeks"
+      }
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "CompTIA Network+"
+    ],
+    "relatedCareers": [
+      "cybersecurity",
+      "cloud-computing"
+    ],
+    "difficulty": "Intermediate",
+    "salaryRange": {
+      "junior": "$50,000",
+      "mid": "$72,000",
+      "senior": "$105,000"
+    },
+    "dayInLife": "Shifts often start with a review of overnight alerts, followed by triaging anything that looks unusual, working a ticket through to resolution, and documenting what happened so the next analyst has context."
+  },
+  {
+    "id": "it-support",
+    "title": "IT Support / Systems Administration",
+    "category": "Infrastructure",
+    "icon": "&#127911;",
+    "summary": "Keep the hardware, accounts, and systems running so everyone else can do their jobs.",
+    "salary": "$52,000",
+    "demand": "High",
+    "growth": "+15%",
+    "timeToLearn": "3-6 months",
+    "education": "High school diploma + certification, often enough to start",
+    "skills": [
+      "Troubleshooting",
+      "Networking Basics",
+      "Windows/Linux",
+      "Ticketing Systems"
+    ],
+    "description": "IT support and systems administration is often the most accessible entry point into tech — helping people with hardware and software issues, managing user accounts, and keeping everyday systems running. Many people use it as a launchpad into cloud, security, or DevOps roles.",
+    "responsibilities": [
+      "Resolve hardware, software, and account issues via a ticketing system",
+      "Set up and maintain workstations and user accounts",
+      "Maintain basic network and server uptime",
+      "Document recurring issues and their fixes"
+    ],
+    "roadmap": [
+      {
+        "step": "Computer & networking fundamentals",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "CompTIA A+ core concepts",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Windows & Linux basics",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Cloud fundamentals",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Apply + help desk interview prep",
+        "duration": "3 weeks"
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner",
+      "Docker Certified Associate"
+    ],
+    "relatedCareers": [
+      "cloud-computing",
+      "devops",
+      "security-operations"
+    ],
+    "difficulty": "Beginner",
+    "salaryRange": {
+      "junior": "$38,000",
+      "mid": "$52,000",
+      "senior": "$75,000"
+    },
+    "dayInLife": "Expect a queue of tickets ranging from password resets to a server that needs attention, some hands-on hardware setup, and the satisfaction of turning someone's frustrating morning into a five-minute fix."
+  },
+  {
+    "id": "ux-research",
+    "title": "UX Research",
+    "category": "Design",
+    "icon": "&#128269;",
+    "summary": "Find out what users actually need, before anyone spends time building the wrong thing.",
+    "salary": "$82,000",
+    "demand": "Moderate",
+    "growth": "+14%",
+    "timeToLearn": "6-9 months",
+    "education": "Bachelor's in psychology, HCI, or related field common",
+    "skills": [
+      "User Interviews",
+      "Usability Testing",
+      "Survey Design",
+      "Synthesis"
+    ],
+    "description": "UX researchers study how people actually use a product — through interviews, usability tests, and surveys — and turn those findings into insights that shape design and product decisions. It's a research-first path for people who like asking why more than they like pushing pixels.",
+    "responsibilities": [
+      "Plan and conduct user interviews and usability tests",
+      "Design and analyze surveys",
+      "Synthesize findings into actionable insights",
+      "Present research to design and product teams"
+    ],
+    "roadmap": [
+      {
+        "step": "UX fundamentals & research methods",
+        "duration": "4 weeks"
+      },
+      {
+        "step": "Interview & usability testing practice",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Survey design & basic data analysis",
+        "duration": "5 weeks"
+      },
+      {
+        "step": "Build a research case study",
+        "duration": "6 weeks"
+      },
+      {
+        "step": "Apply + portfolio review prep",
+        "duration": "3 weeks"
+      }
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Nielsen Norman Group UX Certification"
+    ],
+    "relatedCareers": [
+      "ui-ux-design",
+      "product-management"
+    ],
+    "difficulty": "Intermediate",
+    "salaryRange": {
+      "junior": "$58,000",
+      "mid": "$82,000",
+      "senior": "$118,000"
+    },
+    "dayInLife": "Days vary between running back-to-back user interviews, digging through session recordings for patterns, and putting together a findings deck that will actually change what the team builds next."
   }
 ]

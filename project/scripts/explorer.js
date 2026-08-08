@@ -1,3 +1,5 @@
+import { fetchJSON } from "./modules/fetch-json.js";
+
 const BOOKMARK_KEY = "cc-bookmarks";
 const MAX_COMPARE = 3;
 
@@ -45,10 +47,9 @@ function saveBookmarks() {
 
 renderSkeletons(grid, 6);
 
-fetch("data/careers.json")
-    .then((res) => res.json())
-    .then((data) => {
-        careers = data;
+async function loadCareers() {
+    try {
+        careers = await fetchJSON("data/careers.json");
         buildCategoryChips();
         renderGrid();
         renderSalaryChart();
@@ -58,10 +59,13 @@ fetch("data/careers.json")
         if (openId && careers.some((c) => c.id === openId)) {
             openDetailModal(openId);
         }
-    })
-    .catch(() => {
+    } catch (err) {
+        console.error("Could not load careers:", err);
         grid.innerHTML = "<p class='no-results'>Careers couldn't be loaded right now. Try refreshing the page.</p>";
-    });
+    }
+}
+
+loadCareers();
 
 function renderSalaryChart() {
     const chartEl = document.getElementById("salary-chart");
@@ -167,7 +171,7 @@ function buildCard(career) {
         <div class="card-banner">
             <div class="card-top-row">
                 <div class="career-card-icon" aria-hidden="true">${career.icon}</div>
-                <button type="button" class="bookmark-btn ${isBookmarked ? "active" : ""}" aria-pressed="${isBookmarked}" aria-label="Bookmark ${career.title}">
+                <button type="button" class="bookmark-button ${isBookmarked ? "active" : ""}" aria-pressed="${isBookmarked}" aria-label="Bookmark ${career.title}">
                     ${isBookmarked ? "&#9733;" : "&#9734;"}
                 </button>
             </div>
@@ -205,16 +209,16 @@ function buildCard(career) {
                 <input type="checkbox" class="compare-checkbox" ${isCompared ? "checked" : ""}>
                 Compare
             </label>
-            <button type="button" class="view-details-btn">View Details &rarr;</button>
+            <button type="button" class="view-details-button">View Details &rarr;</button>
         </div>
     `;
 
-    card.querySelector(".bookmark-btn").addEventListener("click", () => {
+    card.querySelector(".bookmark-button").addEventListener("click", () => {
         toggleBookmark(career.id);
         renderGrid();
     });
 
-    card.querySelector(".view-details-btn").addEventListener("click", () => openDetailModal(career.id));
+    card.querySelector(".view-details-button").addEventListener("click", () => openDetailModal(career.id));
 
     card.querySelector(".compare-checkbox").addEventListener("change", (e) => {
         toggleCompare(career.id, e.target.checked, e.target);
@@ -270,7 +274,7 @@ function renderSuggestions() {
     suggestionsEl.hidden = false;
 
     suggestionsEl.querySelectorAll(".suggestion-item").forEach((btn) => {
-        action-btn.addEventListener("click", () => selectSuggestion(btn.dataset.id));
+        btn.addEventListener("click", () => selectSuggestion(btn.dataset.id));
     });
 }
 
@@ -491,7 +495,7 @@ function openDetailModal(id) {
         <div class="dialog-tabpanel" id="tabpanel-roadmap" role="tabpanel" hidden>
             <div class="roadmap-header">
                 <h3>Learning roadmap</h3>
-                <button type="button" class="download-roadmap-btn" id="download-roadmap-btn">&#8595; Download</button>
+                <button type="button" class="download-roadmap-button" id="download-roadmap-btn">&#8595; Download</button>
             </div>
             <ul class="roadmap-list">
                 ${career.roadmap.map((step) => `
@@ -557,9 +561,9 @@ document.addEventListener("keydown", (e) => {
 // ---------- FAQ accordion ----------
 
 document.querySelectorAll(".faq-question").forEach((btn) => {
-    action-btn.addEventListener("click", () => {
-        const item = action-btn.closest(".faq-item");
+    btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item");
         const isOpen = item.classList.toggle("open");
-        action-btn.setAttribute("aria-expanded", isOpen);
+        btn.setAttribute("aria-expanded", isOpen);
     });
 });

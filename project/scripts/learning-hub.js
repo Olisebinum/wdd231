@@ -1,3 +1,5 @@
+import { fetchJSON } from "./modules/fetch-json.js";
+
 let certifications = [];
 let resources = [];
 let certCategory = "all";
@@ -46,19 +48,22 @@ renderSkeletons(resourceGrid, 6);
 
 // ---------- Certifications ----------
 
-fetch("data/certifications.json")
-    .then((res) => res.json())
-    .then((data) => {
+async function loadCertifications() {
+    try {
+        const data = await fetchJSON("data/certifications.json");
         certifications = data;
         buildChips(certFiltersEl, [...new Set(data.map((c) => c.category))], (cat) => {
             certCategory = cat;
             renderCerts();
         });
         renderCerts();
-    })
-    .catch(() => {
+    } catch (err) {
+        console.error("Could not load certifications:", err);
         certGrid.innerHTML = "<p class='no-results'>Certifications couldn't be loaded right now.</p>";
-    });
+    }
+}
+
+loadCertifications();
 
 function renderCerts() {
     const filtered = certCategory === "all" ? certifications : certifications.filter((c) => c.category === certCategory);
@@ -83,19 +88,22 @@ function difficultyClass(level) {
 
 // ---------- Resources ----------
 
-fetch("data/resources.json")
-    .then((res) => res.json())
-    .then((data) => {
+async function loadResources() {
+    try {
+        const data = await fetchJSON("data/resources.json");
         resources = data;
         buildChips(resourceFiltersEl, [...new Set(data.map((r) => r.category))], (cat) => {
             resourceCategory = cat;
             renderResources();
         });
         renderResources();
-    })
-    .catch(() => {
+    } catch (err) {
+        console.error("Could not load resources:", err);
         resourceGrid.innerHTML = "<p class='no-results'>Resources couldn't be loaded right now.</p>";
-    });
+    }
+}
+
+loadResources();
 
 function renderResources() {
     const filtered = resourceCategory === "all" ? resources : resources.filter((r) => r.category === resourceCategory);
@@ -120,7 +128,6 @@ const form = document.getElementById("contact-form");
 const nameInput = document.getElementById("contact-name");
 const emailInput = document.getElementById("contact-email");
 const messageInput = document.getElementById("contact-message");
-const formSuccess = document.getElementById("form-success");
 
 function showError(input, errorId, message) {
     document.getElementById(errorId).textContent = message;
@@ -160,15 +167,13 @@ emailInput.addEventListener("blur", validateEmail);
 messageInput.addEventListener("blur", validateMessage);
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    formSuccess.hidden = true;
-
     const isNameValid = validateName();
     const isEmailValid = validateEmail();
     const isMessageValid = validateMessage();
 
-    if (isNameValid && isEmailValid && isMessageValid) {
-        formSuccess.hidden = false;
-        form.reset();
+    if (!isNameValid || !isEmailValid || !isMessageValid) {
+        e.preventDefault();
     }
+    // If all fields are valid, the form submits normally (GET) and the
+    // browser navigates to form-action.html with the data as query params.
 });
