@@ -192,7 +192,8 @@
 /* ---------- Contact Information Panel ---------- */
 
 .contact-copy {
-  background: linear-gradient(
+  background-color: var(--navy);
+  background-image: linear-gradient(
     160deg,
     var(--navy) 0%,
     var(--navy-soft) 100%
