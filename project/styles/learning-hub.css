@@ -32,21 +32,16 @@
    Explicitly define the hero background and text colors here.
 */
 
-.explorer-hero {
+.explorer-hero.learning-hub-hero {
   background: var(--navy);
-  color: var(--white);
   padding: 3rem 0;
 }
 
-.explorer-hero h1 {
-  color: var(--white);
-}
-
-.explorer-hero .hero-eyebrow {
+.learning-hub-hero .hero-eyebrow {
   color: #BFDBFE;
 }
 
-.explorer-hero-sub {
+.learning-hub-hero .explorer-hero-sub {
   color: #E2E8F0;
 }
 
