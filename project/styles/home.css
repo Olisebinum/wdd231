@@ -1,551 +1,84 @@
 /* =========================================================
    CAREER COMPASS — HOMEPAGE
-   Homepage-specific styles
+   Homepage-only enhancements.
+   Shared components are defined in style.css.
    ========================================================= */
 
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-    position: relative;
-    overflow: hidden;
-    padding: 6rem 0;
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(37, 99, 235, 0.22),
-            transparent 35%
-        ),
-        linear-gradient(
-            160deg,
-            #0F172A 0%,
-            #1E2A47 100%
-        );
-    color: #FFFFFF;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    right: -180px;
-    top: -180px;
-    border: 1px solid rgba(147, 197, 253, 0.12);
-    border-radius: 50%;
-}
-
-.hero-container {
-    position: relative;
-    z-index: 1;
-    width: min(1200px, 92%);
-    margin-inline: auto;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-    align-items: center;
-    gap: 4rem;
-}
-
-.hero-copy {
-    max-width: 680px;
-}
-
-.hero-eyebrow {
-    display: inline-block;
-    margin-bottom: 1rem;
-    color: #93C5FD;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    margin-bottom: 1.25rem;
-    color: #FFFFFF;
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    letter-spacing: -0.04em;
-}
-
-.hero h1 span {
-    color: #93C5FD;
-}
-
-.hero-sub {
-    max-width: 620px;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 1.08rem;
-    line-height: 1.75;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.hero-popular-label {
-    margin-bottom: 0.75rem;
-    color: rgba(255, 255, 255, 0.82);
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-}
-
-.hero-tag {
-    display: inline-flex;
-    align-items: center;
-    min-height: 36px;
-    padding: 0.45rem 0.85rem;
-    border: 1px solid #64748B;
-    border-radius: 999px;
-    background: #334155;
-    color: #FFFFFF;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition:
-        background-color 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.hero-tag:hover,
-.hero-tag:focus-visible {
-    background: #475569;
-    border-color: #CBD5E1;
-    transform: translateY(-2px);
-}
-
-.hero-visual {
-    position: relative;
-}
-
-.hero-card {
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(14px);
-}
-
-.hero-card-label {
-    margin-bottom: 0.5rem;
-    color: #93C5FD;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-.hero-card h2 {
-    margin-bottom: 1.5rem;
-    color: #FFFFFF;
-    font-size: 1.6rem;
-}
-
-.hero-card-list {
-    display: grid;
-    gap: 0.75rem;
-}
-
-.hero-card-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.8rem;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.07);
-    color: #FFFFFF;
-}
-
-.hero-card-list li::before {
-    content: "✓";
-    display: grid;
-    place-items: center;
-    width: 24px;
-    height: 24px;
-    flex: 0 0 24px;
-    border-radius: 50%;
-    background: #2563EB;
-    color: #FFFFFF;
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-/* =========================================================
-   STATS BAND
-   ========================================================= */
-
-.stats-band {
-    background: #FFFFFF;
-    border-bottom: 1px solid var(--border);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.stat-item {
-    padding: 2rem 1rem;
-    text-align: center;
-    border-right: 1px solid var(--border);
-}
-
-.stat-item:last-child {
-    border-right: 0;
-}
-
-.stat-number {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: var(--navy);
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.stat-label {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-/* =========================================================
-   HOMEPAGE CONTENT SECTIONS
-   ========================================================= */
-
-.home-section {
-    padding: 6rem 0;
-}
-
-.home-section-alt {
-    background: #FFFFFF;
-}
-
-/* =========================================================
-   CAREER CATEGORIES
-   ========================================================= */
-
-.career-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.career-card {
-    min-height: 260px;
-}
-
-/* =========================================================
-   CAREER INSIGHTS
-   ========================================================= */
-
-.insights-section {
-    background: #0F172A;
-    color: #FFFFFF;
-}
-
-.insights-section h2 {
-    color: #FFFFFF;
-}
-
-.insights-section .section-heading p {
-    color: #CBD5E1;
-}
-
-.insights-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.insight-card {
-    padding: 1.75rem;
-    background: #1E293B;
-    border: 1px solid #334155;
-    border-radius: var(--radius-md);
-}
-
-.insight-card h3 {
-    color: #FFFFFF;
-}
-
-.insight-card p {
-    color: #CBD5E1;
-}
-
-.insight-value {
-    margin-bottom: 0.4rem;
-    color: #93C5FD;
-    font-family: var(--font-heading);
-    font-size: 2.25rem;
-    font-weight: 800;
-}
-
-/* =========================================================
-   LEARNING HUB PREVIEW
-   ========================================================= */
-
-.learning-preview {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.learning-card {
-    overflow: hidden;
-    background: #FFFFFF;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.learning-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.learning-card-image {
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background: var(--surface-soft);
-}
-
-.learning-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.learning-card-body {
-    padding: 1.5rem;
-}
-
-.learning-card-body h3 {
-    margin-bottom: 0.5rem;
-}
-
-.learning-card-body p {
-    margin-bottom: 1rem;
-    color: var(--text-secondary);
-}
-
-/* =========================================================
-   TESTIMONIALS
-   ========================================================= */
-
-.testimonials-section {
-    background: #F1F5F9;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.testimonial-card {
-    position: relative;
-    padding: 2rem;
-    background: #FFFFFF;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-}
-
-.quote-mark {
-    margin-bottom: 0.5rem;
-    color: #64748B;
-    font-family: Georgia, serif;
-    font-size: 4rem;
-    line-height: 0.7;
-}
-
-.testimonial-card blockquote {
-    margin: 0 0 1.5rem;
-    color: var(--text-secondary);
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.testimonial-author img {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.testimonial-author strong {
-    display: block;
-    color: var(--text);
-}
-
-.testimonial-author span {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-/* =========================================================
-   NEWSLETTER
-   ========================================================= */
-
-.newsletter-section {
-    padding: 5rem 0;
-    background:
-        linear-gradient(
-            135deg,
-            #1D4ED8,
-            #0F172A
-        );
-    color: #FFFFFF;
-}
-
-.newsletter-content {
-    max-width: 720px;
-    margin-inline: auto;
-    text-align: center;
-}
-
-.newsletter-content h2 {
-    margin-bottom: 0.75rem;
-    color: #FFFFFF;
-}
-
-.newsletter-content p {
-    margin-bottom: 2rem;
-    color: #DBEAFE;
-}
-
-.newsletter-form {
-    display: flex;
-    max-width: 600px;
-    margin-inline: auto;
-    gap: 0.75rem;
-}
-
-.newsletter-form input {
-    flex: 1;
-    min-width: 0;
-    border: 0;
-}
-
-.newsletter-form .action-btn {
-    flex: 0 0 auto;
-}
-
-/* =========================================================
-   HOMEPAGE FOCUS STATES
-   ========================================================= */
-
-.hero a:focus-visible,
-.career-card a:focus-visible,
-.learning-card a:focus-visible {
-    outline-color: #93C5FD;
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 1000px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .hero-copy {
-        max-width: 760px;
-        margin-inline: auto;
-        text-align: center;
-    }
-
-    .hero-sub {
-        margin-inline: auto;
-    }
-
-    .hero-actions,
-    .hero-tags {
-        justify-content: center;
-    }
-
-    .career-grid,
-    .insights-grid,
-    .learning-preview,
-    .testimonials-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 700px) {
-    .hero {
-        padding: 4.5rem 0;
-    }
-
-    .hero h1 {
-        font-size: clamp(2.4rem, 12vw, 3.5rem);
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-actions .action-btn {
-        width: 100%;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stat-item:nth-child(2) {
-        border-right: 0;
-    }
-
-    .career-grid,
-    .insights-grid,
-    .learning-preview,
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .home-section {
-        padding: 4rem 0;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form .action-btn {
-        width: 100%;
-    }
-}
-
+/* Keep homepage-specific content visually separated from shared site styles. */
+.home-page {
+  isolation: isolate;
+}
+
+/* Decorative hero glow. The core hero layout and colors live in style.css. */
+.home-page .hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.home-page .hero::before {
+  content: "";
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  top: -11rem;
+  right: -8rem;
+  border: 1px solid rgba(147, 197, 253, 0.14);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.home-page .hero::after {
+  content: "";
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  left: -7rem;
+  bottom: -8rem;
+  border: 1px solid rgba(147, 197, 253, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Keep interactive homepage cards clearly keyboard-accessible. */
+.home-page .career-card:focus-visible,
+.home-page .hero-tag:focus-visible,
+.home-page .link-arrow:focus-visible {
+  outline: 3px solid #BFDBFE;
+  outline-offset: 3px;
+}
+
+/* Keep the featured cards visually balanced at wider sizes. */
+@media only screen and (min-width: 48rem) {
+  .home-page .career-card {
+    min-height: 100%;
+  }
+
+  .home-page .hero-popular {
+    max-width: 46rem;
+  }
+}
+
+/* Prevent decorative effects from interfering with small screens. */
+@media only screen and (max-width: 47.99rem) {
+  .home-page .hero::before {
+    width: 16rem;
+    height: 16rem;
+    right: -9rem;
+    top: -8rem;
+  }
+
+  .home-page .hero::after {
+    width: 10rem;
+    height: 10rem;
+    left: -6rem;
+    bottom: -6rem;
+  }
+}
+
+/* Respect users who request reduced motion. */
 @media (prefers-reduced-motion: reduce) {
-    .hero-tag,
-    .action-btn,
-    .career-card,
-    .learning-card {
-        transition: none;
-    }
+  .home-page .hero::before,
+  .home-page .hero::after {
+    display: none;
+  }
 }

@@ -9,11 +9,7 @@
 :root {
   --navy: #0F172A;
   --navy-soft: #1E2A47;
-  /* #3B82F6 only gave 3.5:1 contrast as text on light backgrounds, failing
-     WCAG AA (needs 4.5:1). This shade passes at 4.7-5.2:1 in every context
-     it's used (links, eyebrows, chip hover states) and is already the
-     approved on-brand shade used for .action-btn-primary's default state. */
-  --sky: #2563EB;
+--sky: #2563EB;
   --sky-light: #93C5FD;
   --emerald: #10B981;
   --white: #FFFFFF;
@@ -44,14 +40,8 @@
 .cat-data           { --cat-color: #7C3AED; --cat-tint: #F5F1FE; }
 .cat-security       { --cat-color: #92400E; --cat-tint: #FDF6EC; }
 .cat-infrastructure { --cat-color: #155E75; --cat-tint: #ECF8FA; }
-.cat-design         { --cat-color: #DB2777; --cat-tint: #FDF0F6; }
+.cat-design         { --cat-color: #BE185D; --cat-tint: #FDF0F6; }
 .cat-product        { --cat-color: #065F46; --cat-tint: #ECFAF5; }
-
-/* Security/Infrastructure/Product deepened from their original values —
-   the originals measured 3.2-3.8:1 as text on white (used for links,
-   badges, growth ribbons), failing WCAG AA's 4.5:1. Engineering, Data,
-   and Design already passed (4.6-5.7:1) and are unchanged. */
-
 * { box-sizing: border-box; }
 
 body {
@@ -115,7 +105,6 @@ img, svg { display: block; max-width: 100%; }
   margin: 0 auto;
   padding: 0 1.25rem;
 }
-
 
 /* ---------- Header ---------- */
 
@@ -206,11 +195,11 @@ nav#primary-nav a:focus-visible {
   color: var(--sky-light);
 }
 
-
 /* ---------- Hero + compass signature ---------- */
 
 .hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+  background-color: var(--navy);
+  background-image: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
   color: var(--white);
   padding: 3rem 0 3.5rem;
 }
@@ -226,10 +215,14 @@ nav#primary-nav a:focus-visible {
 }
 
 .hero-eyebrow {
+  display: inline-block;
+  background: #1E2A47;
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 0.78rem;
-  color: var(--sky-light);
+  color: #BFDBFE;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
@@ -238,14 +231,14 @@ nav#primary-nav a:focus-visible {
 .hero-copy { text-align: center; }
 
 .hero-copy h1 {
-  color: var(--white);
+  color: #FFFFFF;
   font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .hero-sub {
-  color: rgba(255, 255, 255, 0.78);
+  color: #E2E8F0;
   font-size: 1.02rem;
   max-width: 34rem;
   margin: 0 auto;
@@ -269,27 +262,23 @@ nav#primary-nav a:focus-visible {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
-.action-btn-primary {
-  /* var(--sky) only gives 3.67:1 contrast with white text, which fails
-     WCAG AA's 4.5:1 requirement for normal-size text. This darker shade
-     gives 5.17:1 while staying recognizably on-brand (it's the same
-     color already used for the hover state elsewhere). */
-  background: #2563EB;
+.primary-action {
+background: #2563EB;
   color: var(--white);
 }
 
-.action-btn-primary:hover, .action-btn-primary:focus-visible {
+.primary-action:hover, .primary-action:focus-visible {
   background: #1D4ED8;
   transform: translateY(-1px);
 }
 
-.action-btn-secondary {
+.secondary-action {
   background: transparent;
   color: var(--white);
   border: 1.5px solid rgba(255, 255, 255, 0.4);
 }
 
-.action-btn-secondary:hover, .action-btn-secondary:focus-visible {
+.secondary-action:hover, .secondary-action:focus-visible {
   border-color: var(--white);
 }
 
@@ -345,7 +334,6 @@ nav#primary-nav a:focus-visible {
   }
 }
 
-
 /* ---------- Stat counters ---------- */
 
 .stats-band {
@@ -379,7 +367,6 @@ nav#primary-nav a:focus-visible {
   margin-top: 0.2rem;
 }
 
-
 /* ---------- Skeleton loading states ---------- */
 
 .skeleton-card { cursor: default; }
@@ -407,7 +394,6 @@ nav#primary-nav a:focus-visible {
   .skeleton-line { animation: none; background: var(--border); }
 }
 
-
 /* ---------- Scroll reveal ---------- */
 
 .reveal {
@@ -421,7 +407,6 @@ nav#primary-nav a:focus-visible {
   transform: none;
 }
 
-
 .hero-popular {
   display: flex;
   flex-wrap: wrap;
@@ -434,7 +419,7 @@ nav#primary-nav a:focus-visible {
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: #E2E8F0;
 }
 
 .hero-tag {
@@ -450,7 +435,6 @@ nav#primary-nav a:focus-visible {
   background: rgba(255, 255, 255, 0.16);
   border-color: rgba(255, 255, 255, 0.35);
 }
-
 
 /* ---------- Shared section rhythm ---------- */
 
@@ -477,7 +461,6 @@ nav#primary-nav a:focus-visible {
   max-width: 38rem;
   margin-bottom: 2rem;
 }
-
 
 /* ---------- Career Journey timeline ---------- */
 
@@ -535,7 +518,6 @@ nav#primary-nav a:focus-visible {
   font-size: 0.95rem;
 }
 
-
 /* ---------- Career cards ---------- */
 
 .career-grid {
@@ -557,7 +539,8 @@ nav#primary-nav a:focus-visible {
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-.career-card:hover {
+.career-card:hover,
+.career-card:focus-visible {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: var(--cat-color, var(--sky));
@@ -582,8 +565,8 @@ nav#primary-nav a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--cat-tint, rgba(59, 130, 246, 0.1));
-  color: var(--cat-color, var(--sky));
+  background: var(--cat-tint, #EFF4FE);
+  color: var(--cat-color, var(--navy));
   font-family: var(--font-mono);
   font-weight: 500;
   border-radius: 10px;
@@ -622,7 +605,6 @@ nav#primary-nav a:focus-visible {
 
 .link-arrow:hover, .link-arrow:focus-visible { text-decoration: underline; }
 
-
 /* ---------- Why section ---------- */
 
 .why-section { background: var(--white); }
@@ -646,7 +628,7 @@ nav#primary-nav a:focus-visible {
 
 .why-icon-navy { background: rgba(15, 23, 42, 0.08); color: var(--navy); }
 .why-icon-emerald { background: rgba(16, 185, 129, 0.12); color: var(--emerald); }
-.why-icon-sky { background: rgba(59, 130, 246, 0.1); color: var(--sky); }
+.why-icon-sky { background: #E8F0FE; color: var(--navy); }
 
 .why-card h3 {
   font-size: 1.05rem;
@@ -657,7 +639,6 @@ nav#primary-nav a:focus-visible {
   color: var(--text-secondary);
   font-size: 0.92rem;
 }
-
 
 /* ---------- Testimonials ---------- */
 
@@ -741,7 +722,6 @@ nav#primary-nav a:focus-visible {
   color: var(--sky);
 }
 
-
 /* ---------- Newsletter ---------- */
 
 .newsletter-section {
@@ -758,7 +738,7 @@ nav#primary-nav a:focus-visible {
 }
 
 .newsletter-section p {
-  color: rgba(255, 255, 255, 0.75);
+  color: #DBEAFE;
   max-width: 30rem;
   margin: 0 auto 1.75rem;
 }
@@ -781,14 +761,13 @@ nav#primary-nav a:focus-visible {
   font-size: 0.95rem;
 }
 
-.newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.55); }
+.newsletter-form input::placeholder { color: #CBD5E1; }
 
 .newsletter-form input:focus-visible {
   outline: 2px solid var(--sky-light);
   outline-offset: 2px;
   background: rgba(255, 255, 255, 0.14);
 }
-
 
 /* ---------- Footer ---------- */
 
@@ -848,7 +827,6 @@ nav#primary-nav a:focus-visible {
 }
 
 .footer-col-meta p { font-size: 0.8rem; margin: 0; }
-
 
 /* =========================================================
    Desktop / wide-screen overrides
